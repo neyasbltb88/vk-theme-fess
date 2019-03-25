@@ -1,22 +1,20 @@
 *:not(.poster__input-msg),
 *:not(.poster__placeholder),
 *:not(.nim-dialog),
-*:not(.nim-dialog--content) {
+*:not(.nim-dialog--content),
+*:not(.ui_scroll_bar_container) {
     color: #C3CFE0 !important;
     border-color: rgba(105, 109, 125, 0.4) !important; /*#696D7D*/
 }
 
 *:not(.poster__slider-arrow):not(.christmas-item) {
-  -webkit-transition: background-color .3s !important;
-  -moz-transition: background-color .3s !important;
-  -ms-transition: background-color .3s !important;
-  -o-transition: background-color .3s !important;
   transition: background-color .3s !important;
 }
 
 /* Прозрачный бордер */
 .im-page--dialogs-search.ui_search_custom .ui_search_field,
-body .nim-dialog {
+body .nim-dialog,
+.ChatSettingsMembers .ListItem {
   border-color: transparent !important;
 }
 
@@ -26,8 +24,9 @@ body .nim-dialog {
 *  Цвет текста #C3CFE0, rgb(195, 207, 224)
 *  #25303c, rgb(37, 48, 60)
 *  #2c3d4e, rgb(44, 61, 78)
-*  Желтый #ffc000, rgb(255, 192, 0)
+*  Желтый #ffc000, rgba(255, 192, 0, 1)
 *  Цвет иконок #5d7997, rgb(93, 121, 151)
+*  Тень больших блоков box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
 */
 
 /*////////////////////////////////////////////////////////////*/
@@ -40,15 +39,15 @@ body .nim-dialog {
 
 ::-webkit-scrollbar-thumb {
   background-color: rgb(255, 192, 0);
-  -webkit-border-radius: 5px;
-          border-radius: 5px; 
+  border-radius: 5px; 
 }
 
 ::-webkit-scrollbar-track {
   background-color: rgb(37, 48, 60); 
 }
 
-h5, body, .nim-dialog.nim-dialog_muted.nim-dialog_selected, a.fc_contact_over, .nim-dialog.nim-dialog_selected, .group1, .group2, .group3, .group4, .group5, .group6, .group7, .group8, .group9, .group10, .audio_row.audio_row_current, .audio_row.audio_row_playing, .audio_row.audio_row_current:hover, .audio_row.audio_row_playing:hover, .pv_white_bg, .post_video_title, .videocat_channel_header, .videocat_channel_title a, .video_upload_ready_name, .video_item_title em, .wdd_hl, .page_media_poll .page_poll_percent, .video_item .video_restore.feedback_row_wrap.unread:not(.feedback_row_touched), .top_notify_cont .feedback_row:not(.dld):hover, .photos_container_albums .photos_album_thumb, .video_item .video_item_thumb_wrap, .video_playlist_item .video_playlist_item_thumb_wrap, .videocat_featured_playlist, .videocat_featured_vide, .post_video_title, .videocat_channel_subscribe .videocat_subscribe_btn .videocat_icon, .video_playlist_item_thumb_wrap, .tu_row_comment, .mv_info_wide_column, .mv_playlist_item, .mv_playlist_header.clear_fix, .market_item_content, .emoji_cat_title, #fw_summary, #fw_replies_header, #im--page > div.im-page--history.page_block._im_page_history > div.im-page-history-w > div.im-page--header-chat._im_dialog_actions > div.im-page--top-date-bar-wrap > div, .im-to-end--label._im_to_end_label, .im-chat-input.clear_fix._im_chat_input_parent, ._sticker_hints_inner.sticker_hints_inner, .sticker_hints_arrow.sticker_right, .sticker_hints_arrow.sticker_left, .sticker_hints_arrow.sticker_left.daysofweek, .daysofweek, .im_cal_clear, .pe_editor .pe_tabs .pe_tab:hover, .pe_editor, .pe_tabs, .pe_tab.pe_selected, .pe_sticker_pack_tab.pe_selected, .video_upload_separator_text, .video_upload_separator_line, .mv_tt_add_playlist, .pe_filter_thumb.pe_filter_selected, .pe_actions, #page_wrap > div > div._wcomments_content.wcomments_content > div._wcomments_form.clear_fix > div, .mv_claimed, .hb_wrap, .basis__header.mhead, .mv_is_in_progress, #marketplace .market_content .market_row.over, #header, #header_wrap2, #header_wrap1, #title, #sf-single-video-menu, .mv_playlist .mv_playlist_list, .im-page--title-wrapper, .im-chat-input .sticker_hints_tt, #payments_box.payments_box_votes .msg, .places_choose_map_content .msg, .settings_panel .msg, .box_msg, .box_msg_gray, .gift_error, .gift_notice, .wcomments_form .wcomments_post_field, .pva_period_fixed, .tt_text, .notify_tt_wrap .top_tt_important, .audio_row__playing, .audio_row__current .audio_row_content, .audio_row:hover .audio_row_content,
+
+body, .nim-dialog.nim-dialog_muted.nim-dialog_selected, a.fc_contact_over, .nim-dialog.nim-dialog_selected, .group1, .group2, .group3, .group4, .group5, .group6, .group7, .group8, .group9, .group10, .audio_row.audio_row_current, .audio_row.audio_row_playing, .audio_row.audio_row_current:hover, .audio_row.audio_row_playing:hover, .pv_white_bg, .post_video_title, .videocat_channel_header, .videocat_channel_title a, .video_upload_ready_name, .video_item_title em, .wdd_hl, .page_media_poll .page_poll_percent, .video_item .video_restore.feedback_row_wrap.unread:not(.feedback_row_touched), .top_notify_cont .feedback_row:not(.dld):hover, .photos_container_albums .photos_album_thumb, .video_item .video_item_thumb_wrap, .video_playlist_item .video_playlist_item_thumb_wrap, .videocat_featured_playlist, .videocat_featured_vide, .post_video_title, .videocat_channel_subscribe .videocat_subscribe_btn .videocat_icon, .video_playlist_item_thumb_wrap, .tu_row_comment, .mv_info_wide_column, .mv_playlist_item, .mv_playlist_header.clear_fix, .market_item_content, .emoji_cat_title, #fw_summary, #fw_replies_header, #im--page > div.im-page--history.page_block._im_page_history > div.im-page-history-w > div.im-page--header-chat._im_dialog_actions > div.im-page--top-date-bar-wrap > div, .im-to-end--label._im_to_end_label, .im-chat-input.clear_fix._im_chat_input_parent, ._sticker_hints_inner.sticker_hints_inner, .sticker_hints_arrow.sticker_right, .sticker_hints_arrow.sticker_left, .sticker_hints_arrow.sticker_left.daysofweek, .daysofweek, .im_cal_clear, .pe_editor .pe_tabs .pe_tab:hover, .pe_editor, .pe_tabs, .pe_tab.pe_selected, .pe_sticker_pack_tab.pe_selected, .video_upload_separator_text, .video_upload_separator_line, .mv_tt_add_playlist, .pe_filter_thumb.pe_filter_selected, .pe_actions, #page_wrap > div > div._wcomments_content.wcomments_content > div._wcomments_form.clear_fix > div, .mv_claimed, .hb_wrap, .basis__header.mhead, .mv_is_in_progress, #marketplace .market_content .market_row.over, #header, #header_wrap2, #header_wrap1, #title, #sf-single-video-menu, .mv_playlist .mv_playlist_list, .im-page--title-wrapper, .im-chat-input .sticker_hints_tt, #payments_box.payments_box_votes .msg, .places_choose_map_content .msg, .settings_panel .msg, .box_msg, .box_msg_gray, .gift_error, .gift_notice, .wcomments_form .wcomments_post_field, .pva_period_fixed, .tt_text, .notify_tt_wrap .top_tt_important, .audio_row__playing, .audio_row__current .audio_row_content, .audio_row:hover .audio_row_content,
 body.dev .wk_text blockquote,
 .info_msg,
 .piechart_col_header th
@@ -80,7 +79,370 @@ body.dev .wk_text blockquote,
   margin-left: -6px;
 }
 
+
+/*  TODO:
+* https://vk.com/ads
+* https://vk.com/ads?act=no_office
+* https://vk.com/dev
+*
+* TODO: Оформить плейлисты на стене и в сообщениях
+*/
 /**********************************************************/
+
+/* Улучшенное выделение активного видео в плейлисте сбоку от открытого видео */
+.mv_playlist .mv_playlist_item.mv_playlist_item_active {
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 3px;
+  margin: 3px 9px 3px 7px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.42);
+}
+
+/* Шапка с информацией при покупке стикера */
+.payments_box_instant_pay .payments_box_summary {
+  background-color: rgb(44, 61, 78);
+}
+
+/* Процент скидки на стикер */
+.im_sticker_bl_promo {
+  color: rgb(37, 48, 60) !important;
+}
+
+/* Блок распродажи в стикерах */
+.im_stickers_notif_block {
+  background-color: rgb(37, 48, 60);
+  border: 1px solid;
+  border-color: rgba(105, 109, 125, 0.4);
+}
+
+/* Затемнение удаленного видео */
+.video_item .video_restore {
+  background-color: rgb(44, 61, 78, .85);
+}
+
+
+/* В новостях, шапка конкретной новости, где написано, что этой новостью поделился друг */
+.post_top_info_wall_reply {
+  box-shadow: none;
+  border: none;
+}
+.post_top_info_wall_share_icon {
+  background: url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%2215%2014%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M18.5004264%2C23.0014212%20L18%2C23.0014212%20C16.5%2C23.0014212%2015%2C22.2871355%2015%2C20.8942784%20L15%2C20.1071429%20C15%2C18.7142857%2016.5%2C18%2018%2C18%20L22%2C18%20C23%2C18%2023.4369954%2C17.64%2024.8971569%2C16.6028571%20C25.9010179%2C15.8485714%2026.996139%2C15%2026.996139%2C15%20L28%2C15%20L28%2C26.0014212%20L26.996139%2C26.0014212%20C26.996139%2C26.0014212%2025.9010179%2C25.1528498%2024.8971569%2C24.3985641%20C23.4369954%2C23.3614212%2023%2C23.0014212%2022%2C23.0014212%20L21.0004572%2C23.0014212%20C21.0205846%2C23.0639764%2021.700616%2C25.1766941%2022%2C26%20C22%2C27.2071429%2021.9246753%2C28%2020%2C28%20L18.5004264%2C23.0014212%20Z%22%20fill%3D%22%23ffc000%22%2F%3E%0A%3C%2Fsvg%3E');
+}
+.post_top_info_wall_reply .post_top_info_wall_reply_text .author {
+  color: #ffc000 !important;
+}
+
+/* Активный блок в настройках аккаунта https://vk.com/settings */
+.settings_line.unfolded {
+  background-color: rgb(37, 48, 60);
+}
+
+/* Небольшое исправление прогресс баоров в плеере из шапки */
+.audio_page_player2 .audio_page_player_volume_wrap {
+  padding: 24px 0px 0 0;
+}
+.audio_page_player2 .audio_page_player_track_slider_wrapper {
+  padding: 0;
+}
+.audio_row[style*=background] {
+  background-color: rgb(44, 61, 78) !important;
+}
+
+
+/* Большая кнопка "Слушать" на странице музыканта */
+.round_button.round_button_large_white,
+.round_button.round_button_large_white:active,
+.round_button.round_button_large_white:hover {
+  background-color: #ffc000;
+  color: rgb(37, 48, 60) !important;
+  padding: 11px 24px 10px 45px;
+}
+/* Название исполнителя */ 
+.audio_artist_block .audio_artist_block__title {
+  text-shadow: rgba(0, 0, 0, .5) 0px 0px 6px;
+}
+
+/* Скругление не прочитанного и выделенного сообщений в диалогах */
+.im-mess+.im-mess_selected,
+.im-mess+.im-mess_unread, 
+.im-mess.im-mess_selected:first-child, 
+.im-mess.im-mess_unread:first-child {
+  border-radius: 3px;
+}
+
+/* Небольшой фикс открытого пллера из шапки */
+.audio_layer_container .audio_page_layout .audio_search {
+  padding: 20px 20px 10px;
+}
+
+/* Инпут поиска по списку диалогов */
+.im-page--dialogs-search.ui_search_custom .ui_search_field {
+  margin-right: 15px;
+}
+
+/* Ошибка неверного пароля на странице входа */
+#login_message .error {
+  background-color: rgb(37, 48, 60);
+}
+#login_message .error .msg_text > b:first-child {
+  color: #ffc000 !important;
+}
+
+/* Войти в другой аккаунт */
+.index_new_user_row .index_user_ph {
+  background: rgb(37, 48, 60) url('data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20width%3D%2216%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M9%207h6c.552%200%201%20.448%201%201s-.448%201-1%201h-6v6c0%20.552-.448%201-1%201s-1-.448-1-1v-6h-6c-.552%200-1-.448-1-1s.448-1%201-1h6v-6c0-.552.448-1%201-1s1%20.448%201%201z%22%20fill%3D%22%23ffc000%22%2F%3E%3C%2Fsvg%3E') no-repeat 50% 50%;
+  background-size: 30px 30px;
+}
+
+/* Страница настроек уведомлений https://vk.com/settings?act=notify */
+.settings_separated_row {
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  margin: 0 5px;
+}
+.settings_separated_row+.settings_separated_row:after {
+  display: none;
+}
+
+/* Сообщение о бане в группе */
+.closed_page {
+  background-color: rgb(37, 48, 60);
+}
+
+/* https://vk.com/products */
+.blog_products_page .blog_about_company_stats, .blog_products_page .blog_about_press {
+  background-color: rgb(37, 48, 60);
+}
+.blog_product {
+  background-color: rgb(44, 61, 78);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
+}
+.blog_products_page .ui_tab:hover {
+  border-color: rgba(255, 192, 0, .6) !important;
+}
+.blog_products_page .ui_tab_sel, .blog_products_page .ui_tab_sel:hover {
+  border-color: rgba(255, 192, 0, 1) !important;
+}
+.blog_about_tabs_line, .blog_about_tabs_line2 {
+  display: none;
+}
+
+
+
+/* Ховер на название беседы для его редактирования */
+.EditableLabel:hover .EditableLabel__text {
+  background-color: rgb(37, 48, 60);
+}
+
+/* Окошко добавления участников в беседу */
+.ChatSettingsMembers {
+  background-color: rgb(44, 61, 78);
+}
+.ChatSettingsMembers .MultiSelect__search {
+  background-color: rgb(44, 61, 78);
+}
+.ChatSettingsMembers .MultiSelect__input {
+  background-color: rgb(37, 48, 60) !important;
+  padding: 0 10px;
+  border-radius: 3px;
+}
+.ChatSettingsMembers .SubmitArea {
+  background-color: rgb(37, 48, 60);
+}
+.ChatSettingsMembers .Button--primary {
+  background-color: #ffc000;
+}
+.ChatSettingsMembers .Button--primary .ButtonWithProgress__content {
+  color: rgb(37, 48, 60) !important;
+}
+.ChatSettingsMembers .MultiSelect__token {
+  background-color: rgb(37, 48, 60);
+}
+.ChatSettingsMembers .MultiSelect__tokenRemove {
+  background: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%2010%2010%22%3E%3Cpath%20fill%3D%22%23ffc000%22%20d%3D%22M9.8%201.3l-1.1-1.1-3.7%203.7-3.7-3.7-1.1%201.1%203.7%203.7-3.7%203.7%201.1%201.1%203.7-3.7%203.7%203.7%201.1-1.1-3.7-3.7z%22%2F%3E%3C%2Fsvg%3E') 6px 7px no-repeat
+}
+.ChatSettingsMembers .ChatSettingsMembers__entity:after {
+  background-color: rgb(37, 48, 60);
+  border-color: rgba(105, 109, 125, 0.4);
+}
+.ChatSettingsMembers .ChatSettingsMembers__entity--selected:after {
+  background: #ffc000 url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211%22%20height%3D%228%22%20viewBox%3D%220%200%2011%208%22%3E%0A%20%20%3Cpath%20fill%3D%22rgb(37%2C%2048%2C%2060)%22%20d%3D%22M9.5.3c.4-.4.9-.4%201.3%200s.4.9%200%201.3l-6.2%206c-.3.4-.9.4-1.2%200l-3.1-3.1c-.4-.4-.4-.9%200-1.3s.9-.4%201.3%200l2.4%202.5%205.5-5.4z%22%2F%3E%0A%3C%2Fsvg%3E') 5px 6px no-repeat;
+}
+
+.ChatSettingsMembers .ListItem--border:before {
+  background-color: rgba(105, 109, 125, 0.4);
+}
+
+/* Маленький фикс высоты скроллбара на списке диалогов */
+.im-page .im-page--dialogs {
+    padding: 48px 0 63px;
+}
+/* И фикс выделяющегося цвета бордера ВСЕХ скроллбаров */
+.ui_scroll_default_theme>.ui_scroll_bar_container {
+  border-color: transparent !important;
+}
+
+/* Для того, чтобы позиционировать текст об отредактированном комментарии в пределах самого коммента */
+.wall_module .reply {
+  position: relative;
+}
+
+/* !!! Давно надо было сделать! Подсветка только что отредактированного комментария под постом на стене */
+[id^=wpt][style*=background] {
+  background-color: rgb(37, 48, 60) !important;
+}
+[id^=wpt][style*=background]:before {
+  content: '';
+  position: absolute;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  left: 1px;
+  top: 1px;
+/*  outline: 1px solid #ffc000; */
+}
+[id^=wpt][style*=background]:after {
+  content: '(ред.)';
+  color: #ffc000;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+}
+
+/* Подсветка только что добавленного коммента под постом стены */
+.wall_module .reply[style*=background] {
+  background-color: rgb(37, 48, 60) !important;
+}
+.wall_module .reply[style*=background]:after {
+  content: '(нов.)';
+  color: #ffc000;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+}
+
+/* Подсветка поста на стене после его редактирования */
+.wall_post_cont[style*=background] {
+  background-color: rgb(37, 48, 60) !important;
+}
+.wall_post_cont[style*=background]:after {
+  content: '(ред.)';
+  color: #ffc000;
+  position: absolute;
+  right: 20px;
+  bottom: 100%;
+}
+
+/* Подсветка комментариев на стене (при переходе к Кому Ответ) */
+.wall_module .reply.reply_highlighted {
+  background-color: rgb(37, 48, 60);
+  position: relative;
+}
+.wall_module .reply.reply_highlighted:before {
+  content: '';
+  position: absolute;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  left: 1px;
+  top: 1px;
+  outline: 1px solid #ffc000;
+}
+
+
+/* Ховер на пункты страницы Работа ВК */
+.blog_job:hover {
+   background-color: rgb(37, 48, 60);
+}
+
+/* Выделение совпадающей части имени аудио при поиске во вложении из дилогов */
+.audio_pl_edit_box .ape_audio_item_wrap .audio_row em {
+/*  background-color: rgb(37, 48, 60); */
+/*  background-color: rgb(44, 61, 78); */
+  background-color: transparent;
+  color: #ffc000 !important;
+}
+
+/* Фон стикера в подсказке ввода в сообщении, при выборе табом */
+.emoji_sticker_item.over:not(:hover)  {
+  background-color: rgb(44, 61, 78);
+  border: 1px solid;
+}
+
+/* Темный текст для блока ошибки при загрузке фото */
+.owner_photo_box .error .msg_text,
+.owner_photo_box .error .msg_text b, 
+.owner_photo_box .error .msg_text a {
+  color: rgb(37, 48, 60) !important;
+}
+
+/* Ховер на название ссылки(для изменения) в сообщении, когда ссылка подгружается в виде вложения */
+.medadd_inline_editable:hover {
+  background-color: rgb(37, 48, 60);
+}
+
+/* Ховер кнопки вариантов ответа при просмотре статистики голосования */
+.summary_tab2:hover {
+  background-color: rgb(44, 61, 78);
+}
+
+/* Всплывающая кнопка "Попробовать этот фон" на постере */
+.poster__cta-btn:hover {
+  background-color: rgb(44, 61, 78);
+}
+.poster__cta-btn {
+  background-color: rgba(44, 61, 78, .5);
+}
+
+/* Окошко со ссылкой на беседу (у админа) */
+.ChatSettingsInvitationLink {
+  background-color: rgb(44, 61, 78);
+}
+.ChatSettingsInvitationLink .Button--primary,
+.ChatSettingsInvitationLink .Button--primary:hover {
+  background-color: #ffc000;
+  color: rgb(37, 48, 60) !important;
+}
+
+/* Кнопка "Редактировать описание" в просмотрщике загруженного фото */
+.pv_cont .pv_can_edit:hover {
+  background-color: rgb(37, 48, 60);
+}
+
+/* Фикс цвета текста в переводчике */
+#SL_shadow_translation_result {
+  color: #000 !important;
+}
+
+/* Полупрозрачная всплывашка с результатом действий, например, отправки репоста в личку */
+/* Давно бесила белая тень под ним, наконец то исправил */
+.top_result_baloon_wrap .top_result_baloon {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
+}
+
+.top_result_baloon_wrap .top_result_baloon .mem_link {
+  color: #ffc000 !important;
+}
+
+/* Сообщение об ошибке при отпрвавке сообщения в диалогах, когда ты у пользователя в ЧС(или его забанил ВК) */
+.im-page .im-page--error {
+  background-color: rgb(37, 48, 60);
+  color: #ffc000 !important;
+}
+
+
+/* Разделитель новых сообщений в диалогах */
+.im-page .im-page--history-new-bar {
+  background: rgb(44, 61, 78);
+}
+.im-page .im-page--history-new-bar:not(.im-page--history-new-bar_days) span {
+  color: #ffc000 !important;
+}
+
+.im-page .im-page--history-new-bar:after, .im-page .im-page--history-new-bar:before {
+  background: rgba(255, 192, 0, .3);
+}
+
 
 /* Дропбоксы для загрузки файлов в сообщениях */
 .im-dropbox--rect.dropbox_over {
@@ -127,9 +489,6 @@ body .ui_rmenu_loading_item:before, body .ui_rmenu_loading_item:hover {
 .ui_rmenu_sliding .ui_rmenu_slider {
   background-color: rgb(255, 192, 0);
 }
-/* .ui_rmenu_item, .ui_rmenu_subitem {
-  border-bottom: 1px solid transparent;
-} */
 
 /* Разделитель закладок https://vk.com/bookmarks?type=link */
 .bookmark_rows_mini .bookmarks_row::after {
@@ -182,6 +541,9 @@ body .ui_rmenu_loading_item:before, body .ui_rmenu_loading_item:hover {
 .podcast_episode_layer__content {
   background-color: rgb(44, 61, 78);
 }
+.podcast_episode_layer__list_content .audio_podcast {
+  background-color: rgb(44, 61, 78) !important;
+}
 .podcast_episode_layer__header {
   background-color: rgb(37, 48, 60);
 }
@@ -190,6 +552,9 @@ body .ui_rmenu_loading_item:before, body .ui_rmenu_loading_item:hover {
 }
 .podcast_episode_layer__content .audio_row__playing {
   background-color: rgb(44, 61, 78) !important;
+}
+.audio_row__more_actions .audio_row__more_action:hover {
+  background-color: rgb(44, 61, 78);
 }
 
 
@@ -249,7 +614,7 @@ body .ui_rmenu_loading_item:before, body .ui_rmenu_loading_item:hover {
 
 
 /* Высота документа в просмотре документов во всю высоту экрана */
-iframe {
+iframe:not(.video_yt_player) {
   height: calc(100vh + 49px);
 }
 
@@ -320,10 +685,6 @@ iframe {
 
 #side_bar .side_bar_inner ol {
   height: 88vh;
-/*  max-height: 88vh; */
-/*  overflow: auto;
-  padding-right: 5px;
-  padding-left: 5px; */
 }
 
 /* Скрытие футера в меню */
@@ -367,6 +728,13 @@ iframe {
 
 
 /* API */
+/* Подсветка совпадающих букв при поиске метода */
+.dev_section_methods_wrap .dev_section_search_result_item.over span,
+.dev_section_methods_wrap .dev_section_search_result_item span {
+  background-color: transparent;
+  color: #ffc000 !important;
+}
+
 .dev_section_methods_wrap .dev_section_search_input, .wk_table th  {
   background-color: rgb(37, 48, 60) !important;
 }
@@ -453,11 +821,11 @@ body.dev .paginated_table_header th.paginated_table_cell:hover .table_header_upp
     background-color: rgb(44, 61, 78);
 }
 
-body:not(.no_wrap_cont) #dev_page_cont {
+body:not(.no_wrap_cont):not(.dev_method_view_page) #dev_page_cont {
     margin-top: 0px;
 }
 
-body:not(.no_wrap_cont) .dev_page_cont_wrap {
+body:not(.no_wrap_cont):not(.dev_method_view_page) .dev_page_cont_wrap {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
 }
 
@@ -527,9 +895,15 @@ body:not(.no_wrap_cont) .dev_page_cont_wrap {
   color: #ffc000 !important;
 }
 
-.deep_active .replies .replies_wrap_deep .replies_short_deep:hover .replies_short_text_count {
+.replies_next.replies_prev.replies_next_main,
+.replies_next_deep {
+  color: #ffc000 !important;
+}
+
+.deep_active .replies .replies_wrap_deep .replies_short_deep:hover .replies_short_text_count,
+.replies_next_deep {
   text-decoration: underline;
-    text-decoration-color: #ffc000;
+  text-decoration-color: #ffc000;
 }
 
 .deep_active .replies .replies_wrap_deep .reply+.replies_next {
@@ -541,7 +915,9 @@ body:not(.no_wrap_cont) .dev_page_cont_wrap {
   background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Eup_12%3C%2Ftitle%3E%3Cg%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M0%200H12V12H0z%22%2F%3E%3Cpath%20d%3D%22M5.248%201.338a.997.997%200%200%201%20.665-.334.998.998%200%200%201%20.794.289l4%204a1%201%200%201%201-1.414%201.414L7%204.414v5.59c0%20.55-.444.996-1%20.996-.552%200-1-.456-1-.995v-5.59L2.707%206.706a1%201%200%200%201-1.414-1.414l3.955-3.955z%22%20fill%3D%22%23ffc000%22%20opacity%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
 }
 
-.deep_active .replies .replies_wrap_deep .replies_next {
+/* .deep_active .replies .replies_wrap_deep .replies_next, */
+.deep_active.wall_module .wl_replies_block_wrap .replies_wrap_deep .replies_next,
+.deep_active .wl_replies_block_wrap .replies_wrap_deep .replies_next {
   background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3Edown_12%3C%2Ftitle%3E%3Cg%20transform%3D%22matrix(1%200%200%20-1%200%2012)%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M0%200H12V12H0z%22%2F%3E%3Cpath%20d%3D%22M5.248%201.338a.997.997%200%200%201%20.665-.334.998.998%200%200%201%20.794.289l4%204a1%201%200%201%201-1.414%201.414L7%204.414v5.59c0%20.55-.444.996-1%20.996-.552%200-1-.456-1-.995v-5.59L2.707%206.706a1%201%200%200%201-1.414-1.414l3.955-3.955z%22%20fill%3D%22%23ffc000%22%20opacity%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
 }
 
@@ -594,7 +970,7 @@ body:not(.no_wrap_cont) .dev_page_cont_wrap {
 }
 
 .im_msg_media_audio_playlist .audio_pl_snippet2 .audio_pl_snippet__action_btn_listen:before {
-  background-image:url(https://neyasbltb.000webhostapp.com/_vk/play-ico.svg);
+  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%3Ccircle%20style%3D%22fill%3A%23ffc000%3Bfill-rule%3Aevenodd%3Bfill-opacity%3A1%22%20r%3D%2212%22%20cy%3D%2212%22%20cx%3D%2212%22%2F%3E%0A%20%20%3Cpath%20style%3D%22fill%3A%23222222%3Bfill-rule%3Aevenodd%22%20d%3D%22M%209.8433557%2C16.789638%20C%209.3775832%2C17.088598%209%2C16.885726%209%2C16.32639%20V%207.6574922%20C%209%2C7.1026877%209.3790244%2C6.8962095%209.8433557%2C7.1942441%20l%206.8897953%2C4.4222679%20c%200.323037%2C0.207344%200.326846%2C0.54107%200%2C0.750858%20z%22%2F%3E%0A%3C%2Fsvg%3E');
   transition: all .1s;
 }
 
@@ -616,14 +992,13 @@ body:not(.no_wrap_cont) .dev_page_cont_wrap {
 .audio_layer_container .audio_page_player_wrap {
   border-bottom: 1px solid rgb(37, 48, 60) !important;
 }
+.audio_page_player_wrap .audio_page_player2 {
+   background-color: rgb(44, 61, 78);
+}
 
 .audio_page_player_wrap .audio_page_player2.audio_page_player_fixed {
   background-color: rgb(37, 48, 60);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
-}
-
-.audio_page_player_wrap .audio_page_player2 {
-/*  position: relative; */
 }
 
 .audio_page_player_wrap .audio_page_player2 .audio_page_player_play {
@@ -653,9 +1028,9 @@ body:not(.no_wrap_cont) .dev_page_cont_wrap {
   top: 0;
   left: 20px;
   margin: 0;
-  width: 50px;
-  height: 50px;
-  z-index: 99;
+  width: 56px;
+  height: 56px;
+  z-index: 10;
   transition: all .3s !important;
 }
 
@@ -663,6 +1038,7 @@ body:not(.no_wrap_cont) .dev_page_cont_wrap {
   width: 150px;
   height: 150px;
   left: -80px;
+  z-index: 11;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
 }
 
@@ -1289,10 +1665,10 @@ body:not(.dev) #page_header_cont {
     background-color: rgb(44, 61, 78) !important;
     box-shadow: 0 1px 0 0 #696D7D, 0 0 0 1px #696D7D;
 }
-.post_upload_dropbox, .fakeinput, div[contenteditable=true], input.big_text, input.dark, input.search, textarea, .submit_post, .pv_cont .narrow_column, .ui_tabs_header, .ui_search, .page_block_header, .wall_module .reply_fakebox, #side_bar ol li .left_row:hover, .wall_module .post_like:hover, .wall_module .post_share:hover, .stl_active.over_fast #stl_bg, .ui_actions_menu, .pv_like:hover, .chat_onl_inner, .page_status_editor .editor, .my_current_info:hover, .no_current_info:hover, .profile_info_header, .profile_info_edit, .mention_tt_actions, .im-page .im-page--history-new-bar>span, .im-page .im-page--history-new-bar, #top_notify_wrap, .top_notify_header, .top_notify_show_all, #top_profile_menu, .privacy_dropdown .header, .privacy_dropdown .body, .box_body, .idd_popup .idd_header_wrap, .idd_popup .idd_item.idd_hl, .idd_popup .idd_items_content, .box_controls, #pv_author_block, .photos_choose_upload_area, .web_cam_photo, .choose_search_cont input, .mv_controls, #fc_contacts, .fc_content, .fc_tab_head, div.fc_clist_filter_wrap, #fc_clist_filter, div.fc_tab_txt, .fc_msgs_unread, .fc_msgs, #wk_box, .im-page--chat-body-wrap-inner._im_peer_history_w, .page_media_poll_wrap, .feedback_row_wrap.unread, .ts_cont_wrap, .im-create, #im_dialogs_creation_name, #im_dialogs_creation, .owner_photo_additional, .im-page--history.page_block._im_page_history, .mail_box_cont, .box_body .im_stickers_store_wrap .ui_tabs, .im_stickers_bl_wrap, .gifts_box_header, #payments_box .payments_about_votes, #payments_box_right_col, .payments_box_wide, .prefix_input_wrap, input#phone, .im-mess.im_in.im-mess_fav-search.im-mess_search._im_mess_search._im_mess.im-mess_fav, .audio_page_player, .fc_tab, .fc_tab_notify_wrap > * {
+.post_upload_dropbox, .fakeinput, div[contenteditable=true], input.big_text, input.dark, input.search, textarea, .submit_post, .pv_cont .narrow_column, .ui_tabs_header, .ui_search, .page_block_header, .wall_module .reply_fakebox, #side_bar ol li .left_row:hover, .wall_module .post_like:hover, .wall_module .post_share:hover, .stl_active.over_fast #stl_bg, .ui_actions_menu, .pv_like:hover, .chat_onl_inner, .page_status_editor .editor, .my_current_info:hover, .no_current_info:hover, .profile_info_header, .profile_info_edit, .mention_tt_actions, .im-page .im-page--history-new-bar>span, #top_notify_wrap, .top_notify_header, .top_notify_show_all, #top_profile_menu, .privacy_dropdown .header, .privacy_dropdown .body, .box_body, .idd_popup .idd_header_wrap, .idd_popup .idd_item.idd_hl, .idd_popup .idd_items_content, .box_controls, #pv_author_block, .photos_choose_upload_area, .web_cam_photo, .choose_search_cont input, .mv_controls, #fc_contacts, .fc_content, .fc_tab_head, div.fc_clist_filter_wrap, #fc_clist_filter, div.fc_tab_txt, .fc_msgs_unread, .fc_msgs, #wk_box, .im-page--chat-body-wrap-inner._im_peer_history_w, .page_media_poll_wrap, .feedback_row_wrap.unread, .ts_cont_wrap, .im-create, #im_dialogs_creation_name, #im_dialogs_creation, .owner_photo_additional, .im-page--history.page_block._im_page_history, .mail_box_cont, .box_body .im_stickers_store_wrap .ui_tabs, .im_stickers_bl_wrap, .gifts_box_header, #payments_box .payments_about_votes, #payments_box_right_col, .payments_box_wide, .prefix_input_wrap, input#phone, .im-mess.im_in.im-mess_fav-search.im-mess_search._im_mess_search._im_mess.im-mess_fav, .audio_page_player, .fc_tab, .fc_tab_notify_wrap > * {
     background-color: rgb(44, 61, 78) !important;
 }
-.button_gray button, .replies_open, .wr_header, .chat_tab_wrap:hover, .ui_actions_menu_item:hover, .profile_more_info_link:hover, .friends_search_filters, .friends_search_import, .page_actions_header, .im-page .im-page--history-new-bar:after, .im-page .im-page--history-new-bar:before, .medadd_c_linkcon, .top_notify_show_all:hover, .feedback_row_wrap.reply_box_open, .top_profile_mrow:hover, .ok_msg, .privacy_dropdown .item_sel, .privacy_dropdown .item_sel_plus, .box_title_wrap, .idd_popup .idd_item.idd_hover, .idd_popup .idd_item.idd_hover_sublist_parent, .docs_choose_rows .docs_item:hover, .im-mess.im-mess_light, .photos_choose_upload_area:hover, .web_cam_photo:hover, .photo_upload_separator, .audio_friends_list, .audio_layer_bottom, .emoji_tt_wrap, .emoji_tabs_l_s, .emoji_tabs_r_s, .emoji_tab_sel, .emoji_tab_sel:hover, .emoji_tabs, .im_rc_emojibtn:hover, .im-mess.im-mess_selected, .im-mess.im-mess_selected:hover, .im-page .im-page--mess-search, .ui_tabs.ui_tabs_box, div.wdd, .wdd_list, .wddi_over, .wddi, .wddi_over, .wddi_no, .docs_choose_upload_area, .pv_comments_header, .im_editable.im-chat-input--text._im_text, .page_media_poll .page_poll_row, .wk_history_tabs, a.ts_contact.active, a.ts_search_link.active, .gift_tt_show_all, .page_actions_wrap, .im-create .im-create--tabs, .ui_grey_block, .ui_multiselect_cnt .token, .ui_search_filters_pane .token, .im-chat-placeholder, .im-chat-input, .im-page--header-chat._im_dialog_actionsб .feedback_unread_bar, .feedback_row_clickable:not(.feedback_row_touched):hover, .top_notify_cont .feedback_row_clickable.unread:hover, .wl_replies_header, .im_stickers_buy_header, .payments_getvotes_method_opt.payments_getvotes_active_row, .payments_getvotes_method_opt:hover, .button_cancel .button.hover, .button_cancel .button:hover, .button_cancel .button_hover, .button_cancel .leave_button:hover, .photos_go_to_album, .photos_period_delimiter_fixed, .lang_box_row:hover, .im-mess.im-mess_search:hover, #profile_groups_link:hover, .settings_block_footer, .selector_container td.selector .token, .ms_items_more_helper, .ms_items_more, ._more_items, .ba_post, .ui_search_field, .dev_page_block, #dev_left_nav, .dev_left_feature, .message_wrapper, ._plb_wrap, .video_plb_video,.app_rate_bg,.apps_options_bar,.wk_extpage_footer_wrap,.apps_footer,.ui_tabs .ui_tab_group_item:hover,.im-page.im-page_classic .im-page--header-inner {
+.button_gray button, .replies_open, .wr_header, .chat_tab_wrap:hover, .ui_actions_menu_item:hover, .profile_more_info_link:hover, .friends_search_filters, .friends_search_import, .page_actions_header, .medadd_c_linkcon, .top_notify_show_all:hover, .feedback_row_wrap.reply_box_open, .top_profile_mrow:hover, .ok_msg, .privacy_dropdown .item_sel, .privacy_dropdown .item_sel_plus, .box_title_wrap, .idd_popup .idd_item.idd_hover, .idd_popup .idd_item.idd_hover_sublist_parent, .docs_choose_rows .docs_item:hover, .im-mess.im-mess_light, .photos_choose_upload_area:hover, .web_cam_photo:hover, .photo_upload_separator, .audio_friends_list, .audio_layer_bottom, .emoji_tt_wrap, .emoji_tabs_l_s, .emoji_tabs_r_s, .emoji_tab_sel, .emoji_tab_sel:hover, .emoji_tabs, .im_rc_emojibtn:hover, .im-mess.im-mess_selected, .im-mess.im-mess_selected:hover, .im-page .im-page--mess-search, .ui_tabs.ui_tabs_box, div.wdd, .wdd_list, .wddi_over, .wddi, .wddi_over, .wddi_no, .docs_choose_upload_area, .pv_comments_header, .im_editable.im-chat-input--text._im_text, .page_media_poll .page_poll_row, .wk_history_tabs, a.ts_contact.active, a.ts_search_link.active, .gift_tt_show_all, .page_actions_wrap, .im-create .im-create--tabs, .ui_grey_block, .ui_multiselect_cnt .token, .ui_search_filters_pane .token, .im-chat-placeholder, .im-chat-input, .im-page--header-chat._im_dialog_actionsб .feedback_unread_bar, .feedback_row_clickable:not(.feedback_row_touched):hover, .top_notify_cont .feedback_row_clickable.unread:hover, .wl_replies_header, .im_stickers_buy_header, .payments_getvotes_method_opt.payments_getvotes_active_row, .payments_getvotes_method_opt:hover, .button_cancel .button.hover, .button_cancel .button:hover, .button_cancel .button_hover, .button_cancel .leave_button:hover, .photos_go_to_album, .photos_period_delimiter_fixed, .lang_box_row:hover, .im-mess.im-mess_search:hover, #profile_groups_link:hover, .settings_block_footer, .selector_container td.selector .token, .ms_items_more_helper, .ms_items_more, ._more_items, .ba_post, .ui_search_field, .dev_page_block, #dev_left_nav, .dev_left_feature, .message_wrapper, ._plb_wrap, .video_plb_video,.app_rate_bg,.apps_options_bar,.wk_extpage_footer_wrap,.apps_footer,.ui_tabs .ui_tab_group_item:hover,.im-page.im-page_classic .im-page--header-inner {
     background-color: rgb(44, 61, 78) !important;
 }
 /*цвет блоков*/
@@ -1513,10 +1889,10 @@ body:not(.dev) .dev_page_block:first-child {
     background-color: rgb(37, 48, 60) !important;
 }
 .audio_pl_edit_box .ape_audio_item_wrap .ape_check .ape_check_icon {
-  background-image:url(https://neyasbltb.000webhostapp.com/_vk/check_uncheck.png);
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAwCAYAAAFiRrqGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTRCOUNGMTcyQzA1MTFFN0JDQTVENDdBNjY5MjVDM0YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTRCOUNGMTgyQzA1MTFFN0JDQTVENDdBNjY5MjVDM0YiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBNEI5Q0YxNTJDMDUxMUU3QkNBNUQ0N0E2NjkyNUMzRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBNEI5Q0YxNjJDMDUxMUU3QkNBNUQ0N0E2NjkyNUMzRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvOPB2cAAAUaSURBVHjaYmAAgqS2tetBNBOYwcgYsOHwtf+MYJn2df9BNOP//2AaDFjUDG39gfRGsB4gjoPJAAQQA8S0dTfBemCaYcrA4D/D/yoM02DsH0xI5twACCAUF8DAv58fOZlgVqT7mzIUhFpCbGDn/w7WkdAwnwPEgdk2vzK4nVHVwAbEfwHEElCT9gOxIwtYEdCxSFY4ArEYE1SwkQEVvAIIILDKqPalghz/OR79+8+Qu6A6eAEjMOROA0POBFkpE7JAWRTElyALGUoibBiYmBgZupYdRgj2rDiCYhPTvMogoGX/P8IEQHyUoEMPQmcg3gsVK2BCEwCBCUxoAqhxgy5YgCb2HiCAGBFxjOldGPjz94/Mopqwp4zgQGLgfMdAEPz/yAQKTRjXVEOaATncYFEMAYz8LKBgBwbffBD39I2n4PD88/cvPDyRAdjNcS2rpFmYWZ7gdMD//0/nVwXLYA1eXAA55YIAKE9MAmI5IP4JxFuBOBiuGErDUuBGWAZCA6D0thsU+A+RkiouUA/EYSDF4kQ6GWwyBzTxEwLFTEgZApR9fkA9KAbEvkB8AYgPQNU4AAQQcg5iSGhdm8DEyFgJDFkpIHfPD8YfScsqo98THyn//5+ZVxVsClaMnKNxpyGIBiYmdr4XBL0GTLqg1MkESk3Y5NlYmRkmFXj/hPGBqXMePJtwc7ACDUAo7Mn2+F80eTs7kn4XuOJff/4yTMz3/sPJzgJS+BeokPHP33/IbnkGV/z7zz+G4inbWToz3RmACplRFQILv///25kNXMJ+MTIwOoMFgDlh+4nbIAkMPwDTcyATqPADJW58gQHKsPByAJQLQKUmtkwKKntBORujRiAEmBhIAOjZai0QewMxKHxBRUQecs6BmVwATdPB0PQNih55IP4CzXJwxaB0LAhN0+hgLzTLvYBl2D1Q0/CBaFDOBymeRYTfQDY8BDmjhcjAkAMpNidS8U+Q4mYiFW8FufkDEQrB9STIZAdQFYBHYSNym4ABGs4HoOWEL7TcmAQtR3aDqiOQIoAAtVdLLwNRFL73zqALaaykQYRdw8aOVLyCpUeCH9CNpcdKJCSsxEojVjZsrKTS8gOIdmGCJY2NhsQjFoTVKDN1zsyZmpkaMdRJTjrpnfkmc+93vvMd7obBaucVwWlYmPGqTzsrgYbL+deXlc2FqFok/JbOSEJSOOe17BeB9aPpWqtFfePzokvxWRSv34KaKsQNAUQsU+hQNgXf8AuEKjTYHmanF7cse+c8I5CIqGxqsT/AqbEIq6sOssubR5ZIZYqLGjBlU+CdZ9jV0sBGupu1s+yDtL57zFAobIB5AOSgbsytbrYdr+GWFXUvlcmCTY5GWH2oQAwDcG1H+QawcJIJciWBrBe1UKgHImGWSGdY7k37CT+eVaY2fnrP8mDKyxv54NyJnnvpQE47NtfomUJK+H4BAL7r2rDF4S8rzwrconI9MAQWCzwNb6IubvQquD6HppPMCTVp7+gOXvvpDX5CsH8Kd89h1ClQpttwFoE8JNVSaB1VuR+yEzIMeQQ5B+lw8bLteooc2yppqVfsUbq1dY9+TdmkieaABpieP+7APhGiW1DLrSoBqGUeESsuUx8fK+G5zUNuCzIHSgmBEatCkOOYKyEwYl0LsjHjNKP9NXoJa0JQC+6D3PpievUTi4SBWEmr8tJkkZ7IJu3/8At66d57ejZkFYq7pGO0iLSpJCpekWfIU6r0X5zu6aFnYnagD+LQvUeFxaiSAAAAAElFTkSuQmCC');
 }
 .audio_row .audio_row_cover_wrap {
-    background-image:url(https://neyasbltb.000webhostapp.com/_vk/audio_row_placeholder_.png);
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2221px%22%20viewBox%3D%220%200%2013%2021%22%20width%3D%2213px%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20id%3D%22Page-1%22%3E%0A%20%20%20%20%3Cg%20id%3D%22musicPlayerAtrwork%22%3E%0A%20%20%20%20%20%20%3Cg%20id%3D%22Group-3%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%20id%3D%22Group-2%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cg%20id%3D%22artAudioPlayer%22%20transform%3D%22translate(-101.000000%2C%20-97.000000)%20translate(80.000000%2C%2080.000000)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20height%3D%2254%22%20id%3D%22Mask%22%20width%3D%2254%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M27%2C21.007484%20C27%2C20.4510659%2027.4438648%2C20%2028%2C20%20L28%2C20%20C28.5522847%2C20%2029%2C20.4489202%2029%2C21.007484%20L29%2C33.992516%20C29%2C34.5489341%2028.5561352%2C35%2028%2C35%20L28%2C35%20C27.4477153%2C35%2027%2C34.5510798%2027%2C33.992516%20L27%2C21.007484%20Z%22%20fill%3D%22%236F98C7%22%20id%3D%22Rectangle%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M27%2C18.7122688%20C27%2C18.4325926%2027.217172%2C18.1658118%2027.4922264%2C18.1150768%20L33.5077736%2C17.0054814%20C33.7796227%2C16.9553376%2034%2C17.1453957%2034%2C17.4210866%20L34%2C20.2818361%20C34%2C20.5615123%2033.782828%2C20.8282931%2033.5077736%2C20.8790281%20L27.4922264%2C21.9886235%20C27.2203773%2C22.0387673%2027%2C21.8487092%2027%2C21.5730183%20L27%2C18.7122688%20Z%22%20fill%3D%22%236F98C7%22%20id%3D%22Rectangle-2%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2225%22%20cy%3D%2234%22%20fill%3D%22%236F98C7%22%20id%3D%22Oval-8%22%20r%3D%224%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fcircle%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E');
 }
 .audio_page_layout .audio_page_separator {
     opacity: .3;
@@ -1559,16 +1935,16 @@ body:not(.dev) .dev_page_block:first-child {
 
 /*Желтые иконки Play и Pause в аудиозаписях*/
 .audio_row .audio_row__cover_icon {
-    background-image:url(https://neyasbltb.000webhostapp.com/_vk/play-ico.svg) !important;
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%3Ccircle%20style%3D%22fill%3A%23ffc000%3Bfill-rule%3Aevenodd%3Bfill-opacity%3A1%22%20r%3D%2212%22%20cy%3D%2212%22%20cx%3D%2212%22%2F%3E%0A%20%20%3Cpath%20style%3D%22fill%3A%23222222%3Bfill-rule%3Aevenodd%22%20d%3D%22M%209.8433557%2C16.789638%20C%209.3775832%2C17.088598%209%2C16.885726%209%2C16.32639%20V%207.6574922%20C%209%2C7.1026877%209.3790244%2C6.8962095%209.8433557%2C7.1942441%20l%206.8897953%2C4.4222679%20c%200.323037%2C0.207344%200.326846%2C0.54107%200%2C0.750858%20z%22%2F%3E%0A%3C%2Fsvg%3E') !important;
 }
 .audio_row.audio_row__playing .audio_row__cover_icon {
-    background-image:url(https://neyasbltb.000webhostapp.com/_vk/pause-ico.svg) !important;
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%3Ccircle%20style%3D%22fill%3A%23ffc000%3Bfill-rule%3Aevenodd%3Bfill-opacity%3A1%22%20r%3D%2212%22%20cy%3D%2212%22%20cx%3D%2212%22%2F%3E%0A%20%20%3Cpath%20style%3D%22fill%3A%23222222%3Bfill-rule%3Aevenodd%22%20d%3D%22M%208%2C7.5955982%20C%208%2C7.2666584%208.2768555%2C7%208.6070948%2C7%20H%2010.392905%20C%2010.728194%2C7%2011%2C7.2674758%2011%2C7.5955982%20V%2016.404402%20C%2011%2C16.733342%2010.723145%2C17%2010.392905%2C17%20H%208.6070948%20C%208.2718056%2C17%208%2C16.732524%208%2C16.404402%20Z%20m%205%2C0%20C%2013%2C7.2666584%2013.276856%2C7%2013.607095%2C7%20h%201.78581%20C%2015.728194%2C7%2016%2C7.2674758%2016%2C7.5955982%20V%2016.404402%20C%2016%2C16.733342%2015.723145%2C17%2015.392905%2C17%20h%20-1.78581%20C%2013.271806%2C17%2013%2C16.732524%2013%2C16.404402%20Z%22%2F%3E%0A%3C%2Fsvg%3E') !important;
 }
 
 /*Кнопки Вперед и Назад из шапки, поверх плейлиста*/
 .top_audio_player_btn .top_audio_player_prev {
     z-index: 9999;
-  position: absolute;
+    position: absolute;
 }
 
 
@@ -1613,10 +1989,10 @@ body:not(.dev) .dev_page_block:first-child {
 /*     margin-left: 160px !important; */
 }
 .audio_page_player_ctrl.audio_page_player_play .icon {
-    background-image:url(https://neyasbltb.000webhostapp.com/_vk/play-ico-mini.svg) !important;
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2228%22%20height%3D%2229%22%20viewBox%3D%220%200%2028%2029%22%3E%0A%20%20%3Cg%20transform%3D%22matrix(0.99938033%2C0%2C0%2C1.0017979%2C0.01224696%2C-0.0143099)%22%20style%3D%22fill%3Anone%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M%2011.8%2C19.9%20C%2011.4%2C20.2%2011%2C20%2011%2C19.5%20V%208.5%20C%2011%2C8%2011.4%2C7.8%2011.8%2C8.1%20l%207.7%2C5.5%20c%200.4%2C0.2%200.3%2C0.6%200%2C0.8%20z%22%20style%3D%22fill%3A%23222222%3Bfill-opacity%3A1%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E') !important;
 }
 .audio_page_player_ctrl.audio_page_player_play.audio_playing .icon {
-    background-image:url(https://neyasbltb.000webhostapp.com/_vk/pause-ico-mini.svg) !important;
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2228%22%20height%3D%2229%22%20viewBox%3D%2236%200%2028%2029%22%3E%0A%20%20%3Cpath%20style%3D%22fill%3A%23222222%3Bfill-opacity%3A1%22%20d%3D%22M%2046%2C8.6%20C%2046%2C8.3%2046.3%2C8%2046.6%2C8%20h%201.8%20C%2048.7%2C8%2049%2C8.3%2049%2C8.6%20V%2019.4%20C%2049%2C19.7%2048.7%2C20%2048.4%2C20%20H%2046.6%20C%2046.3%2C20%2046%2C19.7%2046%2C19.4%20Z%20m%205%2C0%20C%2051%2C8.3%2051.3%2C8%2051.6%2C8%20h%201.8%20C%2053.7%2C8%2054%2C8.3%2054%2C8.6%20V%2019.4%20C%2054%2C19.7%2053.7%2C20%2053.4%2C20%20H%2051.6%20C%2051.3%2C20%2051%2C19.7%2051%2C19.4%20Z%22%2F%3E%0A%3C%2Fsvg%3E%0A') !important;
 }
 
 
@@ -1792,7 +2168,7 @@ body:not(.dev) .dev_page_block:first-child {
 
 /*Картинка замка на запрещенных комментариях*/
 .pv_cont .pv_closed_commments_placeholder {
-    background-image:url(https://neyasbltb.000webhostapp.com/_vk/privacy.png);
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAA6CAYAAAG8DIsRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTM0OUNDQzMyQzQ2MTFFN0E0NzVBNjBCNzdDN0YzN0EiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTM0OUNDQzQyQzQ2MTFFN0E0NzVBNjBCNzdDN0YzN0EiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMzQ5Q0NDMTJDNDYxMUU3QTQ3NUE2MEI3N0M3RjM3QSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBMzQ5Q0NDMjJDNDYxMUU3QTQ3NUE2MEI3N0M3RjM3QSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pk1QqZQAAAR1SURBVHjaYmBAAtcevNrGgAtcvf/yP4hmwqkCqP3p////GdAxE5CQgin69vO3GIyNYtTDFx9yUSzDZhTj1Yev2hn+/WdGtxsggBCOuP/qJqq7H7xaxUAIMIIMRwdw5z1+9TEcLgpzCrITsWpnAYZHF7ogQAChgBuPXvuhuP3hyzIGUgAsTvDHCy6d2AIYa/zhiOz/IIwz0NBAt5aCGCNFzgAIIGxOyAbG7ufbT97K4PUsUOFffHwUE8kKfFyApEghLQY/f/spS0ywAZ3ZxcTDyfaYImcAw7gUmzgLtnQB1cCgKiPcjddkMUEeaxCNrhCrYhF+rmMkuRlriiM1nAnnYgQoBQggRkK5/e/ffxsZGBlXM7Ew1giz/X/29huj37///xcANf7QUhTjYyAVEJMIrz14uR6IZxFtKKgMvf7ktRolDsAayMAUqaYpI3qLgQLAxEAjACrE2a4/fH0fubqiGDAxdpBUyhGLwdmaVkHBQowiYFA1A11SA+MrSAqKc7GzvqI48pANBYG3H785UiVVQAuEbhhbVox/JdWSGysL82uapGNQ4YirKKNrBgEIIIIuAFXEv//8nQUsEGwZ/zM8A+qYBHT5VIpcDCyMPv36/fceIwPjElEuBklGVkZfoAX2oEwFTIK+ZHkF1AIAFoml+ORJNhyoaTbQ0HXUKLPJ0gBq6uJqwlCUKkDVFbDwzqO6waDKAFQp0DUdjxqMyNLA3NUBjIByqhnIyPhMU15UkQVoKBMppRYh8OX7L1lQ5Uz1oAA1jUE1/jBNFaD+NqjxjtKHpbT6Bxn64Pn7lyA2sMAHNQV0gLFeS7GLn77+FI+vKUC2wRxsLI9oEsagNgQw0begd2moEnlIYdqNr/sz+AohUlpDLMQqJLU8GS3oEeUytA3RTd0GIeM/gACjqIAHdoml/v373whkJgKzOjOBmuUvsECYx8TE1KAhJ/qMpn0bzL7Oq1xgp2sCsP/OxMjIsJ6ViUFdVU78Lt7W8KOXyr//MXQD9TwFtsr+AfUVaMqLTaZ6sxsjRP/+vwGsfnmBFpZpKYiTFeWgocj//xg6gVH8mYmZUYOUECfawdD+wgNgyP5jY/6vSShECZoHDPFffxmvAz3OxMzMJK8uK/KUqrkO3LkBplNgGkig1LHgrh3QDGZGRnDaByaTWVQvJkA9MXCUcDNsplq252bYBDXclvrl2v//PCBKQ1T0M7XcCzMLlCcGvCAecjXHqIOHqoORO3fdg9ytpaCBUhaYY4ENvbLB7Fpgdc7A8O9/xWgaHnUwNZqX2MCbj9+sXn/46oneBQZ1NkUFuLcT2x+kSwiDRhdevf9yFFt/HSQGkiNlBILmDv7x648cNdTQzcHSonwLkccZsHSPWkBqBo2DQVNBoPEL0LQQWgXUDRIDyRGaLhqQUgKbo6jl0NFiDQbkxAUmP3/7GTxIJCnMu2LQOxg0ToxtncJo1TxkHAyanAAxQHMJg9WRMLeB3ApekXDt0etGxv8McVRdlUDNXgYoUP8zLNZUEK0DAI6wx7c/gdy3AAAAAElFTkSuQmCC');
 }
 
 /*Оранжевые уведомления о не прочитанных сообщениях*/
@@ -1806,12 +2182,6 @@ body #top_notify_btn .top_notify_count {
 }
 
 
-/*Оранжевые иконки главного меню
-#side_bar .left_icon {
-    background: url(https://neyasbltb.000webhostapp.com/_vk/menu_icon.png) no-repeat 7px -441px;
-} */
-
-
 /*Убрать большой лайк с фото*/
 .pv_cont .pv_hh_like {
     display: none;
@@ -1823,7 +2193,8 @@ body #top_notify_btn .top_notify_count {
     background-color: rgb(255, 192, 0);
 }
 .online.mobile:after, .chat_tab_imgcont.online.mobile:after, .layers_shown .chat_tab_imgcont.online.mobile:after, .layers_shown_transparent.layers_shown .chat_tab_imgcont.online.mobile:after, span.fc_contact_photo.online.mobile:after, .nim-dialog:not(.nim-dialog_deleted).nim-dialog_muted.nim-dialog_selected .nim-dialog--photo .online.mobile:after, .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected .nim-dialog--photo .online.mobile:after, .im-create .im-creation--item .olist_item_photo_wrap.online.mobile:after, .nim-peer.nim-peer_smaller.online.mobile:after, .friends_user_row .online.mobile:after, .wddi_thumb.online.mobile:after, .wddi_over:hover .wddi_thumb.online.mobile:after, .wddi_over .wddi_thumb.online.mobile:after {
-    background-image: url(https://neyasbltb.000webhostapp.com/_vk/mobile_online.png);
+/* mobile_online.png */
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAuCAYAAAGjeiKaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjkxM0YyQ0YwMkNBQzExRTdBNDQ4Q0I3REIwMUNBMjQ2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjkxM0YyQ0YxMkNBQzExRTdBNDQ4Q0I3REIwMUNBMjQ2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTEzRjJDRUUyQ0FDMTFFN0E0NDhDQjdEQjAxQ0EyNDYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OTEzRjJDRUYyQ0FDMTFFN0E0NDhDQjdEQjAxQ0EyNDYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5kVELSAAABmUlEQVR42mJkAIL/Bxj+M0DABRYQZ/IuRTBPWvCHAQuIARMwV37PwMSABjAEGJEMBAOAAAIJnAfSBmCOAwMjy7rTkgZP33MwQKy//59l/RkJhpN3BcECuW73ybDlA0AAgQT2AxkODNjBAbCO2OmGcItgAOStxZnnMe0g6AiCXsdQgBbgqJLAoAEIIJwKwJL4jEeJKWQACk+8kkxk+5lGknj9SdDYBzjkLgAEEMhYASDjPQOJgGDYEwIsMAa25IcNwJIkUamOoiQ7DDVTFFUUO7uRTL2JAAEEy/oFQKqfaE0ODAtQylcSwAWyA4qJ4oyArSzCBkDlE0UameieEEY1jnCN9M9WQ0yjIRn6BAECDFY8gmrw/WSUdiSVjEDsCCxawY1KUFlcwEA/kAiyFNRGEaCjpR+Y6GwhCAiwoIsQ2z4iFiC3o6hSww9Is2LU0lFLRy0dtZSqAKPsDTR5wWCm/IFqFkgL/qBu12w0Tomx9AKd7TwAstSRAfe4C9UbZ8CGmSMjjAdtEYIaaPFArEBFi0AeWgi0rAEmAAAFtIhOTfbLhQAAAABJRU5ErkJggg==');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 -1px;
@@ -1835,7 +2206,8 @@ body #top_notify_btn .top_notify_count {
 }
 
 .mob_onl {
-    background-image: url(https://neyasbltb.000webhostapp.com/_vk/mobile_online.png);
+/* mobile_online.png */
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAuCAYAAAGjeiKaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjkxM0YyQ0YwMkNBQzExRTdBNDQ4Q0I3REIwMUNBMjQ2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjkxM0YyQ0YxMkNBQzExRTdBNDQ4Q0I3REIwMUNBMjQ2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTEzRjJDRUUyQ0FDMTFFN0E0NDhDQjdEQjAxQ0EyNDYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OTEzRjJDRUYyQ0FDMTFFN0E0NDhDQjdEQjAxQ0EyNDYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5kVELSAAABmUlEQVR42mJkAIL/Bxj+M0DABRYQZ/IuRTBPWvCHAQuIARMwV37PwMSABjAEGJEMBAOAAAIJnAfSBmCOAwMjy7rTkgZP33MwQKy//59l/RkJhpN3BcECuW73ybDlA0AAgQT2AxkODNjBAbCO2OmGcItgAOStxZnnMe0g6AiCXsdQgBbgqJLAoAEIIJwKwJL4jEeJKWQACk+8kkxk+5lGknj9SdDYBzjkLgAEEMhYASDjPQOJgGDYEwIsMAa25IcNwJIkUamOoiQ7DDVTFFUUO7uRTL2JAAEEy/oFQKqfaE0ODAtQylcSwAWyA4qJ4oyArSzCBkDlE0UameieEEY1jnCN9M9WQ0yjIRn6BAECDFY8gmrw/WSUdiSVjEDsCCxawY1KUFlcwEA/kAiyFNRGEaCjpR+Y6GwhCAiwoIsQ2z4iFiC3o6hSww9Is2LU0lFLRy0dtZSqAKPsDTR5wWCm/IFqFkgL/qBu12w0Tomx9AKd7TwAstSRAfe4C9UbZ8CGmSMjjAdtEYIaaPFArEBFi0AeWgi0rAEmAAAFtIhOTfbLhQAAAABJRU5ErkJggg==');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 0 2px;
@@ -1852,7 +2224,7 @@ body #top_notify_btn .top_notify_count {
 
 /*Желтые чекеры выделения сообщений*/
 .im-mess .im-mess--check {
-    background-image: url(https://neyasbltb.000webhostapp.com/_vk/msg_check_.png);
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAkCAYAAAH3H4pMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0RCOTVEMDQyREI2MTFFN0E4QUU4RDZFMzExNTNGNkEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0RCOTVEMDUyREI2MTFFN0E4QUU4RDZFMzExNTNGNkEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3REI5NUQwMjJEQjYxMUU3QThBRThENkUzMTE1M0Y2QSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3REI5NUQwMzJEQjYxMUU3QThBRThENkUzMTE1M0Y2QSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsPQcu0AAAMcSURBVHjaYvx/gAEEPjMAGZ//AwEjEIOFmNWlObUvnD3wCsxbNLP5P0AAMQLVaAPZV5kYlPuvABkIxSyLZ7WAWUwMUAAQQDDFV2ACIJmrDOhg2awO7cUzmz+DVYAY/xj/uMam1/KCLAQIIEao60DadgFxIUjgP5LufxDrlPvglqCrmAJ3IgpYPLPl6qKZLf1gl4KswjSUgakIZihU4B/YGkZGxikAAQRz2B4gdsY0nYEN5llUSXu4Nb+YoF6CAOV+CH2QkQE5/ECAFYh/IAcsyFNAnIvdY0iABehSkEf3/Gf4j+FILQYxNiZQKKBLxqXXgh1xjeHVL6b/SI5kYmIshKUEuCNBxJmZM1mBqlEcCQqk2LSaXIAAgvkCBEB+TAHiR0AcBksMIAUgL/7C4oG9QOwCUvAXzf/IQIcJQxIUmogksYoFJfyfQIP6Lix2GWQRusHhD8R3C5HNmwtyw2QgIweHGxhBJuRCIwYZ/AOlBYg3CUQWEwMBAE8ZoGTLyPAfGJKMj5gZWcKi0iogIQmNh1+YOhn3xqbXuIDSOc6QZGFkxQxJSJRD8sHf/39WMaEmElgGgeSL/4xIIQlKJExM////+/e/H27cf4a5TKCEAQ8dZEmwqTWFTOBUg6QIphaUYEEMgABDTlGghAOyOwtPAIKiYBoQg9z6G9kAfBGKC0Az3gFwWi4gqByUEP98YGB42IgsOoEJmhEQQL4eUQbANMIKC1TNIJACcsFVcCZGt03YF8J+uwk5haODa7DC+RIxKQ9LgOrBAhEUJdtwFIIMOLK0JygmkKMRBrSh4eIGxHJQsUfQcnIOeu1BMEcRzFAUGwBjgDLedcbXfUAD8aZEYLKepvlftMgkPf033ABgxTkZqJGklAgvXSFV2H+CKRGUkf//+y8A9HA9kjETmCAFCYqfGmEFPUwjrEZA1QxS+z+FCVQKIQvCFAEThgoI/wP6GlQYoOd1qBGPGEENgD//f5OVEoGFlh7YaatWrWL7+f7WNmw1HfaoY9yrySDqCYoJRmxNkj///6QwglPifzmYU0GVIQsjyxxYgQsDAEk2PFoUYvvPAAAAAElFTkSuQmCC');
     background-repeat: no-repeat;
 }
 
@@ -1868,11 +2240,11 @@ body #top_notify_btn .top_notify_count {
 
 /*Тени на окне смайликов*/
 .emoji_cats_title_helper:after {
-    background: url(https://neyasbltb.000webhostapp.com/_vk/emoji_sprite_.png) 0 -29px;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJUAAABOCAYAAAApW1SjAAAVJElEQVR4nO2de5RU1ZXGf/vcW9XdtE3TYgMNERWVJGqCI0pAEVF8AYIO0mii8bUiJia6JjPJrDGPyWvFeUgyiYkKmDHiaAI0oKL4CKAGn6Bm4nMSHyTgSAOtNnRBP6rqnj1/VFVTXXVv1a3uIpKxvrVqddc9e39733O+e86551adEnyw6K5ffwaP6YpMFKEJQJVWQZ8zyCPAc35+BxquvvJiaW5uNps3N5i2tmcP2rLl5Q/C+h522KcPbmyctGfMmHbb0tJiAU0X9eF88fdPh+Ycf/wpoTifeu6x0JyTJ54RxBkKKx9cdzrIOOAnfuUftLVNtEZmiDJR0ZEAgmxT4TlFHgaezfVxFy5Z3vvGeokxjph/xsoEEY2BPKdiHwdApUmE6RbmobrJU/t9YHMuoTiRCUbtnSWcl3qemQP8sQSfktA9pl0aGW5HH/2po7a++cpbxexHH/2po4Y1jrDdY9qlGOcJE04+6nebninKecKEk0NznjLl9KOe3vB4Uc5TppxelLMQ7luz9lMWuReoR3GBBZmy7Tu3j3GM+R4iE1CNKTwrSEoLok0oMwS9CHSTZ+13yNKCa71E6h9xThLj3CrQY5Ef0LN7BZDIzlYhItH6CxH5iiPOMlGuBZ7PTtRa+zlKO0VxXHsFcEMhIxO3w4EdJTFnYejQpmSiysSOPnbCcW++tunVILujj51wXMOwkbGhBw1Pvkt3KM5Jk6cd9+xT6wM5J02eVjLnGWfOOO6xdQ8Fcp5x5ozQnH64/5HHj/KsfQSlHuhUR3+bKdu584MJjnEWKvSI6veId7QAiZwuMKJVQ+YC1zvGWWHFfBHYBCC3LVmOeokxrjG/tshOTRW+WySnUaJ2oUGHJa39LGmViusNMza6HnBKPMdExJozgbZAA2NXO0lzBRB6aAD4whfmmfHj5zuMbI3UtNuqHuMetGfvB42vv7DhxVzbY06cMv6g2oPbqmxyT1eD6WFbU+LFFxd7gM0x9eXcsHZNHueUs2YOiPPRB1blcZ4za05YTl8sf2hDo2MTz4hwFOCpyhxgNcCOna1jHOMsF2GHh5lPCC042MWqDPesNw/YLKoqi5cs+xXCaDepzcA2ABGnkZxG7nEYlQkSTXojk660oGydf/lFnwP09ruWXavKV8KcWD50IXBzcLm8jvLy3lpzJdAVlvXv582TqVOnOoDbVTMqGiVe1R3rrOvs7jjk1ec3bMzYHXfSlM8Mqh78XnXdoFicaE9N17txIPnEE0945M9TAjmf+M2aXs6pZ88sC+fDq1f1ck6fPaco5/K1a+vduFlthAXAA9lB4hFb78bNemA8oKJ6GXA3wAUzp8miJUuXisphrtU5pLUAkHTlC6JcApyeW8eOpyOTRlap6JZrLr/4YrPorpaJwDi1/ChhZFvCCMmIMzlh7BNx1zsx7nrEXQ9PvFON2rUCkwRIuM42UfkxMG7RXS0TF93VgqrMKt7MQZBZIAS/AOHTgzrtrbXt7ZHa9nbCvAAaGxs1FhvrmV3xhNOVSOAO6hxUPfi9Y06cMh5SPdSg6sHv4Q7qdLoSCbMrnojFxnqNjY2Bk94gzilnzRwPqR6qXJznzJozHlI9VBhOt8e5BZhilaXq2anqWdSzxPe8H3XjZhUpQQF8Q0XuVhFUhNt/uXSSIMeLyE2eY7Z5jiHzUnSoKjWqkPtKGtmmRhcIcvztv1w6yaD2XIT27YcPX7398OFsP3w4WHsaIGLNaWINYg2e4WQAsXayWItYy7bDht2P0I7ac1EL2Pqsc7uHrMm3Ko8DT/RKCHkN1eX73uMWkVTG7jMarb+poaHBaWhooNhr+fLl2tLSYseMabfxeEOypyfSY126rDu4Y0h9/Y6/mXT6EUPq63dYd3CHdenq6Yn0xOMNySJ3UwU5z5oxu+ycs+c0h+Y04v0bsBsYpMbcZzEnJLraHXfQ0HuAMwAU+XdF/lURMi8M01Hatx027P5thw0j+4VSjxANaqDto0fch9KOYborMBFlU9OWHcnes0NEcs7bqDGKgkhvGzdt2ZkENglMTDW4+ZGiNwDvJNX8Z8ThKVV7o6js9azcLBEbEZWPG9UqNfLTZJItrnAC0KQqP/Wp6Cw17ctHhLPb93rfnn/Fxd8LaKC+raWqImKbm5vZvLkhWVf1hkajhyZ3O/Vxx9SIjUR1qGe8eLzVi8XHeiFvz7WlpeWA5Lxg5lmvrHzo8XNF7XqgXgyPuLVD1wFzU1HknjkzT/+n3OCLlyybiMjGdLvmwAwGjQQl3rRlRxKRjQoTZdGdS19SYQnw494zszrViNyK0SuBjQCCc5pae5tFrgae7g0F/wB6GTAuO4iTNAerJiME37ENt7V4wHtBifZB3Lyef1BvB/4jlD9wzRWflebmZtPW1iax2Fipq3uj94YiFhvr1dW9oY2NjVries8By7niwcfOMaKrgeg+Zla3DaufCyTyHF5961VB7yRraSErpSUKJwHHBGatfB3hcheIi4rbx13kCStyFtpn5v/bSNKb7sCWbFvPdfPv9FS/7UXsuXjmOoJFNYq4/hzlYeAHgYn2JuV3SOqK+mVh8Z1Ldf4VF1uA5uZGA429d0uNje20tDyReV/KAmKmcQ84zrnnnfHoyofWXSYqvwKMwsao1/nZka2d+YICtkFcc7TQCyEKOAYzHsi7IwWwWAdAFi9ZusZa3gT+rvB5BuInInwSOCfr2OvpKJcCvwvwOwGTuuugkPpzOTMQHmyoMTcAXknZfgTh1B58jYhcniRyPgWWbT7Yse0RY3gDuD63TEU/g5U7AEXtXOAPuTZizM2qHONi5RUxemrr6OEukBy5Zec8sBdYlZ2C7gLZixBVtBbhEIOMUtHvAxtbDx3hjtyy40RUnspJYKD1UBAq+pR0d3yzvbsiqFBob18ELCpmJtX1L6tlSuvhKS3kFG9s2rJjNsJKMMuSVs8D3skUth0xwh2xZcdJIjzpqiMPYnX2iD/vmA2s6o4Nvr9qcMffinB29pgjCCiocD8qGwFGbt0+S5GDrfRdCzH9P/3iUF6u0u7riUZ9u/AK+o+4mNWIPX/klp3nAyvzLeRtk5AzPNd70DVyX0KiZwPvA4zcsvN8hYMRs7rP4icmMRdo3VtVVVPb6V0tcImm5y0CO1TkzvmXzbsL0MV3392EjazIXvzMhF68ZNl+Gf5EecOxNZ8HYiHsKygRV101O3DxMxvGdFfHpeZWk7A3ADuMkT6Ln6Kq3PbLX/U+pol4ek2GrK7Ocdq7GYX0JOZfeul20sK5446lIxOOLMp9TJOBY5z9IapHTcJexgCe/1VQHAlHex/TOEm9mgBhZWGk58rtqgwHLgLelkV3LgVAlJNUSD1QFv3Z9tEjVpI/rrojtm6/0Khcp1CV+0BZRZ8BGdLP82kDTgssNWY0sLWf3BWUAKtMMGoXKvSA3Lz9sGEt+Glhy85m0OsFqvIeKGegXmKMY5wfAuMEjVmVZzHamookTUZ0Uno4fMmz3jfJ76GeB2r7dSZCO3BKv3wrKDs8zxtjjPkXQY4HOkR4FpWUFkSbVJkEDFb099baG8jSgtx6xz19yL505edk4ZLlJwt6dnqlvAlIgLQq+qIiv/ni5fOeocQPg1XwVwlZ/F8tp4j1zlFkEtCEkEClVbAvqHEenf/55qfJ0YKoVrRRQXkhRx8/OfshcGYNQYscy+NJl+fa+r0PKsvl8ovhl5vi75Pz+cI8jlyfoNz9cvTLTcmvhzC+QVx+/2dzhjn33DYppS2D3ufGyIW6QGOBAANFoYQOhC6ylDzKkXMYjgOlbrJRUk4uMBJ/RQf1IIUChLkqivVquT6Fcgkqz4uV/qeQT9D5F+p9CvVIfvVVrKcM03DFLtSgv2FiBPXeQTn7xneBUSGSLjZsFfPxSyCbo1jj5JYFCTO3rNdeww15xXLvbwOVyhck6kIiKTbkFmu3Yp2Kn40vnwuM9nH2IwszT/KzD4sPo9v/S8QcSIy/VJ2E6jXDJpMRVaGrYb8kWEaUPBwIqBaetIath3Kf20CHwDA2pebca6/5x3y5XODQLEMKGfvYBSVbyh1Jdhk+x8MMxX75BBIUEFRGcEGuhagLDcnFUKoAisUKqt8wQ3+h+GFGKfzmVGED5gYOMw7nvu/j40MwkJ5T2CeQoJzz3pcQpNAkNmxvHfZ4OSbxBJSF4Qg7kvXOqUb4GBbqaQaC3KurT5LqH8PPx68s1yeDQpPRUnPOzTs7Rp/Y0vfmoBhnoTjFbPxy8LMv1rsXqo+gdsPnOC5wcECwMCILO0QW5EofKGW4GciV61ep5bqxKLXHC6qn/vRsfjwDQX/nbeIC1QMMPmD09+z39x1ABf2Dy75v++ZO/iB4Ilpo+AiaHPZ3XA+6enPXnoImr0HzgWLnmf3ejy+3PJcnly/oBiMoBz++YnOtwPlqAZ9i+RZri7wh2gU6fYiLjeeFghbjyS0rNu8oNKcKkx8U5inkR0BZsfmFX25+5YWEGqaOe4/5KKU/86VCx8PM55T08BfLMSplQh62wcPwFIpdSuOFFWKp+Ra6CAInrSWioF9WBeTZ9WMaUEw0/YZL6uvRxa5av+44zLBQrBfw4+lvWZgho1DvFSbHIP4g34EOc33ianCuxYZFP95C/oXsIT+37HMQF9jlY5CbeB+nIrZBjVzqVRw2Xtjj/S0rJkK/HPubQ3/9wx4r1R/y261o/hlRhVGhpCMErScF+YZBKRVdtm66BIS9uMqVWykiKWcOYeZNQTF6j7kEbyLmO+Rp/rFcn0I9VqFhJAxK7a7zyoTeu0YC7IrF9vMrdVgpxJFrQxHOQnkFcYSJX+r0JWMTKKqBNH6YCs21DXu8v7F6y/uj5BJz6q/9QDnCzqvKkUtBbhefzWDDMv+V4C9duQdaFe0vsQXyuGRtRBYGJWbTn/E9zKRxf8QK6urDlheLk0EhPr+8wuZ/wEBUtepDzqHnQ44fFh92Pf3VoPIVrQrKDnf7nj2N0TjDktiPOWKOtNhjDeZIRQ8l9U2bwWnbDqBNkHcs9m2Dec1T+7aL+d94lJ0PrHpoHJYzh9TKNym+Z5TT3mlvFJG1wLqrL5vXBPyC1M63bwNfZN9ufacCPwM+AawFriK9x9KqR59sMsnEL1RSfirS6+dYe6oV6fVLSqTXb96MKdOBZ0gt/PqhHjgZeDhsRVawD/67pvUDqlyA6BkfdFq7/c9//BbBe3qbEYd//AeCzFKlFlgH3EFqe8cFwMWktrE5Im2/gtQ22wuA64CFwIUA4iXvUNFxoixQkYtFdWVyb80RAFLbtULgXRUWoFznamIhcOGcmdPOA64BzgO+Qb6w6oEbSX3M2gEeHHDlfMRQNlFFtfNrcVN9i6hc0HTEJ5PzL5v3HXzujBbftfy7qF6A6LNR2/W19PEzga8CPye1ycMD7NuZbxgwndTuMRFSPVUaeqaIfBXh56huAnkgclDnOQCqMszatJ+RiKAZvyfTfKNJiSdbWNmC2pq2raBElE1U586d2/3IihVfjpuaxajOXbxkWQ/wwz5GojegMhfhhajt/jL0/v7FH4BmYAPwcvrY6em/HqkhcTIwK/1/Bn9Qpdka3WA9fdk1guo+P6/avu0mmYw1szTtt3LN+t0Xzpz2DfaJJyMs6Csov16sghAo66Z3586d210j8S8J+nvgEpSvo5B+fR2VS4GXkjXm2s7a2u7O2lo6a2sBrgXGAi+xb91sHHA8qSFoF6leo56s/SiN6rXAWGPlJdeYtJ+MI7VTiePGzS6seRKh3liuNxaMhXsfWL+blGi2sk9YFUGVCdIai5Vlok7WBqUPLX+sznO671D0WFVuAxDhS4K85njVV+GzE95VV82uAs4CppH6RYLM1/F3ktoNdx2wnpwliIcffriqW6Nnicg01Xw/a2TdIO3O8wOYMWNG9nAHFUGVBWUb/oJgDEY1+Bn0VVfNfpLU0JaL7IXBKaTmXBk8de+ax0F0cmb5KGtlpI+fsfrV7swSU2rD21P7ey4VhEPZRbX23ntrPSeySJFjQe5U5afpdq5W9Iqk07U4OchcDexJu/gJqhgm058dkEV7Y82ZOS13Ug7+k/cKSkRZRfXIihXVcVNzG6m50D3zL593U1bxTYuXLIsAl7hd9tao7ZoP/fihujLAR1C5E/WKsAaAsk3UU4KqvgXlREFXzr/8ohvpu6Sg8y+/6EZEVqCcGDfVt/AhfJMnQFC706/cyXt9AE0FBVC2niougxagOgnh/iE1zndbWlr8xidt/dP/fLfpiE9EUDk/LoMWLF6yvNgD0f4+MA3yO4/gu7yMsDKiO5XK4mfJKJuoRLhPobOhxnyLAo9pjjnmGAt8q73LOgK/Abj6snlBn6mC4M9bce9Dj5Xst2rN+gfnzJzmEfyYJiOsymOafqJsopo1Z8Y6Urf9YeAB/1iu2KVi1Zr1xcSym4qg+o39+osfFXw0URFVBWXHgSKqp4qb9KL3Byxzf70rtF8F+xX7fUU9DLbv2VNolTvw7m/SaSf1y6+C/YsDpaeq4P8RKqKqoOyoiKqCsqMiqgrKjoqoKig7KqKqoOyoiKqCsqMiqgrKjgNi8bOCAxNNdXUC0NzcnNf5tLS0ZL7XmfdpkIqoKvBFU12dNDc3m7a2Ntm8uUHq6t5wMmWx2Fhv6tSp0tjYqGlx9RFWZfirIA8ZQW3e3GAAd+jQrmhXzahozG2s6qoZFR06tCsKuJs3N5h0L9bnkVhFVBX0QbagotF2N+Y2Vr0fT9aYnt113p62BtOzu+79eLIm5jZWRaPtvsKqiKqCXuQKqqoqUWWS1Jhkx+Bdu3cP/+9nH//Trt27h5tkx2CTpKaqKuErrIqoKuiDtrY2qat7w7FDohGvJhIh2Tmos7vjkNdf2PAiwOsvbHixs7vjEJKdg7yaSMQOiUbq6t5w2traKj1VBb6QWGysxOrqTCS2y+neG6/e09Ux5NXnN2zMNnr1+Q0b93R1DOneG6+OxHY5sbo6E4uNFSo9VQXZSA990j2mXYb2DJEOm4i0v7dtcKaHysXrL2x4sf29bYM7bCIytGeIdI9pl+bmZgGkIqoK8vD++61u+85tdW++tunVQnZvvrbp1fad2+ref7+1z9JURVQV9EH15gZta9thtr75ylth7Le++cpbbW07TPXmht61KnmztbUxGmdYJGI+Fo1WH+lZPRbHOdKoPdQaadT0ri8CHcZqmxXzDp73tmPktXi8++1Ewubt+lLBRxv/B7Zm692EGIpMAAAAAElFTkSuQmCC') 0 -29px;
 }
 
 .ui_scroll_default_theme.ui_scroll_emoji_theme>.ui_scroll_overflow>.ui_scroll_shadow_bottom, .ui_scroll_default_theme.ui_scroll_emoji_theme>.ui_scroll_overflow>.ui_scroll_shadow_top {
-    background: url(https://neyasbltb.000webhostapp.com/_vk/emoji_sprite_.png) 0 -29px;
+    background: url('data:image/png;base64,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') 0 -29px;
     box-shadow: none;
     height: 10px;
 }
@@ -1920,7 +2292,7 @@ body #top_notify_btn .top_notify_count {
 
 
 #content > div > div > div.im-page--dialogs._im_page_dialogs.page_block > div.im-page--dialogs-footer.ui_grey_block._im_dialogs_settings > div.tt_w.tt_black.toleft.tt_down {
-        position: absolute;
+  position: absolute;
     opacity: 1;
     top: -29px;
     left: 80.984px !important;
@@ -1934,11 +2306,15 @@ body #top_notify_btn .top_notify_count {
 }
 
 
-.stories_feed_arrow_left, .stories_feed_arrow_right {
+/* .stories_feed_arrow_left, .stories_feed_arrow_right {
     background-color: rgba(37, 48, 60, .6);
-}
-.stories_feed_cont:hover .stories_feed_arrow_left, .stories_feed_cont:hover .stories_feed_arrow_right {
+} */
+/* .stories_feed_cont:hover .stories_feed_arrow_left, .stories_feed_cont:hover .stories_feed_arrow_right {
     background: rgba(37, 48, 60, .7) !important;
+} */
+
+.stories_feed_with_thumb .stories_feed_arrow_left, .stories_feed_with_thumb .stories_feed_arrow_right {
+  border-color: transparent !important;
 }
 
 /*Подчеркивание заголовков*/
@@ -2047,7 +2423,7 @@ body #top_notify_btn .top_notify_count {
 /*Плавающая круглая кнопка Наверх в раскрытых комментах на стене*/
 
 .replies_side.replies_side_fixed {
-    background: transparent url(https://neyasbltb.000webhostapp.com/_vk/hide_comments_.png) no-repeat 50% 50%;
+    background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAOCAYAAAFsus16AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QjRDNDE3RTkzRkE4MTFFNzhGNUU4OEQ0OTQ4QTA2QUQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QjRDNDE3RUEzRkE4MTFFNzhGNUU4OEQ0OTQ4QTA2QUQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCNEM0MTdFNzNGQTgxMUU3OEY1RTg4RDQ5NDhBMDZBRCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCNEM0MTdFODNGQTgxMUU3OEY1RTg4RDQ5NDhBMDZBRCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvwWLZYAAAEHSURBVHjaYvz//z8DCDAxQAFAADH8P8AgxgASBgggRiBLGiQAxAcZYQpBACCAwNJA2UcwZTCpuzCZ/yAaYSYQAAQQxICDjFJA9lMg/gLETxjs/2uClEuCrELWCqSrIGbBMEwCiAECCFnwEci5MD7EwoOMN4CkIBC/BLIlIZYfALqNgeEvEKsCsTTUEdIgHXOBrlAD67T//wxIyoD9jM1iDE8hA5wSAAGGGnQHGSWA5D4g1oSKXANiJ6DdL1FNOsgoA8S3gKznaKazAPELsNxBRmmIhoOMVUD6MRAzA7Es0DQNuHL7/+pgMYjcE6DaSlQnIZz2H6qBkWjPkRwauAALDvFt0BSIAQBA/pklNsGj5gAAAABJRU5ErkJggg==') no-repeat 50% 50%;
     border: 1px solid #ffc000 !important;
 }
 
