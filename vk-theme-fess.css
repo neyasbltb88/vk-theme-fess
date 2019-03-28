@@ -89,12 +89,22 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Заголовок приложения паблика */
+#apps_layer .apps_header {
+  background-color: rgb(37, 48, 60);
+}
+#flash_api_external_cont {
+    top: 50px;
+}
+
 /* Улучшенное выделение активного видео в плейлисте сбоку от открытого видео */
 .mv_playlist .mv_playlist_item.mv_playlist_item_active {
   border: 1px solid;
   border-radius: 3px;
+/*  padding: 6px 5px 6px 10px; */
   padding: 3px;
   margin: 3px 9px 3px 7px;
+/*  background-color: rgb(92, 110, 130) !important; */
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.42);
 }
 
