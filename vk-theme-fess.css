@@ -1,3 +1,4 @@
+@-moz-document url-prefix("https://vk.com/") {
 *:not(.poster__input-msg),
 *:not(.poster__placeholder),
 *:not(.nim-dialog),
@@ -25,6 +26,7 @@ body .nim-dialog,
 *  #25303c, rgb(37, 48, 60)
 *  #2c3d4e, rgb(44, 61, 78)
 *  Желтый #ffc000, rgba(255, 192, 0, 1)
+*  Красный цвет лайка #ff3347
 *  Цвет иконок #5d7997, rgb(93, 121, 151)
 *  Тень больших блоков box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
 */
@@ -89,6 +91,27 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Скрытие кнопки скачивания картинки от Download Master */
+.pv_img_area_wrap .sf-dl-current-photo-btn {
+  display: none !important;
+}
+
+.pv_img_area_wrap #photoDlMenu {
+  display: none !important;
+}
+
+/* Активный лайк в посте */
+.wk_like_wrap.my_like .wk_like_icon {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg%20height%3D"9"%20viewBox%3D"0%200%2011%209"%20width%3D"11"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"><path%20d%3D"M7.9%200C9.612%200%2011%201.36%2011%203.039c0%201.688-.69%202.534-3.597%204.75L6.063%208.81a.931.931%200%200%201-1.126%200l-1.34-1.022C.69%205.573%200%204.727%200%203.039%200%201.36%201.388%200%203.1%200c.904%200%202.4.9%202.4%202.25C5.5.9%206.996%200%207.9%200z"%20fill%3D"%23ff3347"%2F><%2Fsvg>');
+  background-size: cover;
+}
+
+/* Цитаты в посте */
+.wk_text blockquote {
+  background-color: rgb(37, 48, 60);
+    border-left: 3px solid #ffc000 !important;
+}
+
 /* Заголовок приложения паблика */
 #apps_layer .apps_header {
   background-color: rgb(37, 48, 60);
@@ -101,10 +124,8 @@ body.dev .wk_text blockquote,
 .mv_playlist .mv_playlist_item.mv_playlist_item_active {
   border: 1px solid;
   border-radius: 3px;
-/*  padding: 6px 5px 6px 10px; */
   padding: 3px;
   margin: 3px 9px 3px 7px;
-/*  background-color: rgb(92, 110, 130) !important; */
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.42);
 }
 
@@ -2454,4 +2475,5 @@ body #top_notify_btn .top_notify_count {
     -ms-transition: color .3s 3s !important;
     -o-transition: color .3s 3s !important;
     transition: color .3s 3s !important;
+}
 }
