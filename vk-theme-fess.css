@@ -91,6 +91,16 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Сортировка комментов под постом (интересные/старые/новые) */
+.eltt .eltt_fancy_action:hover {
+  background-color: rgb(44, 61, 78);
+}
+
+.eltt .eltt_fancy_action.radiobtn.on:before {
+  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffc000%22%20d%3D%22M10%2016c-.3%200-.5-.1-.7-.3l-3.5-3.5c-.4-.4-.4-1%200-1.4s1-.4%201.4%200l2.8%202.8%206.3-6.3c.4-.4%201-.4%201.4%200s.4%201%200%201.4l-7%207c-.2.2-.4.3-.7.3z%22%2F%3E%3C%2Fsvg%3E');
+  background-position: 0 -4px;
+}
+
 /* Скрытие кнопки скачивания картинки от Download Master */
 .pv_img_area_wrap .sf-dl-current-photo-btn {
   display: none !important;
