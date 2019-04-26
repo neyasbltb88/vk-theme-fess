@@ -91,6 +91,40 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Оформление модалки для скачивания альбома фото от SaveFrom.net */
+#dl_confirm_box_popup, #sf_progress_popup {
+  background: rgb(37, 48, 60) !important;
+  border: 1px solid rgba(105, 109, 125, 0.4) !important;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
+}
+
+#dl_confirm_box_popup > div > img,
+#sf_progress_popup > div > img {
+  opacity: 0 !important;
+}
+
+#dl_confirm_box_popup > div:after,
+#sf_progress_popup > div:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23C3CFE0%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%0A%20%20%20%20%3Cline%20x1%3D%2218%22%20y1%3D%226%22%20x2%3D%226%22%20y2%3D%2218%22%2F%3E%0A%20%20%20%20%3Cline%20x1%3D%226%22%20y1%3D%226%22%20x2%3D%2218%22%20y2%3D%2218%22%2F%3E%0A%3C%2Fsvg%3E');
+  background-size: 18px 18px;
+  top: 10px;
+    right: 15px;
+  z-index: -1;
+}
+
+.sf-infoPopupTemplate > div:first-child {
+  background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2224px%22%20height%3D%2218px%22%20viewBox%3D%220%200%2024%2018%22%20version%3D%221.1%22%3E%3Cpath%20d%3D%22M19.5%2C3%20L21.0089096%2C3%20C22.6582294%2C3%2024%2C4.34288718%2024%2C5.99942248%20L24%2C15.0005775%20C24%2C16.6556493%2022.6608432%2C18%2021.0089096%2C18%20L2.99109042%2C18%20C1.34177063%2C18%200%2C16.6571128%200%2C15.0005775%20L0%2C5.99942248%20C0%2C4.34435073%201.33915679%2C3%202.99109042%2C3%20L7.5%2C3%20C7.5%2C1.34651712%208.84187067%2C0%2010.497152%2C0%20L16.502848%2C0%20C18.1583772%2C0%2019.5%2C1.34314575%2019.5%2C3%20L19.5%2C3%20Z%20M13.5%2C16.5%20C16.8137087%2C16.5%2019.5%2C13.8137087%2019.5%2C10.5%20C19.5%2C7.18629134%2016.8137087%2C4.5%2013.5%2C4.5%20C10.1862913%2C4.5%207.5%2C7.18629134%207.5%2C10.5%20C7.5%2C13.8137087%2010.1862913%2C16.5%2013.5%2C16.5%20Z%20M13.5%2C15%20C15.9852815%2C15%2018%2C12.9852815%2018%2C10.5%20C18%2C8.0147185%2015.9852815%2C6%2013.5%2C6%20C11.0147185%2C6%209%2C8.0147185%209%2C10.5%20C9%2C12.9852815%2011.0147185%2C15%2013.5%2C15%20Z%22%20fill%3D%22%23ffc000%22%2F%3E%3C%2Fsvg%3E') !important;
+}
+
+.sf-infoPopupTemplate button {
+  background-color: rgb(44, 61, 78) !important;
+}
+
 /* Шапка спойлера на странице(меню группы?) https://vk.com/page-54530371_48968741  */
 .wk_hider_header {
   background-color: rgb(37, 48, 60);
