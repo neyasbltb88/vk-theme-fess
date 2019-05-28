@@ -91,6 +91,22 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Модалка Красивый адрес для Вашей страницы  */
+.settdbx_edit {
+	background-color: rgb(44, 61, 78);
+}
+
+#settdbx_addr_table {
+	border-color: rgb(37, 48, 60) !important;
+	background-color: rgb(44, 61, 78);
+	border-radius: 5px;
+}
+
+.settdbx_edit_addr_label {
+	background-color: rgb(37, 48, 60);
+}
+
+
 /* Оформление модалки для скачивания альбома фото от SaveFrom.net */
 #dl_confirm_box_popup, #sf_progress_popup {
   background: rgb(37, 48, 60) !important;
