@@ -91,6 +91,15 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Отступы постов/вложений от блока лайков */
+.wall_module:not(.search_results) .post--with-likes:not(.post_copy):not(.post_btl):not(.post_wf):not(.post_fr_likes) .wall_text .media_link:last-child {
+	margin-bottom: -12px;
+}
+
+.wall_text .page_post_sized_thumbs:last-child {
+	margin-bottom: -8px;
+}
+
 /* Цвет ссылок */
 ._im_mess .im-mess--text a:not(._im_replied_author_link):not(.im_srv_lnk ):not(.wall_post_more):not(.author):not(.im-mess-stack--lnk):not([onclick*="showForwardBox"]):not(.media_link__title):not(.mem_link):not(.page_doc_title):not([href*="browse_images"]), 
 .wall_reply_text a[rel="nofollow noopener"],
@@ -101,9 +110,9 @@ body.dev .wk_text blockquote,
 }
 
 /* Фон ссылки-вложения */
-.media_link__label {
+.media_link__label, .thumbed_link__label {
 	background-color: rgb(37, 48, 60);
-	margin: 0 -1px;
+	margin: -1px;
 }
 
 /* Круглая кнопка перехода в конец открытого диалога */
