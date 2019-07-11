@@ -91,6 +91,15 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Цвет ссылок */
+._im_mess .im-mess--text a:not(._im_replied_author_link):not(.im_srv_lnk ):not(.wall_post_more):not(.author):not(.im-mess-stack--lnk):not([onclick*="showForwardBox"]):not(.media_link__title):not(.mem_link):not(.page_doc_title):not([href*="browse_images"]), 
+.wall_reply_text a[rel="nofollow noopener"],
+.wall_post_cont a[rel="nofollow noopener"] { 
+	color: #E8EAED !important;
+	font-weight: 500;
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
 /* Фон ссылки-вложения */
 .media_link__label {
 	background-color: rgb(37, 48, 60);
