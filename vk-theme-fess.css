@@ -49,7 +49,7 @@ body .nim-dialog,
 }
 
 
-body, .nim-dialog.nim-dialog_muted.nim-dialog_selected, a.fc_contact_over, .nim-dialog.nim-dialog_selected, .group1, .group2, .group3, .group4, .group5, .group6, .group7, .group8, .group9, .group10, .audio_row.audio_row_current, .audio_row.audio_row_playing, .audio_row.audio_row_current:hover, .audio_row.audio_row_playing:hover, .pv_white_bg, .post_video_title, .videocat_channel_header, .videocat_channel_title a, .video_upload_ready_name, .video_item_title em, .wdd_hl, .page_media_poll .page_poll_percent, .video_item .video_restore.feedback_row_wrap.unread:not(.feedback_row_touched), .top_notify_cont .feedback_row:not(.dld):hover, .photos_container_albums .photos_album_thumb, .video_item .video_item_thumb_wrap, .video_playlist_item .video_playlist_item_thumb_wrap, .videocat_featured_playlist, .videocat_featured_vide, .post_video_title, .videocat_channel_subscribe .videocat_subscribe_btn .videocat_icon, .video_playlist_item_thumb_wrap, .tu_row_comment, .mv_info_wide_column, .mv_playlist_item, .mv_playlist_header.clear_fix, .market_item_content, .emoji_cat_title, #fw_summary, #fw_replies_header, #im--page > div.im-page--history.page_block._im_page_history > div.im-page-history-w > div.im-page--header-chat._im_dialog_actions > div.im-page--top-date-bar-wrap > div, .im-to-end--label._im_to_end_label, .im-chat-input.clear_fix._im_chat_input_parent, ._sticker_hints_inner.sticker_hints_inner, .sticker_hints_arrow.sticker_right, .sticker_hints_arrow.sticker_left, .sticker_hints_arrow.sticker_left.daysofweek, .daysofweek, .im_cal_clear, .pe_editor .pe_tabs .pe_tab:hover, .pe_editor, .pe_tabs, .pe_tab.pe_selected, .pe_sticker_pack_tab.pe_selected, .video_upload_separator_text, .video_upload_separator_line, .mv_tt_add_playlist, .pe_filter_thumb.pe_filter_selected, .pe_actions, #page_wrap > div > div._wcomments_content.wcomments_content > div._wcomments_form.clear_fix > div, .mv_claimed, .hb_wrap, .basis__header.mhead, .mv_is_in_progress, #marketplace .market_content .market_row.over, #header, #header_wrap2, #header_wrap1, #title, #sf-single-video-menu, .mv_playlist .mv_playlist_list, .im-page--title-wrapper, .im-chat-input .sticker_hints_tt, #payments_box.payments_box_votes .msg, .places_choose_map_content .msg, .settings_panel .msg, .box_msg, .box_msg_gray, .gift_error, .gift_notice, .wcomments_form .wcomments_post_field, .pva_period_fixed, .tt_text, .notify_tt_wrap .top_tt_important, .audio_row__playing, .audio_row__current .audio_row_content, .audio_row:hover .audio_row_content,
+body, .nim-dialog.nim-dialog_muted.nim-dialog_selected, a.fc_contact_over, .nim-dialog.nim-dialog_selected, .group1, .group2, .group3, .group4, .group5, .group6, .group7, .group8, .group9, .group10, .audio_row.audio_row_current, .audio_row.audio_row_playing, .audio_row.audio_row_current:hover, .audio_row.audio_row_playing:hover, .pv_white_bg, .post_video_title, .videocat_channel_header, .videocat_channel_title a, .video_upload_ready_name, .video_item_title em, .wdd_hl, .page_media_poll .page_poll_percent, .video_item .video_restore.feedback_row_wrap.unread:not(.feedback_row_touched), .top_notify_cont .feedback_row:not(.dld):hover, .photos_container_albums .photos_album_thumb, .video_item .video_item_thumb_wrap, .video_playlist_item .video_playlist_item_thumb_wrap, .videocat_featured_playlist, .videocat_featured_vide, .post_video_title, .videocat_channel_subscribe .videocat_subscribe_btn .videocat_icon, .video_playlist_item_thumb_wrap, .tu_row_comment, .mv_info_wide_column, .mv_playlist_item, .mv_playlist_header.clear_fix, .market_item_content, .emoji_cat_title, #fw_summary, #fw_replies_header, #im--page > div.im-page--history.page_block._im_page_history > div.im-page-history-w > div.im-page--header-chat._im_dialog_actions > div.im-page--top-date-bar-wrap > div, .im-chat-input.clear_fix._im_chat_input_parent, ._sticker_hints_inner.sticker_hints_inner, .sticker_hints_arrow.sticker_right, .sticker_hints_arrow.sticker_left, .sticker_hints_arrow.sticker_left.daysofweek, .daysofweek, .im_cal_clear, .pe_editor .pe_tabs .pe_tab:hover, .pe_editor, .pe_tabs, .pe_tab.pe_selected, .pe_sticker_pack_tab.pe_selected, .video_upload_separator_text, .video_upload_separator_line, .mv_tt_add_playlist, .pe_filter_thumb.pe_filter_selected, .pe_actions, #page_wrap > div > div._wcomments_content.wcomments_content > div._wcomments_form.clear_fix > div, .mv_claimed, .hb_wrap, .basis__header.mhead, .mv_is_in_progress, #marketplace .market_content .market_row.over, #header, #header_wrap2, #header_wrap1, #title, #sf-single-video-menu, .mv_playlist .mv_playlist_list, .im-page--title-wrapper, .im-chat-input .sticker_hints_tt, #payments_box.payments_box_votes .msg, .places_choose_map_content .msg, .settings_panel .msg, .box_msg, .box_msg_gray, .gift_error, .gift_notice, .wcomments_form .wcomments_post_field, .pva_period_fixed, .tt_text, .notify_tt_wrap .top_tt_important, .audio_row__playing, .audio_row__current .audio_row_content, .audio_row:hover .audio_row_content,
 body.dev .wk_text blockquote,
 .info_msg,
 .piechart_col_header th
@@ -90,6 +90,31 @@ body.dev .wk_text blockquote,
 * TODO: Оформить плейлисты на стене и в сообщениях
 */
 /**********************************************************/
+
+/* Круглая кнопка перехода в конец открытого диалога */
+.im-to-end.im-to-end_shown {
+	opacity: .5;
+}
+.im-to-end__button {
+	background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%227%22%20viewBox%3D%220%200%2014%207%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23ffc000%22%20d%3D%22M1.64.232c-.424-.354-1.055-.296-1.408.128s-.296%201.055.128%201.408l6%205c.371.309.91.309%201.28%200l6-5c.424-.354.482-.984.128-1.408s-.984-.482-1.408-.128l-5.36%204.467z%22%2F%3E%0A%3C%2Fsvg%3E');
+	background-color: rgb(37, 48, 60) !important;	
+	box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, .8);
+}
+.im-to-end .im-to-end--label-in {
+	background-color: #ffc000;
+	color: rgb(37, 48, 60) !important;
+}
+
+.im-to-end.im-to-end_shown:hover {
+	opacity: 1;
+}
+.im-to-end.im-to-end_shown:hover .im-to-end__button {
+	background-color: rgb(37, 48, 60) !important;
+	box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.42);
+}
+.im-to-end.im-to-end_shown:hover .im-to-end--label {
+	opacity: .8;
+}
 
 /* Модалка Красивый адрес для Вашей страницы  */
 .settdbx_edit {
@@ -1738,26 +1763,7 @@ filter:alpha(opacity=50);
 }
 */ 
 
-#im-to-end, ._im_to_end, .im-to-end_shown, #im--page > div.im-page--history.page_block._im_page_history 
 
-> div.im-page-history-w > div.im-page--chat-input._im_chat_input_w > div.im-to-end._im_to_end.im-to-end_shown {
-   visibility: hidden;
-}
-
-#im--page > div.im-page--history.page_block._im_page_history > div.im-page-history-w > div.im-page--header-chat._im_dialog_actions > div.im-page--top-date-bar-wrap > div, .im-to-end--label._im_to_end_label {
-    visibility: visible;
-    opacity: 0.4;
-}
-
-#im--page > div.im-page--history.page_block._im_page_history > div.im-page-history-w > div.im-page--header-chat._im_dialog_actions > div.im-page--top-date-bar-wrap > div, .im-to-end--label._im_to_end_label:hover {
-    visibility: visible;
-    opacity: 0.9;
-}
-
-#im--page > div.im-page--history.page_block._im_page_history > div.im-page-history-w > div.im-page--header-chat._im_dialog_actions > div.im-page--top-date-bar-wrap > div, .im-to-end--label._im_to_end_label {
-    visibility: visible;
-    opacity: 0.4;
-}
 
 /* #page_header_cont, */
 .page_block, .eltt, #top_notify_wrap, .chat_onl_wrap, .fc_tab_wrap, .page_actions_wrap, #ts_cont_wrap,
@@ -1787,7 +1793,7 @@ body:not(.dev) #page_header_cont {
 .notifier_baloon {
     box-shadow: 1px 0 1px gray;
 }
-.ui_rmenu_item:hover, .ui_rmenu_subitem:hover, .ui_rmenu_item_sel, .ui_rmenu_item_sel:hover, em.fc_clist_hl, .ui_gridsorter_cont .ui_gridsorter_moveable, .ui_suggester_results_list ul li.active, .ui_suggester_results_list ul li:hover, .emoji_tab:hover, .emoji_shop:hover, .emoji_bg, .media_selector .ms_items_more .ms_item:hover, .div.fc_tab_txt, .docs_choose_upload_area:hover, .pv_comments_header:hover, .nim-dialog.nim-dialog_muted .nim-dialog--unread, em.ts_clist_hl, .gift_tt_show_all:hover, .page_actions_item:hover, .button_gray button:hover, .flat_button.im-create--btn.button_disabled._im_confirm_creation, .wl_replies_header:hover, .selector_container td.selector input, .audio_friend:hover, .mv_desc .can_edit:hover, .olist_item_wrap:hover, .top_profile_mrow:hover, .tabbed_box .summary_tab .summary_tab3:hover, .tabbed_box .summary_tab_sel .summary_tab3:hover, .tabbed_box .summary_tab_sel a:hover, .tabbed_box .summary_tab a:hover, .tabbed_box .summary_tab_sel .summary_tab2, .flat_button, .pv_data, .nim-dialog.nim-dialog_selected, .selector_container, .result_list ul li, .emoji_sticker_item:hover, .im-to-end, #pv_albums_wrap, #pv_box, .wl_post_reply_form_forbidden, .top_nav_btn.active, .eltt, .notifier_baloon, .notifier_type_mail, .wall_module .page_media_thumbed_link, .album_module .page_album_nocover, .apps_settings_icons .apps_settings_payments, .apps_settings_icons .apps_settings_stats, a.wk_photo_no_border img, a.wk_photo img, img.wk_photo, img.wk_photo_no_border, .dev_mlist_item, .graffiti_tools, .graffiti_wrap, em.highlight, .search_filters_minimized_text, .slider_hint, .settings_menu_rows .olist_item_menu .olist_item_photo, .login_about_mobile, input.dark, .wdd_add2, .im-mess.im-mess_gift, .photos_edit_selection_header, .photos_container_edit_grid .photos_photo_edit_row_desc_cont, .im_stickers_my_tip, .tt .side_sh, .video_plb_wrap, .feedback_sticky_row.hover, .feedback_sticky_row:hover, .feedback_sticky_row.unread, .button_blue button, .button_blue button, .page_media_poll .page_poll_percent, .group_wiki_hider:hover, .wrapped, #audio_status_tt .audio_share_cont, #mv_comments_header, .audio_friend.audio_friend_selected,.apps_i_wrap,.apps_i_policy,.app_rate_count,.ui_tab_group_items,.im-page a.im-page--back-button:hover,.ui_actions_menu {
+.ui_rmenu_item:hover, .ui_rmenu_subitem:hover, .ui_rmenu_item_sel, .ui_rmenu_item_sel:hover, em.fc_clist_hl, .ui_gridsorter_cont .ui_gridsorter_moveable, .ui_suggester_results_list ul li.active, .ui_suggester_results_list ul li:hover, .emoji_tab:hover, .emoji_shop:hover, .emoji_bg, .media_selector .ms_items_more .ms_item:hover, .div.fc_tab_txt, .docs_choose_upload_area:hover, .pv_comments_header:hover, .nim-dialog.nim-dialog_muted .nim-dialog--unread, em.ts_clist_hl, .gift_tt_show_all:hover, .page_actions_item:hover, .button_gray button:hover, .flat_button.im-create--btn.button_disabled._im_confirm_creation, .wl_replies_header:hover, .selector_container td.selector input, .audio_friend:hover, .mv_desc .can_edit:hover, .olist_item_wrap:hover, .top_profile_mrow:hover, .tabbed_box .summary_tab .summary_tab3:hover, .tabbed_box .summary_tab_sel .summary_tab3:hover, .tabbed_box .summary_tab_sel a:hover, .tabbed_box .summary_tab a:hover, .tabbed_box .summary_tab_sel .summary_tab2, .flat_button, .pv_data, .nim-dialog.nim-dialog_selected, .selector_container, .result_list ul li, .emoji_sticker_item:hover, #pv_albums_wrap, #pv_box, .wl_post_reply_form_forbidden, .top_nav_btn.active, .eltt, .notifier_baloon, .notifier_type_mail, .wall_module .page_media_thumbed_link, .album_module .page_album_nocover, .apps_settings_icons .apps_settings_payments, .apps_settings_icons .apps_settings_stats, a.wk_photo_no_border img, a.wk_photo img, img.wk_photo, img.wk_photo_no_border, .dev_mlist_item, .graffiti_tools, .graffiti_wrap, em.highlight, .search_filters_minimized_text, .slider_hint, .settings_menu_rows .olist_item_menu .olist_item_photo, .login_about_mobile, input.dark, .wdd_add2, .im-mess.im-mess_gift, .photos_edit_selection_header, .photos_container_edit_grid .photos_photo_edit_row_desc_cont, .im_stickers_my_tip, .tt .side_sh, .video_plb_wrap, .feedback_sticky_row.hover, .feedback_sticky_row:hover, .feedback_sticky_row.unread, .button_blue button, .button_blue button, .page_media_poll .page_poll_percent, .group_wiki_hider:hover, .wrapped, #audio_status_tt .audio_share_cont, #mv_comments_header, .audio_friend.audio_friend_selected,.apps_i_wrap,.apps_i_policy,.app_rate_count,.ui_tab_group_items,.im-page a.im-page--back-button:hover,.ui_actions_menu {
     background-color: rgb(37, 48, 60) !important;
 }
 /*цвет фона*/
@@ -1795,9 +1801,6 @@ body:not(.dev) #page_header_cont {
 .apps_i_panel {
     background: #32404e;
 
-}
-.im-to-end:hover {
-    background-color: #1A242F !important;
 }
 .button_blue button.hover, .button_blue button:hover, .flat_button.hover, .flat_button:hover {
     background-color: #283542 !important;
