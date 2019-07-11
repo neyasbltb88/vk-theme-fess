@@ -91,6 +91,12 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Фон ссылки-вложения */
+.media_link__label {
+	background-color: rgb(37, 48, 60);
+	margin: 0 -1px;
+}
+
 /* Круглая кнопка перехода в конец открытого диалога */
 .im-to-end.im-to-end_shown {
 	opacity: .5;
