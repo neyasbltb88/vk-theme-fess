@@ -863,6 +863,12 @@ body.dev .wk_text blockquote,
   border-left: 3px solid #ffc000;
   border-color: #ffc000 !important;
 }
+.group_api_url_desc,
+.gedit_block_footer,
+.group_api_requests_table.ui_table tr.ui_table_row,
+.group_api_requests_table.ui_table tr.ui_table_row.header    {
+background-color: transparent;    
+}
 
 #dev_left_nav, .dev_section_methods_wrap {
   box-shadow: none;
