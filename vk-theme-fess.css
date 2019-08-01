@@ -246,7 +246,10 @@ body.dev .wk_text blockquote,
 #flash_api_external_cont {
     top: 50px;
 }
-
+/*Скрытие рекламы */
+#ads_left{
+  display: none;
+}
 /* Улучшенное выделение активного видео в плейлисте сбоку от открытого видео */
 .mv_playlist .mv_playlist_item.mv_playlist_item_active {
   border: 1px solid;
