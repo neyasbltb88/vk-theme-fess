@@ -932,13 +932,16 @@ body.dev .wk_text blockquote,
   border-left: 3px solid #ffc000;
   border-color: #ffc000 !important;
 }
+/* Убрать задний фон */
 .group_api_url_desc,
+#stats_cont.stats_cont_browse,
 .gedit_block_footer,
 .group_api_requests_table.ui_table tr.ui_table_row,
 .group_api_requests_table.ui_table tr.ui_table_row.header    {
-background-color: transparent;    
+	background-color: transparent;    
 }
-
+/* Убрать задний фон */
+	
 #dev_left_nav, .dev_section_methods_wrap {
   box-shadow: none;
   border: 1px solid rgba(232, 234, 237, .1);
