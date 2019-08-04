@@ -91,6 +91,13 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Кнопка о наличии нового уведомления в окне 'колокольчика' */
+.notifications_new_events, .notifications_new_events:hover {
+	background-color: rgb(37, 48, 60);
+	color: #ffc000 !important;
+}
+
+
 /* Отступы постов/вложений от блока лайков */
 .wall_module:not(.search_results) .post--with-likes:not(.post_copy):not(.post_btl):not(.post_wf):not(.post_fr_likes) .wall_text .media_link:last-child {
 	margin-bottom: -12px;
