@@ -91,6 +91,13 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Тень у картинок/документов с картинками/ссылок с картинками в диалоге */
+.im-page-history-w .image_cover,
+.im-page-history-w .im_msg_media_link,
+.im-page-history-w .page_post_thumb_unsized {
+	  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
 /* Инпут в диалоге при записи голоса */
 .im-audio-message-input {
 	background-color: rgb(37, 48, 60);
