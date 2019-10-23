@@ -41,7 +41,7 @@ body .nim-dialog,
 
 ::-webkit-scrollbar-thumb {
   background-color: rgb(255, 192, 0);
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -90,6 +90,33 @@ body.dev .wk_text blockquote,
 * TODO: Оформить плейлисты на стене и в сообщениях
 */
 /**********************************************************/
+
+/* Ddict Translate (https://chrome.google.com/webstore/detail/ddict-translate-translato/bpggmmljdiliancllaapiggllnkbjocb?hl=ru) */
+.ddict_div {
+	background-color: rgb(44, 61, 78);
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
+	border: 1px solid;
+	padding: 10px 15px;
+}
+
+.ddict_div .ddict_sentence {
+	margin-top: 10px !important;
+	position: relative;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.ddict_div .ddict_sentence:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: -6px;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 1px;
+	background-color: rgba(105, 109, 125, 0.4);
+}
 
 /* Тень у картинок/документов с картинками/ссылок с картинками в диалоге */
 .im-page-history-w .image_cover,
@@ -878,7 +905,7 @@ iframe:not(.video_yt_player) {
 }
 
 #side_bar .side_bar_inner ol {
-  height: 88vh;
+/*   height: 88vh; */
 }
 
 /* Скрытие футера в меню */
