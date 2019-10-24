@@ -91,6 +91,24 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Левое меню с внутренним скроллом, если не уместится по высоте */
+#side_bar {
+	display: flex;
+	flex-direction: column;
+}
+
+#side_bar_inner {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+#side_bar nav {
+	max-height: inherit;
+	overflow: auto;
+	flex-shrink: 1;
+}
+
 /* Ddict Translate (https://chrome.google.com/webstore/detail/ddict-translate-translato/bpggmmljdiliancllaapiggllnkbjocb?hl=ru) */
 .ddict_div {
 	background-color: rgb(44, 61, 78);
@@ -900,9 +918,6 @@ iframe:not(.video_yt_player) {
 }
 
 /*** Подготовка меню к вставке избранных групп ***/
-#side_bar nav {
-  width: 154px;
-}
 
 #side_bar .side_bar_inner ol {
 /*   height: 88vh; */
@@ -915,19 +930,19 @@ iframe:not(.video_yt_player) {
 
 /* Контейнер для запиненных групп */
 .pinned_groups ul {
-  list-style: none;
-  padding-left: 8px;
+/*   list-style: none;
+  padding-left: 8px; */
 }
 
 /* Аватарка запиненной группы */
 #side_bar .pinned_groups .pinned_item .left_icon{
-  background-size: contain;
+/*   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 24px;
   width: 24px;
   margin: 2px 4px;
-  border-radius: 50%; 
+  border-radius: 50%;  */
 }
 
 
