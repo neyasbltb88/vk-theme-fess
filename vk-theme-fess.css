@@ -109,6 +109,12 @@ body.dev .wk_text blockquote,
 	flex-shrink: 1;
 }
 
+/* Скрытие футера в левом меню */
+.left_menu_nav_wrap {
+  display: none;
+}
+
+
 /* Ddict Translate (https://chrome.google.com/webstore/detail/ddict-translate-translato/bpggmmljdiliancllaapiggllnkbjocb?hl=ru) */
 .ddict_div {
 	background-color: rgb(44, 61, 78);
@@ -469,7 +475,6 @@ body.dev .wk_text blockquote,
 }
 
 
-
 /* Ховер на название беседы для его редактирования */
 .EditableLabel:hover .EditableLabel__text {
   background-color: rgb(37, 48, 60);
@@ -596,8 +601,6 @@ body.dev .wk_text blockquote,
 
 /* Выделение совпадающей части имени аудио при поиске во вложении из дилогов */
 .audio_pl_edit_box .ape_audio_item_wrap .audio_row em {
-/*  background-color: rgb(37, 48, 60); */
-/*  background-color: rgb(44, 61, 78); */
   background-color: transparent;
   color: #ffc000 !important;
 }
@@ -917,39 +920,6 @@ iframe:not(.video_yt_player) {
   background-color: rgb(44, 61, 78) !important;
 }
 
-/*** Подготовка меню к вставке избранных групп ***/
-
-#side_bar .side_bar_inner ol {
-/*   height: 88vh; */
-}
-
-/* Скрытие футера в меню */
-.left_menu_nav_wrap {
-  display: none;
-}
-
-/* Контейнер для запиненных групп */
-.pinned_groups ul {
-/*   list-style: none;
-  padding-left: 8px; */
-}
-
-/* Аватарка запиненной группы */
-#side_bar .pinned_groups .pinned_item .left_icon{
-/*   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 24px;
-  width: 24px;
-  margin: 2px 4px;
-  border-radius: 50%;  */
-}
-
-
-
-
-
-/* --- Подготовка меню к вставке избранных групп --- */
 
 /* То, что вызывало появление скролла при появлении подсказке о количестве диалогов */
 .im-page .im-page--dialogs-footer .tt_down:after, .im-page .im-page--dialogs-footer .tt_down:before {
@@ -1855,27 +1825,6 @@ input.text.ts_input, input.ui_search_field, .im-chat-input .im-chat-input--txt-w
      background-color: rgb(44, 61, 78);
 }
 
-/*Прозрачность*/
-
-
-/* Прозрачность при наведении*//*
-.im-mess-stack--photo {  
--moz-transition: all 0.4s; 
--webkit-transition: all 0.4s;  
--ms-transition: all 0.4s;  
--o-transition: all 0.4s;  
-transition: all 0.4s; 
-opacity:1;
-filter:alpha(opacity=100);
-}
- 
-.im-mess-stack--photo:hover {
-opacity:0.5;
-filter:alpha(opacity=50);
-}
-*/ 
-
-
 
 /* #page_header_cont, */
 .page_block, .eltt, #top_notify_wrap, .chat_onl_wrap, .fc_tab_wrap, .page_actions_wrap, #ts_cont_wrap,
@@ -2013,9 +1962,6 @@ div.submit_post_field, div.submit_post_field[contenteditable=true], div.submit_p
 .im-mess.im-mess_selected:last-child:before, .im-mess.im-mess_unread:before {
     background: transparent !important;
 }
-/* .audio_row:not(.audio_row_current):hover, .audio_row.audio_row_current, .audio_row.audio_row_playing, .audio_row.audio_row_current:hover, .audio_row.audio_row_playing:hover {
-    background-color: rgb(41, 51, 62) !important;
-} */
 .im-mess.im-mess_selected+.im-mess:before, .im-mess.im-mess_unread+.im-mess:before {
     background: transparent !important;
 }
@@ -2335,17 +2281,6 @@ body:not(.dev) .dev_page_block:first-child {
 }
 
 
-/*Большой эквалайзер слева*/
-/*
-.ap_layer__content > div > div  > div > .audio_row_inner.clear_fix > div.audio_row_cover_wrap._audio_row_cover_wrap > .audio_sound_bars
-
-{
-    width: 200px;
-    height: 200px;
-    left: -35px;
-}
-*/
-
 /*Фон шапки плейлиста по наведению*/
 
 .ap_layer .audio_pl_snippet .audio_pl_snippet__cover {
@@ -2369,18 +2304,13 @@ body:not(.dev) .dev_page_block:first-child {
 .ap_layer .audio_pl_snippet .audio_pl_snippet__cover {
     transition: all .3s !important;
     position: absolute;
-    z-index: 99;
-    
+    z-index: 99;   
 }
-
-
-
 
 .blind_label {
     position: absolute;
     height: 1px;
     width: 1px;
-    
 }
 
 
@@ -2528,14 +2458,6 @@ body #top_notify_btn .top_notify_count {
   background-color: rgb(37, 48, 60);
 }
 
-
-/* .stories_feed_arrow_left, .stories_feed_arrow_right {
-    background-color: rgba(37, 48, 60, .6);
-} */
-/* .stories_feed_cont:hover .stories_feed_arrow_left, .stories_feed_cont:hover .stories_feed_arrow_right {
-    background: rgba(37, 48, 60, .7) !important;
-} */
-
 .stories_feed_with_thumb .stories_feed_arrow_left, .stories_feed_with_thumb .stories_feed_arrow_right {
   border-color: transparent !important;
 }
@@ -2562,7 +2484,6 @@ body #top_notify_btn .top_notify_count {
 .ui_scroll_bar_outer {
     background-color: rgb(44, 61, 78);
 }
-
 
 
 .wall_module .reply_box, .wall_module .reply_fakebox_wrap {
