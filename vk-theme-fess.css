@@ -91,6 +91,11 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Ошибка в управлении группой */
+#group_edit_msg.msg.error {
+	background-color: rgb(37, 48, 60);
+}
+
 /* Ошибка подтверждения сервера в управлении группой */
 .group_api_error {
 	background-color: rgb(37, 48, 60);
