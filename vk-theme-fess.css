@@ -91,7 +91,13 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
-/* Ошибка в управлении группой */
+/* Многострочное отображение запроса на Callback Api в управлении группой */
+.group_api_result_pre {
+	word-break: break-all;
+	white-space: pre-line;
+}
+
+/*  Ошибка в управлении группой  */
 #group_edit_msg.msg.error {
 	background-color: rgb(37, 48, 60);
 }
