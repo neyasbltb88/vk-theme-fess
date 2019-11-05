@@ -91,6 +91,39 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Треугольники дропдаунов с подсказками */
+.tt_default.tt_up:before {
+	border-bottom-color: rgba(105, 109, 125, 0.4);
+}
+
+.tt_default.tt_up:after {
+	border-bottom-color: rgb(37, 48, 60);
+}
+
+.tt_default.tt_right:before {
+	border-left-color: rgba(105, 109, 125, 0.4);
+}
+
+.tt_default.tt_right:after {
+	border-left-color: rgb(37, 48, 60);
+}
+
+.tt_default.tt_down:before {
+	border-top-color: rgba(105, 109, 125, 0.4);
+}
+
+.tt_default.tt_down:after {
+	border-top-color: rgb(37, 48, 60);
+}
+
+.tt_default.tt_left:before {
+	border-right-color: rgba(105, 109, 125, 0.4);
+}
+
+.tt_default.tt_left:after {
+	border-right-color: rgb(37, 48, 60);
+}
+
 /* Окно управления беседой */
 .List {
 	background-color: rgb(44, 61, 78);
