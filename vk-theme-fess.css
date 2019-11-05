@@ -91,6 +91,53 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Дропдаун админа беседы на участнике */ 
+.Dropdown__in {
+	background-color: rgb(37, 48, 60);
+}
+
+.Dropdown__item:hover {
+	background-color: rgb(44, 61, 78);
+}
+
+.Dropdown--b .Dropdown__in:before {
+	border-bottom-color: rgba(105, 109, 125, 0.4);
+}
+
+.Dropdown--b .Dropdown__in:after {
+	border-bottom-color: rgb(37, 48, 60);
+}
+
+
+/* Окно "Приглашение сообщества в беседу" */
+#GroupChatInvites .GroupChatInvites {
+	background-color: rgb(44, 61, 78);
+}
+
+#GroupChatInvites .MultiSelect__search {
+	background-color: rgb(37, 48, 60);
+}
+
+#GroupChatInvites .MultiSelect__token {
+	background-color: rgb(44, 61, 78);
+}
+
+#GroupChatInvites .MultiSelect__scroll .ListItem--border:before {
+	display: none;
+}
+
+#GroupChatInvites .SubmitArea {
+	background-color: rgb(37, 48, 60);
+}
+
+#GroupChatInvites .SubmitArea button {
+	background-color: #ffc000;
+}
+
+#GroupChatInvites .SubmitArea button span {
+	color: rgb(37, 48, 60) !important;
+}
+
 /* Многострочное отображение запроса на Callback Api в управлении группой */
 .group_api_result_pre {
 	word-break: break-all;
