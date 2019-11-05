@@ -1611,37 +1611,8 @@ body:not(.no_wrap_cont):not(.dev_method_view_page) .dev_page_cont_wrap {
 
 
 /* Новые лайки */
-.wr_header {
-  margin: 0px 20px 12px 20px;
-}
 .like_cont {
   border-top: none;
-  padding: 0 0 10px 0;
-}
-.like_views {
-  height: 24px;
-  font-size: 12px;
-}
-.like_btn {
-  height: 24px;
-}
-.like_button_icon {
-  width: 16px;
-  height: 16px;
-}
-.like_button_count, .like_button_label {
-  font-size: 12px;
-}
-.replies_open, .wr_header {
-  line-height: 28px;
-  height: 30px;
-}
-.wall_module .wall_text {
-  padding: 8px 20px 12px;
-}
-.wall_module .wall_text .page_media_poll_wrap:last-child,
-.wall_module .wall_text .page_media_thumbed_link:last-child {
-  margin-bottom: -8px;
 }
 
 /*Новые статьи блога*/
