@@ -91,6 +91,52 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Окно управления беседой */
+.List {
+	background-color: rgb(44, 61, 78);
+}
+.Select:not(.Select--opened) .Select__control {
+	border-color: transparent !important;
+}
+
+.Select--opened .Select__control {
+	background-color: rgb(44, 61, 78);
+}
+
+.Select__menu {
+	background-color: rgb(37, 48, 60);
+}
+
+.ListItem--border:before {
+	background-color: transparent;
+}
+
+.Select__option--selected, .Select__option:hover {
+	background-color: rgb(44, 61, 78);
+}
+
+.SubmitArea {
+	background-color: rgb(37, 48, 60);
+}
+
+.SubmitArea .Button--tertiary:not(.Button--disabled):focus, 
+.SubmitArea .Button--tertiary:not(.Button--disabled):hover {
+	background-color: rgb(37, 48, 60);
+}
+
+.SubmitArea .Button--primary {
+	background-color: #ffc000;
+}
+
+.SubmitArea .Button--primary span {
+	color: rgb(37, 48, 60) !important;
+}
+
+.SubmitArea .Button--primary:not(.Button--disabled):focus, 
+.SubmitArea .Button--primary:not(.Button--disabled):hover {
+	background-color: #ffc000;
+}
+
 /* Дропдаун админа беседы на участнике */ 
 .Dropdown__in {
 	background-color: rgb(37, 48, 60);
