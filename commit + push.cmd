@@ -7,5 +7,6 @@ set /p message=Сообщение коммита:
 git add .
 git commit -am "%message%"
 git push
+echo.
 
 goto BEGIN
