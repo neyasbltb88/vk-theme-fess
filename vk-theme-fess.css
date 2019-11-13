@@ -91,6 +91,20 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Отдельная страница с плейлистом */
+/* https://vk.com/music/album/-2000029177_6029177_f9be3d9c00fba51f0a */
+._playlist_page_content_block {
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
+}
+
+.AudioPlaylistSnippet {
+	background-color: rgb(44, 61, 78);
+}
+
+.AudioPlaylistSnippet .ActionButton--shuffle:hover {
+	background-color: rgb(37, 48, 60);
+}
+
 /* Треугольники дропдаунов с подсказками */
 .tt_default.tt_up:before {
 	border-bottom-color: rgba(105, 109, 125, 0.4);
