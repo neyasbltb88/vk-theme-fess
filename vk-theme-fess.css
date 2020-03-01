@@ -91,15 +91,17 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Стилизация поиска в главном блоке страницы музыки */
+.audio_page_layout .audio_search_wrapper {
+    padding: 10px 20px 20px;
+    background-color: rgb(44, 61, 78);
+}
+
+
 /* Убрать рамку вокруг главного блока страницы музыки */
 .page_block._audio_page_content_block:before,
 .audio_page_layout .audio_block:before {
     box-shadow: none;
-}
-
-/* Убрать паддинг вокруг строки поиска в плеере из шапки */
-.audio_page_layout .audio_search_wrapper {
-    padding: 0;
 }
 
 /* Отдельная страница с плейлистом */
