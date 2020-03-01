@@ -91,6 +91,14 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Цвет полосы под активным табом в шапке главного блока страницы музыки как у текста */
+._audio_section_tab__all .ui_tab_sel, .ui_tab_sel:hover, 
+._audio_section_tab__all .ui_tabs .ui_tab_sel, .ui_tabs .ui_tab_sel:hover, 
+._audio_section_tab__all .ui_tabs_box .ui_tab_sel, 
+._audio_section_tab__all .ui_tabs_box .ui_tab_sel:hover {
+    border-color: #C3CFE0 !important;
+}
+
 /* Стилизация поиска в главном блоке страницы музыки */
 .audio_page_layout .audio_search_wrapper {
     padding: 10px 20px 20px;
