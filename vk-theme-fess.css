@@ -1,3 +1,4 @@
+@-moz-document url-prefix("https://vk.com/") {
 *:not(.poster__input-msg),
 *:not(.poster__placeholder),
 *:not(.nim-dialog),
@@ -89,6 +90,12 @@ body.dev .wk_text blockquote,
 * TODO: Оформить плейлисты на стене и в сообщениях
 */
 /**********************************************************/
+
+/* Убрать рамку вокруг главного блока страницы музыки */
+.page_block._audio_page_content_block:before,
+.audio_page_layout .audio_block:before {
+    box-shadow: none;
+}
 
 /* Убрать паддинг вокруг строки поиска в плеере из шапки */
 .audio_page_layout .audio_search_wrapper {
@@ -2832,4 +2839,5 @@ body #top_notify_btn .top_notify_count {
     -ms-transition: color .3s 3s !important;
     -o-transition: color .3s 3s !important;
     transition: color .3s 3s !important;
+}
 }
