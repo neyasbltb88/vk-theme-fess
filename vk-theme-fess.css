@@ -91,6 +91,45 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Стилизация старых диалогов */
+.im-page_classic.im-page .im-page--dialogs-footer,
+.im-page_classic.im-page .im-page--dialogs-search,
+.im-page_classic.im-page .im-page--chat-body-abs,
+.im-chat-input.im-chat-input_classic,
+.im-page_classic .im-page--chat-header-in{
+    box-shadow:none;
+}
+
+.dev_top_link.sel, .dev_top_link.sel:hover, #dev_top_nav a:hover, #dev_left_nav a:hover, .dev_nav a.nav.nav_selected, .dev_nav a.nav.nav_selected:hover, .im-page--header-chat:hover, .im-page--toolsw, .im-page--toolsw:hover, .blind_label:hover, .im-page a:hover ,.im-page--back-button:hover, .im-page.im-page_classic:hover, .im-page--header-chat:hover, .im-page_classic.im-page .im-page--dcontent {
+    background-color: rgb(37, 48, 60) !important;
+}
+
+._im_dialog_actions {
+    background: rgb(37, 48, 60);
+}
+
+.im-page_classic.im-page .im-page--header, 
+.im-page--chat-header,
+.im-page_classic.im-page .im-page--chat-input {
+    border-color: rgb(37, 48, 60) !important;
+}
+
+.nim-dialog.nim-dialog_classic.nim-dialog_unread-out .nim-dialog--inner-text, 
+.nim-dialog.nim-dialog_classic.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text,
+.nim-dialog.nim-dialog_classic.nim-dialog_unread-out:hover .nim-dialog--inner-text, 
+.nim-dialog.nim-dialog_classic.nim-dialog_unread-out.nim-dialog_muted:hover .nim-dialog--inner-text {
+    background-color: rgb(37, 48, 60);
+}
+
+.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted):hover.nim-dialog_unread-out .nim-dialog--inner-text, 
+.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted):hover.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text {
+    background-color:rgb(44, 61, 78)
+}
+
+.im-page--back-btn:hover {
+    background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2216%22%20viewBox%3D%220%200%209%2016%22%20width%3D%229%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m8%2015.9c-.2%200-.4-.1-.6-.3l-7-7c-.3-.3-.3-.9%200-1.2l7-7c.3-.3.9-.3%201.2%200s.3.9%200%201.2l-6.4%206.4%206.4%206.4c.3.3.3.9%200%201.2-.2.2-.4.3-.6.3z%22%20fill%3D%22%23828a99%22%20opacity%3D%22.7%22%2F%3E%3C%2Fsvg%3E) 15px 16px no-repeat, linear-gradient(90deg,rgb(44, 61, 78) 50%,rgb(37, 48, 60));
+}
+
 /* Цвет полосы под активным табом в шапке главного блока страницы музыки как у текста */
 ._audio_section_tab__all .ui_tab_sel, .ui_tab_sel:hover, 
 ._audio_section_tab__all .ui_tabs .ui_tab_sel, .ui_tabs .ui_tab_sel:hover, 
@@ -1920,9 +1959,6 @@ box-shadow: -4px 0px 20px 0px rgba(0, 0, 0, 0.42) !important;
 } */
 .top_audio_player:hover, .top_profile_link:hover, #side_bar_inner > ol li a:hover, .wall_module .post_like:hover, .wall_module .post_share:hover, .dev_top_link.sel, .dev_top_link.sel:hover, #dev_top_nav a:hover, .top_audio_player.audio_top_btn_active, .top_profile_link.active {
     background-color: rgba(51, 76, 105, 0.65) !important;
-}
-.dev_top_link.sel, .dev_top_link.sel:hover, #dev_top_nav a:hover, #dev_left_nav a:hover, .dev_nav a.nav.nav_selected, .dev_nav a.nav.nav_selected:hover, .im-page--header-chat:hover, ._im_dialog_actions:hover, .im-page--toolsw, .im-page--toolsw:hover, .blind_label:hover, .im-page a:hover ,.im-page--back-button:hover, .im-page.im-page_classic:hover, .im-page--header-chat:hover {
-    background-color: rgb(37, 48, 60) !important;
 }
 
 .wall_module .page_media_thumbed_link {
