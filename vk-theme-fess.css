@@ -91,6 +91,11 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Фикс отступа слева и скругления пункта левого меню под ховером */
+#side_bar #side_bar_inner ol li {
+    margin-left: 0
+}
+
 /* Стилизация старых диалогов */
 .im-page_classic.im-page .im-page--dialogs-footer,
 .im-page_classic.im-page .im-page--dialogs-search,
