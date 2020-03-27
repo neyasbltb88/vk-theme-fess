@@ -91,6 +91,11 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Небольшая правка тени на блоке со списком диалогов */
+.im-page .im-page--dialogs {
+    box-shadow: 5px 0px 20px -3px rgba(0, 0, 0, 0.42) !important;
+}
+
 /* Скругление углов основоного окна диалогов в нужную сторону */
 .im-page .im-page--history {
     border-radius: 4px 0 0 4px;
@@ -2021,9 +2026,6 @@ box-shadow: -4px 0px 20px 0px rgba(0, 0, 0, 0.42) !important;
 }
 #dev_page_wrap2 {
     padding-top: 25px !important;
-}
-.im-page .im-page--dialogs {
-    box-shadow: 1px 0px 0px 0px #696D7D, 0 1px 0 0 #696D7D, 0 0 0 1px #696D7D;
 }
 #dev_page_wrap1, .dev_page_block, #dev_left_na {
     border-color: #696D7D !important;
