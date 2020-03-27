@@ -91,6 +91,31 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Скругление углов основоного окна диалогов в нужную сторону */
+.im-page .im-page--history {
+    border-radius: 4px 0 0 4px;
+}
+.im-page--chat-header, 
+.im-page--toolsw,
+.im-page--title-wrapper {
+    border-radius: 4px 0 0 0;
+}
+
+.im-chat-input {
+    bottom: -1px;
+    border-radius: 0 0 0 4px;
+}
+
+.im-page .im-page--dialogs {
+    border-radius: 0 4px 4px 0;
+}
+.im-page--dialogs-search.ui_search {
+    border-radius: 0 4px 0 0;
+}
+.im-page .im-page--dialogs-footer {
+    border-radius: 0 0 4px 0;
+}
+
 /* Фикс отступа слева и скругления пункта левого меню под ховером */
 #side_bar #side_bar_inner ol li {
     margin-left: 0
