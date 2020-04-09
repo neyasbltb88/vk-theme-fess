@@ -91,6 +91,28 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Обновленная круглая кнопка перехода в конец открытого диалога */
+.im-navigation.im-navigation--to-end.im-navigation_shown {
+	opacity: .2;
+	z-index: 100;
+    transition: opacity 250ms ease !important;
+}
+.im-navigation.im-navigation--to-end.im-navigation_shown:hover {
+	opacity: .8;
+	z-index: 100;
+}
+
+.im-navigation--to-end .im-navigation__button {
+	background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%227%22%20viewBox%3D%220%200%2014%207%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23ffc000%22%20d%3D%22M1.64.232c-.424-.354-1.055-.296-1.408.128s-.296%201.055.128%201.408l6%205c.371.309.91.309%201.28%200l6-5c.424-.354.482-.984.128-1.408s-.984-.482-1.408-.128l-5.36%204.467z%22%2F%3E%0A%3C%2Fsvg%3E');
+	background-color: rgb(37, 48, 60) !important;	
+	box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, .8);
+    transition: box-shadow 250ms ease !important;
+}
+
+.im-navigation.im-navigation--to-end.im-navigation_shown:hover .im-navigation__button {
+	box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.42);
+}
+
 /* Небольшая правка тени на блоке со списком диалогов */
 .im-page .im-page--dialogs {
     box-shadow: 5px 0px 20px -3px rgba(0, 0, 0, 0.42) !important;
@@ -447,32 +469,6 @@ body.dev .wk_text blockquote,
 .media_link__label, .thumbed_link__label {
 	background-color: rgb(37, 48, 60);
 	margin: -1px;
-}
-
-/* Круглая кнопка перехода в конец открытого диалога */
-.im-to-end.im-to-end_shown {
-	opacity: .5;
-	z-index: 100;
-}
-.im-to-end__button {
-	background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%227%22%20viewBox%3D%220%200%2014%207%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23ffc000%22%20d%3D%22M1.64.232c-.424-.354-1.055-.296-1.408.128s-.296%201.055.128%201.408l6%205c.371.309.91.309%201.28%200l6-5c.424-.354.482-.984.128-1.408s-.984-.482-1.408-.128l-5.36%204.467z%22%2F%3E%0A%3C%2Fsvg%3E');
-	background-color: rgb(37, 48, 60) !important;	
-	box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, .8);
-}
-.im-to-end .im-to-end--label-in {
-	background-color: #ffc000;
-	color: rgb(37, 48, 60) !important;
-}
-
-.im-to-end.im-to-end_shown:hover {
-	opacity: 1;
-}
-.im-to-end.im-to-end_shown:hover .im-to-end__button {
-	background-color: rgb(37, 48, 60) !important;
-	box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.42);
-}
-.im-to-end.im-to-end_shown:hover .im-to-end--label {
-	opacity: .8;
 }
 
 /* Модалка Красивый адрес для Вашей страницы  */
