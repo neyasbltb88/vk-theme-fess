@@ -91,6 +91,11 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Выпадающее меню дополнительных действий на музыкальном треке в списке */
+.audio_row__more_actions .audio_row__more_action {
+    background: rgb(37, 48, 60);
+}
+
 /* Обновленная круглая кнопка перехода в конец открытого диалога */
 .im-navigation.im-navigation--to-end.im-navigation_shown {
 	opacity: .2;
