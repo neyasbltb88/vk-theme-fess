@@ -22,6 +22,7 @@ body .nim-dialog,
 
 
 /* ? Цвет светлых элементов #E8EAED, rgb(232, 234, 237) ?
+*  Цвет бордера rgba(105, 109, 125, 0.4)
 *  Цвет текста #C3CFE0, rgb(195, 207, 224)
 *  #25303c, rgb(37, 48, 60)
 *  #2c3d4e, rgb(44, 61, 78)
@@ -92,8 +93,25 @@ body.dev .wk_text blockquote,
 /**********************************************************/
 
 /* Выпадающее меню дополнительных действий на музыкальном треке в списке */
+.audio_row .audio_row__info .eltt {
+	background-color: rgb(44, 61, 78) !important;
+	border: 1px solid rgba(105, 109, 125, 0.4) !important;
+}
+
 .audio_row__more_actions .audio_row__more_action {
-    background: rgb(37, 48, 60);
+	background-color: rgb(44, 61, 78);
+}
+
+.audio_row__more_actions .audio_row__more_action:hover {
+ 	background: rgb(37, 48, 60);
+}
+
+.audio_row__more_actions .audio_row__more_playlist_added {
+	color: #ffc000 !important;
+}
+
+.audio_row__more_actions .audio_row__more_playlist_added:before {
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2210%22%20viewBox%3D%220%200%2012%2010%22%20width%3D%2212%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m0%205.33333333%202.5%202.66666667%207.5-8%22%20fill%3D%22none%22%20stroke%3D%22%23ffc000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20transform%3D%22translate(1%201)%22%2F%3E%3C%2Fsvg%3E");
 }
 
 /* Обновленная круглая кнопка перехода в конец открытого диалога */
@@ -1053,9 +1071,6 @@ body .ui_rmenu_loading_item:before, body .ui_rmenu_loading_item:hover {
 }
 .podcast_episode_layer__content .audio_row__playing {
   background-color: rgb(44, 61, 78) !important;
-}
-.audio_row__more_actions .audio_row__more_action:hover {
-  background-color: rgb(44, 61, 78);
 }
 
 
