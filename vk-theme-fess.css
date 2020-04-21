@@ -92,6 +92,12 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Фон блока с треками в табе "Рекомендации" из плеера в шапке */
+.CatalogBlock--divided {
+	background: rgb(44, 61, 78);
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42) !important;
+}
+
 /* Выпадающее меню дополнительных действий на музыкальном треке в списке */
 .audio_row .audio_row__info .eltt {
 	background-color: rgb(44, 61, 78) !important;
