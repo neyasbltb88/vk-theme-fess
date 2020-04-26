@@ -92,9 +92,14 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
-/* Фон блока с треками в табе "Рекомендации" из плеера в шапке
-* и блока результатов поиска там же, в шапке
-*/
+/* Убрана рамка вокруг блоков в рекомендации музыки */
+.CatalogBlock--divided:before,
+.CatalogBlock--divided:before, 
+.CatalogSection:before {
+	box-shadow: none;
+}
+
+/* Фон блока с треками в табе "Рекомендации" из плеера в шапке */
 .CatalogBlock--divided, .CatalogSection__search_results {
 	background: rgb(44, 61, 78);
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42) !important;
