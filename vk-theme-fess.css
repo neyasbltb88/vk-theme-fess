@@ -50,7 +50,7 @@ body .nim-dialog,
 }
 
 
-body, .nim-dialog.nim-dialog_muted.nim-dialog_selected, a.fc_contact_over, .nim-dialog.nim-dialog_selected, .group1, .group2, .group3, .group4, .group5, .group6, .group7, .group8, .group9, .group10, .audio_row.audio_row_current, .audio_row.audio_row_playing, .audio_row.audio_row_current:hover, .audio_row.audio_row_playing:hover, .pv_white_bg, .post_video_title, .videocat_channel_header, .videocat_channel_title a, .video_upload_ready_name, .video_item_title em, .wdd_hl, .page_media_poll .page_poll_percent, .video_item .video_restore.feedback_row_wrap.unread:not(.feedback_row_touched), .top_notify_cont .feedback_row:not(.dld):hover, .photos_container_albums .photos_album_thumb, .video_item .video_item_thumb_wrap, .video_playlist_item .video_playlist_item_thumb_wrap, .videocat_featured_playlist, .videocat_featured_vide, .post_video_title, .videocat_channel_subscribe .videocat_subscribe_btn .videocat_icon, .video_playlist_item_thumb_wrap, .tu_row_comment, .mv_info_wide_column, .mv_playlist_item, .mv_playlist_header.clear_fix, .market_item_content, .emoji_cat_title, #fw_summary, #fw_replies_header, #im--page > div.im-page--history.page_block._im_page_history > div.im-page-history-w > div.im-page--header-chat._im_dialog_actions > div.im-page--top-date-bar-wrap > div, .im-chat-input.clear_fix._im_chat_input_parent, ._sticker_hints_inner.sticker_hints_inner, .sticker_hints_arrow.sticker_right, .sticker_hints_arrow.sticker_left, .sticker_hints_arrow.sticker_left.daysofweek, .daysofweek, .im_cal_clear, .pe_editor .pe_tabs .pe_tab:hover, .pe_editor, .pe_tabs, .pe_tab.pe_selected, .pe_sticker_pack_tab.pe_selected, .video_upload_separator_text, .video_upload_separator_line, .mv_tt_add_playlist, .pe_filter_thumb.pe_filter_selected, .pe_actions, #page_wrap > div > div._wcomments_content.wcomments_content > div._wcomments_form.clear_fix > div, .mv_claimed, .hb_wrap, .basis__header.mhead, .mv_is_in_progress, #marketplace .market_content .market_row.over, #header, #header_wrap2, #header_wrap1, #title, #sf-single-video-menu, .mv_playlist .mv_playlist_list, .im-page--title-wrapper, .im-chat-input .sticker_hints_tt, #payments_box.payments_box_votes .msg, .places_choose_map_content .msg, .settings_panel .msg, .box_msg, .box_msg_gray, .gift_error, .gift_notice, .wcomments_form .wcomments_post_field, .pva_period_fixed, .tt_text, .notify_tt_wrap .top_tt_important, .audio_row__playing, .audio_row__current .audio_row_content, .audio_row:hover .audio_row_content,
+body, .nim-dialog.nim-dialog_muted.nim-dialog_selected, a.fc_contact_over, .nim-dialog.nim-dialog_selected, .group1, .group2, .group3, .group4, .group5, .group6, .group7, .group8, .group9, .group10, .audio_row.audio_row_current, .audio_row.audio_row_playing, .audio_row.audio_row_current:hover, .audio_row.audio_row_playing:hover, .pv_white_bg, .post_video_title, .videocat_channel_header, .videocat_channel_title a, .video_upload_ready_name, .video_item_title em, .wdd_hl, .page_media_poll .page_poll_percent, .video_item .video_restore.feedback_row_wrap.unread:not(.feedback_row_touched), .top_notify_cont .feedback_row:not(.dld):hover, .photos_container_albums .photos_album_thumb, .video_item .video_item_thumb_wrap, .video_playlist_item .video_playlist_item_thumb_wrap, .videocat_featured_playlist, .videocat_featured_vide, .post_video_title, .videocat_channel_subscribe .videocat_subscribe_btn .videocat_icon, .video_playlist_item_thumb_wrap, .tu_row_comment, .mv_info_wide_column, .mv_playlist_item, .mv_playlist_header.clear_fix, .market_item_content, .emoji_cat_title, #fw_summary, #fw_replies_header, #im--page > div.im-page--history.page_block._im_page_history > div.im-page-history-w > div.im-page--header-chat._im_dialog_actions > div.im-page--top-date-bar-wrap > div, .im-chat-input.clear_fix._im_chat_input_parent, ._sticker_hints_inner.sticker_hints_inner, .sticker_hints_arrow.sticker_right, .sticker_hints_arrow.sticker_left, .sticker_hints_arrow.sticker_left.daysofweek, .daysofweek, .im_cal_clear, .pe_editor .pe_tabs .pe_tab:hover, .pe_editor, .pe_tabs, .pe_tab.pe_selected, .pe_sticker_pack_tab.pe_selected, .video_upload_separator_text, .video_upload_separator_line, .mv_tt_add_playlist, .pe_filter_thumb.pe_filter_selected, .pe_actions, #page_wrap > div > div._wcomments_content.wcomments_content > div._wcomments_form.clear_fix > div, .mv_claimed, .hb_wrap, .basis__header.mhead, .mv_is_in_progress, #marketplace .market_content .market_row.over, #header, #header_wrap2, #header_wrap1, #title, #sf-single-video-menu, .mv_playlist .mv_playlist_list, .im-page--title-wrapper, .im-chat-input .sticker_hints_tt, #payments_box.payments_box_votes .msg, .places_choose_map_content .msg, .settings_panel .msg, .box_msg, .box_msg_gray, .gift_error, .gift_notice, .wcomments_form .wcomments_post_field, .pva_period_fixed, .tt_text, .notify_tt_wrap .top_tt_important,
 body.dev .wk_text blockquote,
 .info_msg,
 .piechart_col_header th
@@ -91,6 +91,68 @@ body.dev .wk_text blockquote,
 * TODO: Оформить плейлисты на стене и в сообщениях
 */
 /**********************************************************/
+/* Плейлист на стене в посте */
+.audio_row:hover .audio_row_content {
+	background-color: rgba(37, 48, 60, .8) !important;
+}
+
+.audio_row__playing,
+.audio_row__current .audio_row_content {
+	background-color: rgba(37, 48, 60, .6) !important;
+	border-radius: 4px;
+}
+
+.audio_row .audio_row__inner {
+	padding-left: 40px;
+}
+
+.audio_row .audio_row__performers, 
+.audio_row .audio_row__title {
+/* 	text-shadow: 0 0 6px rgb(44, 61, 78, 1); */
+	text-shadow: 0 0 6px rgb(37, 48, 60);
+	padding: 12px 4px;
+}
+
+.audio_pl_snippet2 {
+	background-color: rgb(44, 61, 78);
+	overflow: hidden;
+    position: relative;
+}
+
+.audio_pl_snippet2 .audio_pl_snippet__header {
+	position: static;
+	z-index: 1;
+}
+
+/* При наведении на обложку плейлиста, растягивает ее на фон всего блока плейлиста */
+.audio_pl_snippet__header .audio_pl_snippet__cover {
+	z-index: 1;
+	will-change: transform, filter, opacity;
+	transition: transform 250ms ease-out, filter 250ms ease-out, opacity 250ms ease-out !important;
+}
+
+.audio_pl_snippet__cover:hover {
+/*     position: absolute;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    left: -5px;
+    top: -5px; */
+	transform: scale(3.5) translate(51px, 51px);
+    background-color: rgba(255, 255, 255, 0.001) !important;
+    background-size: cover !important;
+    filter: blur(1px);
+	opacity: .9;
+}
+
+.audio_pl_snippet2 .audio_pl_snippet__body {
+	z-index: 10;
+    position: relative;
+}
+
+.audio_pl_snippet2 .audio_shuffle_all_button:hover {
+    background-color: rgb(37, 48, 60);
+    border-radius: 4px;
+}
 
 /* Убрана рамка вокруг блоков в рекомендации музыки */
 .CatalogBlock--divided:before,
@@ -2518,17 +2580,6 @@ body:not(.dev) .dev_page_block:first-child {
     z-index: 100;
     background-color: rgba(255, 255, 255, 0.001) !important;
     transition: all .5s !important;
-}
-.post_content .audio_pl_snippet__header:hover .audio_pl_snippet__cover {
-    position: absolute;
-    width: 508px;
-    height: 508px;
-    margin-left: -14px;
-    margin-top: -14px;
-    background-color: rgba(255, 255, 255, 0.001) !important;
-    background-size: cover !important;
-    transition: all .3s ease-out !important;
-    filter: blur(2px);
 }
 
 
