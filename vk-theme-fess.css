@@ -35,7 +35,7 @@ body .nim-dialog,
 /*////////////////////////////////////////////////////////////*/
 
 ::-webkit-scrollbar {
-  width: .55%;
+  width: 0;
   min-width: 6px; 
   height: 8px;
 }
