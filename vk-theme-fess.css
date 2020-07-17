@@ -571,7 +571,7 @@ body.dev .wk_text blockquote,
 }
 
 /* Кнопка о наличии нового уведомления в окне 'колокольчика' */
-[dir] .notifications_new_events, .notifications_new_events:hover {
+[dir] .notifications_new_events, [dir] .notifications_new_events:hover {
 	background-color: rgb(37, 48, 60);
 	color: #ffc000 !important;
 }
