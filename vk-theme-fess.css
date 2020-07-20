@@ -561,21 +561,21 @@ body.dev .wk_text blockquote,
 }
 
 /* Инпут в диалоге при записи голоса */
-.im-audio-message-input {
+[dir] .im-audio-message-input {
 	background-color: rgb(37, 48, 60);
 }
-.im-audio-message-input .im-audio-message-track {
+[dir] .im-audio-message-input .im-audio-message-track {
 	background-color: rgb(44, 61, 78);
 }
-.im-audio-message-input .audio-msg-track.audio-msg-track_recording .audio-msg-track--btn {
+[dir] .im-audio-message-input .audio-msg-track.audio-msg-track_recording .audio-msg-track--btn {
 	  background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%2262%200%2024%2024%22%3E%3Cdesc%3E%20Created%20with%20Sketch.%3C%2Fdesc%3E%3Cg%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M74%2024C80.6%2024%2086%2018.6%2086%2012%2086%205.4%2080.6%200%2074%200%2067.4%200%2062%205.4%2062%2012%2062%2018.6%2067.4%2024%2074%2024Z%22%20fill%3D%22%23ffc000%22%2F%3E%3Crect%20x%3D%2270%22%20y%3D%228%22%20width%3D%228%22%20height%3D%228%22%20rx%3D%221%22%20fill%3D%22%23000%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E) #ffc000 no-repeat 50%;
 }
 
-.im-audio-message-input .audio-msg-track .audio-msg-track--btn {
+[dir] .im-audio-message-input .audio-msg-track .audio-msg-track--btn {
 	  background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.0%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%2011%22%20width%3D%2210px%22%20height%3D%2211px%22%3E%0A%20%20%20%20%3Cpolygon%20stroke%3D%22%23000%22%20fill%3D%22%23000%22%20style%3D%22stroke-linecap%3A%20round%3B%20stroke-linejoin%3A%20round%3B%22%20points%3D%222.5%200.5%202.5%209.5%209.5%205%22%20transform%3D%22%22%3E%3C%2Fpolygon%3E%0A%3C%2Fsvg%3E) #ffc000 no-repeat 50%;
 }
 
-.im-audio-message-input .audio-msg-track.audio-msg-track_playing .audio-msg-track--btn {
+[dir] .im-audio-message-input .audio-msg-track.audio-msg-track_playing .audio-msg-track--btn {
 	  background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.0%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%2011%22%20width%3D%2210px%22%20height%3D%2211px%22%3E%0A%20%20%20%20%3Crect%20x%3D%221.5%22%20y%3D%221%22%20rx%3D%220.5%22%20ry%3D%220.5%22%20width%3D%222%22%20height%3D%229%22%20fill%3D%22%23000%22%20stroke%3D%22%23000%22%20%2F%3E%0A%20%20%20%20%3Crect%20x%3D%226.5%22%20y%3D%221%22%20rx%3D%220.5%22%20ry%3D%220.5%22%20width%3D%222%22%20height%3D%229%22%20fill%3D%22%23000%22%20stroke%3D%22%23000%22%20%2F%3E%0A%3C%2Fsvg%3E) #ffc000 no-repeat 50%;
 }
 
@@ -596,16 +596,17 @@ body.dev .wk_text blockquote,
 }
 
 /* Цвет ссылок */
-._im_mess .im-mess--text a:not(._im_replied_author_link):not(.im_srv_lnk ):not(.wall_post_more):not(.author):not(.im-mess-stack--lnk):not([onclick*="showForwardBox"]):not(.media_link__title):not(.mem_link):not(.page_doc_title):not([href*="browse_images"]), 
-.wall_reply_text a[rel="nofollow noopener"],
-.wall_post_cont a[rel="nofollow noopener"] { 
+[dir] ._im_mess .im-mess--text a:not(._im_replied_author_link):not(.im_srv_lnk ):not(.wall_post_more):not(.author):not(.im-mess-stack--lnk):not([onclick*="showForwardBox"]):not(.media_link__title):not(.mem_link):not(.page_doc_title):not([href*="browse_images"]), 
+[dir] .wall_reply_text a[rel="nofollow noopener"],
+[dir] .wall_post_cont a[rel="nofollow noopener"] { 
 	color: #E8EAED !important;
 	font-weight: 500;
 	text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Фон ссылки-вложения */
-.media_link__label, .thumbed_link__label {
+[dir] .media_link__label, 
+[dir] .thumbed_link__label {
 	background-color: rgb(37, 48, 60);
 	margin: -1px;
 }
