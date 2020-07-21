@@ -92,6 +92,13 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Выделенные отфильтрованные слова в удаленных комментариях паблика */
+[dir] .group_activity_row_wrap .group_obscene_word {
+	background: rgb(37, 48, 60);
+/* 	background: rgb(44, 61, 78); */
+	color: #ffc000 !important;
+}
+
 /* ============= Тултипы ============= */
 [dir] .emoji_tt_wrap.tt_down:before {
 	border-top-color: rgba(105, 109, 125, 0.4);
