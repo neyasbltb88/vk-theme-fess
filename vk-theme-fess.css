@@ -618,6 +618,10 @@ body.dev .wk_text blockquote,
 	margin: -1px;
 }
 
+[dir] .article_snippet.article_snippet_mini .article_snippet_mini_info_block {
+	background-color: rgb(37, 48, 60);
+}
+
 /* Модалка Красивый адрес для Вашей страницы  */
 .settdbx_edit {
 	background-color: rgb(44, 61, 78);
