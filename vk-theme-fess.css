@@ -92,6 +92,12 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Кнопка дополнительных действий в шапке над списком диалогов */
+[dir=ltr] .im-page--dialogs-header-control:last-child, [dir=ltr] .im-page--dialogs-extra-wrap .im-page--dialogs-header-control {
+	border: none;
+    padding-right: 9px;
+}
+
 /* Выделенные отфильтрованные слова в удаленных комментариях паблика */
 [dir] .group_activity_row_wrap .group_obscene_word {
 	background: rgb(37, 48, 60);
