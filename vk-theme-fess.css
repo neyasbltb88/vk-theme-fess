@@ -92,6 +92,16 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Фикс цвета основной шапки */
+[dir] #page_header_cont {
+	background-color: rgb(44, 61, 78);
+	border-bottom: none;
+}
+
+[dir=ltr] .TopSearch__input {
+	border-left-color: transparent !important;
+}
+
 /* Кнопка дополнительных действий в шапке над списком диалогов */
 [dir=ltr] .im-page--dialogs-header-control:last-child, [dir=ltr] .im-page--dialogs-extra-wrap .im-page--dialogs-header-control {
 	border: none;
