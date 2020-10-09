@@ -19,17 +19,27 @@ body .nim-dialog,
   border-color: transparent !important;
 }
 
+:root {
+	--dark-bg: rgb(37, 48, 60);
+	--middle-bg: rgb(44, 61, 78);
+	--text-color: rgb(195, 207, 224);
+	--accent-color: #ffc000;
+	--border-color: rgba(105, 109, 125, 0.4);
+	--light-color: rgb(232, 234, 237);
+	--like-color: #ff3347;
+	--icon-color: rgb(93, 121, 151);
+	--block-shadow: box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
+}
 
-
-/* ? Цвет светлых элементов #E8EAED, rgb(232, 234, 237) ?
-*  Цвет бордера rgba(105, 109, 125, 0.4)
-*  Цвет текста #C3CFE0, rgb(195, 207, 224)
-*  #25303c, rgb(37, 48, 60)
-*  #2c3d4e, rgb(44, 61, 78)
-*  Желтый #ffc000, rgba(255, 192, 0, 1)
-*  Красный цвет лайка #ff3347
-*  Цвет иконок #5d7997, rgb(93, 121, 151)
-*  Тень больших блоков box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
+/* ? Цвет светлых элементов #E8EAED, rgb(232, 234, 237) ? var(--light-color)
+*  Цвет бордера rgba(105, 109, 125, 0.4) var(--border-color)
+*  Цвет текста #C3CFE0, rgb(195, 207, 224) var(--text-color)
+*  #25303c, rgb(37, 48, 60) var(--dark-bg)
+*  #2c3d4e, rgb(44, 61, 78) var(--middle-bg)
+*  Желтый #ffc000, rgba(255, 192, 0, 1) var(--accent-color)
+*  Красный цвет лайка #ff3347 var(--like-color)
+*  Цвет иконок #5d7997, rgb(93, 121, 151) var(--icon-color)
+*  Тень больших блоков box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42) var(--block-shadow)
 */
 
 /*////////////////////////////////////////////////////////////*/
