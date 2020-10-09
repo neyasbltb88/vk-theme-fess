@@ -163,6 +163,22 @@ body.dev .wk_text blockquote,
 	margin-top: 0;
 }
 
+/* Уменьшение высоты шапки */
+[dir] body.new_header_design {
+	--header-height: 40px;
+}
+
+[dir] body.new_header_design .TopSearch,
+[dir] body.new_header_design .TopSearch__input {
+	height: 28px;
+}
+
+[dir] body.new_header_design .TopSearch__input::placeholder, 
+[dir] body.new_header_design .TopSearch .input_back_content {
+	font-size: 12px;
+	opacity: 0.7;
+}
+
 
 /* ------- Новый дизайн октябрь 2020 ------- */
 
