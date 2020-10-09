@@ -148,6 +148,11 @@ body.dev .wk_text blockquote,
 	padding: 0 4px 0 8px;
 }
 
+/* Фикс длины разделителей разделов главного меню */
+[dir=ltr] body.new_header_design #side_bar .more_div {
+    margin: 9px 4px 0 36px;
+}
+
 /* фикс расположения значка онлайн-статуса от vkopt */
 #vk_online_status {
 	display: flex;
