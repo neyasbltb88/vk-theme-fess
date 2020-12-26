@@ -103,6 +103,12 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Цвет разделителя закрепленных диалогов от простых */
+[dir] .nim-dialog.nim-dialog_pinned+.nim-dialog:not(.nim-dialog_pinned)::before {
+	background: var(--middle-bg);
+	box-shadow: var(--block-shadow);
+}
+
 /* ======= Новый дизайн октябрь 2020 ======= */
 /* Фон шапки */
 [dir] body.new_header_design #page_header_cont {
