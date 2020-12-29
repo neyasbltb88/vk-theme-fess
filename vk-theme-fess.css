@@ -103,10 +103,14 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Пометки отредактированных сообщений в диалоге сделаны бледнее */
+.im-mess--lbl-was-edited {
+	opacity: 0.5;
+}
+
 /* Цвет разделителя закрепленных диалогов от простых */
 [dir] .nim-dialog.nim-dialog_pinned+.nim-dialog:not(.nim-dialog_pinned)::before {
-	background: var(--middle-bg);
-	box-shadow: var(--block-shadow);
+	background: var(--border-color);
 }
 
 /* ======= Новый дизайн октябрь 2020 ======= */
