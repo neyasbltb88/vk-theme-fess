@@ -20,16 +20,17 @@ body .nim-dialog,
 }
 
 :root {
-	--dark-bg: rgb(37, 48, 60);
-	--middle-bg: rgb(44, 61, 78);
-	--text-color: rgb(195, 207, 224);
-	--accent-color: #ffc000;
-	--border-color: rgba(105, 109, 125, 0.4);
-	--light-color: rgb(232, 234, 237);
-	--like-color: #ff3347;
-	--icon-color: rgb(93, 121, 151);
-	--block-shadow: box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
-	--menu-icon-color: #5181b8;
+    --dark-bg: rgb(37, 48, 60);
+    --middle-bg: rgb(44, 61, 78);
+    --text-color: rgb(195, 207, 224);
+    --accent-color: #ffc000;
+    --orange-color: rgb(208, 127, 41);
+    --border-color: rgba(105, 109, 125, 0.4);
+    --light-color: rgb(232, 234, 237);
+    --like-color: #ff3347;
+    --icon-color: rgb(93, 121, 151);
+    --block-shadow: box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
+    --menu-icon-color: #5181b8;
 }
 
 /* ? Цвет светлых элементов #E8EAED, rgb(232, 234, 237) ? var(--light-color)
@@ -103,20 +104,25 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Фикс цвета бейджика уведомлений на колокольчике в шапке */
+[dir] .TopNavBtn__notifyCount {
+    background-color: var(--orange-color) !important;
+}
+
 /* Пометки отредактированных сообщений в диалоге сделаны бледнее */
 .im-mess--lbl-was-edited {
-	opacity: 0.5;
+    opacity: 0.5;
 }
 
 /* Цвет разделителя закрепленных диалогов от простых */
 [dir] .nim-dialog.nim-dialog_pinned+.nim-dialog:not(.nim-dialog_pinned)::before {
-	background: var(--border-color);
+    background: var(--border-color);
 }
 
 /* ======= Новый дизайн октябрь 2020 ======= */
 /* Фон шапки */
 [dir] body.new_header_design #page_header_cont {
-	background-color: var(--middle-bg);
+    background-color: var(--middle-bg);
     border-bottom: none;
 }
 
@@ -125,37 +131,37 @@ body.dev .wk_text blockquote,
 [dir] body.new_header_design .p_head_l97 .top_home_link .top_home_logo, 
 [dir] body.new_header_design .p_head_l114 .top_home_link .top_home_logo, 
 [dir] body.new_header_design .p_head_l1 .top_home_link .top_home_logo {
-	background-image: url('https://vk.com/images/svg_icons/ic_head_logo.svg');
+    background-image: url('https://vk.com/images/svg_icons/ic_head_logo.svg');
 }
 
 /* Иконка уведомления в шапке с синим цветом иконок из главного меню */
 [dir] body.new_header_design .top_nav_btn#top_notify_btn .top_nav_btn_icon {
-	background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20fill%3D%22none%22%20height%3D%2224%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%202.1c4%200%206.9%203.3%206.9%207.5v1.6c0%20.3.2.6.7%201.1l.3.3c1%201%201.5%201.7%201.5%202.7%200%20.5%200%20.8-.3%201.2-.4%201-1.4%201.4-2.8%201.4h-2c-.6%202.3-2%203.6-4.3%203.6-2.2%200-3.8-1.3-4.4-3.7v.1H5.7c-1.5%200-2.4-.5-2.9-1.4-.2-.4-.2-.7-.2-1.2%200-1%20.4-1.6%201.5-2.7l.3-.3c.5-.5.7-.8.7-1V9.5C5.1%205.4%208%202.1%2012%202.1zm2.5%2015.8h-5c.5%201.2%201.3%201.8%202.5%201.8s2-.6%202.5-1.8zM12%203.9c-3%200-5.1%202.4-5.1%205.7v1.6c0%20.9-.4%201.5-1.2%202.4l-.3.2c-.8.8-1%201.2-1%201.5v.4c.2.2.5.4%201.3.4h12.6c.8%200%201.1-.2%201.2-.4l.1-.4c0-.3-.2-.7-1-1.5a41%2041%200%2001-.3-.2c-.8-1-1.2-1.5-1.2-2.4V9.6C17.1%206.3%2015%204%2012%204z%22%20fill%3D%22%235181b8%22%2F%3E%3C%2Fsvg%3E');
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20fill%3D%22none%22%20height%3D%2224%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%202.1c4%200%206.9%203.3%206.9%207.5v1.6c0%20.3.2.6.7%201.1l.3.3c1%201%201.5%201.7%201.5%202.7%200%20.5%200%20.8-.3%201.2-.4%201-1.4%201.4-2.8%201.4h-2c-.6%202.3-2%203.6-4.3%203.6-2.2%200-3.8-1.3-4.4-3.7v.1H5.7c-1.5%200-2.4-.5-2.9-1.4-.2-.4-.2-.7-.2-1.2%200-1%20.4-1.6%201.5-2.7l.3-.3c.5-.5.7-.8.7-1V9.5C5.1%205.4%208%202.1%2012%202.1zm2.5%2015.8h-5c.5%201.2%201.3%201.8%202.5%201.8s2-.6%202.5-1.8zM12%203.9c-3%200-5.1%202.4-5.1%205.7v1.6c0%20.9-.4%201.5-1.2%202.4l-.3.2c-.8.8-1%201.2-1%201.5v.4c.2.2.5.4%201.3.4h12.6c.8%200%201.1-.2%201.2-.4l.1-.4c0-.3-.2-.7-1-1.5a41%2041%200%2001-.3-.2c-.8-1-1.2-1.5-1.2-2.4V9.6C17.1%206.3%2015%204%2012%204z%22%20fill%3D%22%235181b8%22%2F%3E%3C%2Fsvg%3E');
 }
 
 /* Иконка музыки в шапке с синим цветом иконок из главного меню */
 [dir] body.new_header_design .top_nav_btn#top_audio .top_nav_btn_icon {
-	background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20fill%3D%22none%22%20height%3D%2224%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22M16.7%203.6a17.3%2017.3%200%20011.8-.2c.2%200%20.4.2.5.4v.4l.1%201.3L8.9%207.6v-.5a15.5%2015.5%200%20010-1.4l.5-.5.3-.1%201-.2zm-9.6%2011h-.2a6%206%200%2000-4%201.2c-1%20.8-1.3%201.8-1.3%202.7C1.6%2020.4%203.1%2022%205%2022c.9%200%202-.4%202.7-1.3a6%206%200%20001.2-4V9.5l10.2-2.1v5.2h-.2a6%206%200%2000-4%201.2c-1%20.8-1.3%201.8-1.3%202.7%200%201.9%201.5%203.4%203.4%203.4.9%200%202-.4%202.7-1.3a6%206%200%20001.2-4V5.5%204c0-.4-.2-.8-.4-1.2-.3-.5-.8-1-1.4-1.1-.4-.2-.9-.2-1.3-.1l-1.4.2-6%201.3-1.2.2a3%203%200%2000-.9.5c-.4.3-.7.7-1%201.2a3%203%200%2000-.2%201V7zm9%20.6c-.5.4-.7.9-.7%201.3%200%20.9.7%201.6%201.6%201.6.4%200%201-.2%201.3-.6.4-.5.8-1.4.8-2.9v-.2h-.2c-1.5%200-2.4.4-2.9.8zM3.3%2018.5c0-.4.2-1%20.6-1.3.5-.4%201.4-.8%202.9-.8h.2v.2c0%201.5-.4%202.4-.8%202.9-.4.4-.9.6-1.3.6-.9%200-1.6-.7-1.6-1.6z%22%20fill%3D%22%235181b8%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E')
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20fill%3D%22none%22%20height%3D%2224%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20clip-rule%3D%22evenodd%22%20d%3D%22M16.7%203.6a17.3%2017.3%200%20011.8-.2c.2%200%20.4.2.5.4v.4l.1%201.3L8.9%207.6v-.5a15.5%2015.5%200%20010-1.4l.5-.5.3-.1%201-.2zm-9.6%2011h-.2a6%206%200%2000-4%201.2c-1%20.8-1.3%201.8-1.3%202.7C1.6%2020.4%203.1%2022%205%2022c.9%200%202-.4%202.7-1.3a6%206%200%20001.2-4V9.5l10.2-2.1v5.2h-.2a6%206%200%2000-4%201.2c-1%20.8-1.3%201.8-1.3%202.7%200%201.9%201.5%203.4%203.4%203.4.9%200%202-.4%202.7-1.3a6%206%200%20001.2-4V5.5%204c0-.4-.2-.8-.4-1.2-.3-.5-.8-1-1.4-1.1-.4-.2-.9-.2-1.3-.1l-1.4.2-6%201.3-1.2.2a3%203%200%2000-.9.5c-.4.3-.7.7-1%201.2a3%203%200%2000-.2%201V7zm9%20.6c-.5.4-.7.9-.7%201.3%200%20.9.7%201.6%201.6%201.6.4%200%201-.2%201.3-.6.4-.5.8-1.4.8-2.9v-.2h-.2c-1.5%200-2.4.4-2.9.8zM3.3%2018.5c0-.4.2-1%20.6-1.3.5-.4%201.4-.8%202.9-.8h.2v.2c0%201.5-.4%202.4-.8%202.9-.4.4-.9.6-1.3.6-.9%200-1.6-.7-1.6-1.6z%22%20fill%3D%22%235181b8%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E')
 }
 
 /* Фикс закруглений слева у пунктов главного меню */
 [dir=ltr] .body_im .side_bar {
-	width: 170px;
-	padding-left: 140px;
+    width: 170px;
+    padding-left: 140px;
 }
 
 [dir=ltr] .body_im .side_bar .side_bar_inner {
-	width: 100%;
+    width: 100%;
 }
 
 [dir=ltr] body.new_header_design #side_bar ol {
-	margin: 0 10px 10px 0;
+    margin: 0 10px 10px 0;
 }
 
 [dir] body.new_header_design #side_bar ol li .left_row {
-	width: 146px;
-	border-radius: 5px;
-	padding: 0 4px 0 8px;
+    width: 146px;
+    border-radius: 5px;
+    padding: 0 4px 0 8px;
 }
 
 /* Фикс длины разделителей разделов главного меню */
@@ -165,40 +171,40 @@ body.dev .wk_text blockquote,
 
 /* фикс расположения значка онлайн-статуса от vkopt */
 #vk_online_status {
-	display: flex;
+    display: flex;
     align-items: center;
 }
 
 #vk_online_status > * {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 /* Уменьшение высоты шапки */
 [dir] body.new_header_design {
-	--header-height: 40px;
+    --header-height: 40px;
 }
 
 [dir] body.new_header_design .TopSearch,
 [dir] body.new_header_design .TopSearch__input {
-	height: 28px;
+    height: 28px;
 }
 
 [dir] body.new_header_design .TopSearch__input::placeholder, 
 [dir] body.new_header_design .TopSearch .input_back_content {
-	font-size: 12px;
-	opacity: 0.7;
+    font-size: 12px;
+    opacity: 0.7;
 }
 
 /* Бордер бейджа с количеством уведомлений при ховере на колокольчик */
 [dir] body.new_header_design .top_notify_count::after {
-	border-color: var(--accent-color) !important;
-	opacity: 0.5;
-	transition: opacity 250ms ease-in-out;
+    border-color: var(--accent-color) !important;
+    opacity: 0.5;
+    transition: opacity 250ms ease-in-out;
 }
 
 [dir] body.new_header_design .top_nav_btn:hover .top_notify_count::after {
-	border-color: var(--accent-color) !important;
-	opacity: 1;
+    border-color: var(--accent-color) !important;
+    opacity: 1;
 }
 
 
@@ -206,93 +212,93 @@ body.dev .wk_text blockquote,
 
 /* Фикс цвета основной шапки */
 [dir] #page_header_cont {
-	background-color: rgb(44, 61, 78);
-	border-bottom: none;
+    background-color: rgb(44, 61, 78);
+    border-bottom: none;
 }
 
 [dir=ltr] .TopSearch__input {
-	border-left-color: transparent !important;
+    border-left-color: transparent !important;
 }
 
 /* Кнопка дополнительных действий в шапке над списком диалогов */
 [dir=ltr] .im-page--dialogs-header-control:last-child, [dir=ltr] .im-page--dialogs-extra-wrap .im-page--dialogs-header-control {
-	border: none;
+    border: none;
     padding-right: 9px;
 }
 
 /* Выделенные отфильтрованные слова в удаленных комментариях паблика */
 [dir] .group_activity_row_wrap .group_obscene_word {
-	background: rgb(37, 48, 60);
-/* 	background: rgb(44, 61, 78); */
-	color: #ffc000 !important;
+    background: rgb(37, 48, 60);
+/*  background: rgb(44, 61, 78); */
+    color: #ffc000 !important;
 }
 
 /* ============= Тултипы ============= */
 [dir] .emoji_tt_wrap.tt_down:before {
-	border-top-color: rgba(105, 109, 125, 0.4);
+    border-top-color: rgba(105, 109, 125, 0.4);
 }
 [dir] .emoji_tt_wrap.tt_down:after {
-	border-top-color: rgb(44, 61, 78);
+    border-top-color: rgb(44, 61, 78);
 }
 
 /* Кнопка "Перейти в VK Connect" */
 [dir] .top_profile_vkconnect_row:hover {
-	background-color: rgba(37, 48, 60, .8);
+    background-color: rgba(37, 48, 60, .8);
 }
 
 /* Фон баннера сверху диалога(например о том, что у этого человека др) */
 .im-top-banner {
-	background: rgb(44, 61, 78);
+    background: rgb(44, 61, 78);
 }
 
 /* Фикс фона у плеера из шапки */
 .CatalogBlock--divided, 
 .CatalogSection {
-	background: rgb(44, 61, 78);
+    background: rgb(44, 61, 78);
 }
 
 .CatalogBlock__separator {
-	background-color: rgba(105, 109, 125, 0.4)
+    background-color: rgba(105, 109, 125, 0.4)
 }
 
 /* Плейлист на стене в посте */
 .audio_row:hover .audio_row_content {
-	background-color: rgba(37, 48, 60, .8) !important;
+    background-color: rgba(37, 48, 60, .8) !important;
 }
 
 .audio_row__playing,
 .audio_row__current .audio_row_content {
-	background-color: rgba(37, 48, 60, .6) !important;
-	border-radius: 4px;
+    background-color: rgba(37, 48, 60, .6) !important;
+    border-radius: 4px;
 }
 
 .audio_row .audio_row__inner {
-	padding-left: 40px;
+    padding-left: 40px;
 }
 
 .audio_row .audio_row__performers, 
 .audio_row .audio_row__title {
-/* 	text-shadow: 0 0 6px rgb(44, 61, 78, 1); */
-	text-shadow: 0 0 6px rgb(37, 48, 60);
-	padding: 12px 4px;
+/*  text-shadow: 0 0 6px rgb(44, 61, 78, 1); */
+    text-shadow: 0 0 6px rgb(37, 48, 60);
+    padding: 12px 4px;
 }
 
 .audio_pl_snippet2 {
-	background-color: rgb(44, 61, 78);
-	overflow: hidden;
+    background-color: rgb(44, 61, 78);
+    overflow: hidden;
     position: relative;
 }
 
 .audio_pl_snippet2 .audio_pl_snippet__header {
-	position: static;
-	z-index: 1;
+    position: static;
+    z-index: 1;
 }
 
 /* При наведении на обложку плейлиста, растягивает ее на фон всего блока плейлиста */
 .audio_pl_snippet__header .audio_pl_snippet__cover {
-	z-index: 1;
-	will-change: transform, filter, opacity;
-	transition: transform 250ms ease-out, filter 250ms ease-out, opacity 250ms ease-out !important;
+    z-index: 1;
+    will-change: transform, filter, opacity;
+    transition: transform 250ms ease-out, filter 250ms ease-out, opacity 250ms ease-out !important;
 }
 
 .audio_pl_snippet__cover:hover {
@@ -301,15 +307,15 @@ body.dev .wk_text blockquote,
     height: calc(100% + 10px);
     left: -5px;
     top: -5px; */
-	transform: scale(3.5) translate(51px, 51px);
+    transform: scale(3.5) translate(51px, 51px);
     background-color: rgba(255, 255, 255, 0.001) !important;
     background-size: cover !important;
     filter: blur(1px);
-	opacity: .9;
+    opacity: .9;
 }
 
 .audio_pl_snippet2 .audio_pl_snippet__body {
-	z-index: 10;
+    z-index: 10;
     position: relative;
 }
 
@@ -322,57 +328,57 @@ body.dev .wk_text blockquote,
 .CatalogBlock--divided:before,
 .CatalogBlock--divided:before, 
 .CatalogSection:before {
-	box-shadow: none;
+    box-shadow: none;
 }
 
 /* Фон блока с треками в табе "Рекомендации" из плеера в шапке */
 .CatalogBlock--divided, .CatalogSection__search_results {
-	background: rgb(44, 61, 78);
-	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42) !important;
+    background: rgb(44, 61, 78);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42) !important;
 }
 
 /* Выпадающее меню дополнительных действий на музыкальном треке в списке */
 .audio_row .audio_row__info .eltt {
-	background-color: rgb(44, 61, 78) !important;
-	border: 1px solid rgba(105, 109, 125, 0.4) !important;
+    background-color: rgb(44, 61, 78) !important;
+    border: 1px solid rgba(105, 109, 125, 0.4) !important;
 }
 
 .audio_row__more_actions .audio_row__more_action {
-	background-color: rgb(44, 61, 78);
+    background-color: rgb(44, 61, 78);
 }
 
 .audio_row__more_actions .audio_row__more_action:hover {
- 	background: rgb(37, 48, 60);
+    background: rgb(37, 48, 60);
 }
 
 .audio_row__more_actions .audio_row__more_playlist_added {
-	color: #ffc000 !important;
+    color: #ffc000 !important;
 }
 
 .audio_row__more_actions .audio_row__more_playlist_added:before {
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2210%22%20viewBox%3D%220%200%2012%2010%22%20width%3D%2212%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m0%205.33333333%202.5%202.66666667%207.5-8%22%20fill%3D%22none%22%20stroke%3D%22%23ffc000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20transform%3D%22translate(1%201)%22%2F%3E%3C%2Fsvg%3E");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2210%22%20viewBox%3D%220%200%2012%2010%22%20width%3D%2212%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m0%205.33333333%202.5%202.66666667%207.5-8%22%20fill%3D%22none%22%20stroke%3D%22%23ffc000%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20transform%3D%22translate(1%201)%22%2F%3E%3C%2Fsvg%3E");
 }
 
 /* Обновленная круглая кнопка перехода в конец открытого диалога */
 .im-navigation.im-navigation--to-end.im-navigation_shown {
-	opacity: .2;
-	z-index: 100;
+    opacity: .2;
+    z-index: 100;
     transition: opacity 250ms ease !important;
 }
 .im-navigation.im-navigation--to-end.im-navigation_shown:hover {
-	opacity: .8;
-	z-index: 100;
+    opacity: .8;
+    z-index: 100;
 }
 
 .im-navigation--to-end .im-navigation__button {
-	background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%227%22%20viewBox%3D%220%200%2014%207%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23ffc000%22%20d%3D%22M1.64.232c-.424-.354-1.055-.296-1.408.128s-.296%201.055.128%201.408l6%205c.371.309.91.309%201.28%200l6-5c.424-.354.482-.984.128-1.408s-.984-.482-1.408-.128l-5.36%204.467z%22%2F%3E%0A%3C%2Fsvg%3E');
-	background-color: rgb(37, 48, 60) !important;	
-	box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, .8);
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%227%22%20viewBox%3D%220%200%2014%207%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23ffc000%22%20d%3D%22M1.64.232c-.424-.354-1.055-.296-1.408.128s-.296%201.055.128%201.408l6%205c.371.309.91.309%201.28%200l6-5c.424-.354.482-.984.128-1.408s-.984-.482-1.408-.128l-5.36%204.467z%22%2F%3E%0A%3C%2Fsvg%3E');
+    background-color: rgb(37, 48, 60) !important;   
+    box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, .8);
     transition: box-shadow 250ms ease !important;
 }
 
 .im-navigation.im-navigation--to-end.im-navigation_shown:hover .im-navigation__button {
-	box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.42);
+    box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.42);
 }
 
 .im-navigation .im-navigation--label-in {
@@ -387,9 +393,9 @@ body.dev .wk_text blockquote,
 
 /* Скругление углов основоного окна диалогов в нужную сторону */
 [dir=ltr] .im-page .im-page--history {
-	border-top-left-radius: 4px;
+    border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-	border-top-right-radius: 0;
+    border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 .im-page--chat-header, 
@@ -401,13 +407,13 @@ body.dev .wk_text blockquote,
 [dir=ltr] .im-chat-input {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 0;
-	margin-top: -2px;
+    margin-top: -2px;
 }
 
 [dir=ltr] .im-page .im-page--dialogs {
-	border-top-right-radius: 4px;
+    border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-	border-top-left-radius: 0;
+    border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 .im-page--dialogs-search.ui_search {
@@ -485,284 +491,284 @@ body.dev .wk_text blockquote,
 /* Отдельная страница с плейлистом */
 /* https://vk.com/music/album/-2000029177_6029177_f9be3d9c00fba51f0a */
 ._playlist_page_content_block {
-	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
 }
 
 .AudioPlaylistSnippet {
-	background-color: rgb(44, 61, 78);
+    background-color: rgb(44, 61, 78);
 }
 
 .AudioPlaylistSnippet .ActionButton--shuffle:hover {
-	background-color: rgb(37, 48, 60);
+    background-color: rgb(37, 48, 60);
 }
 
 /* Треугольники дропдаунов с подсказками */
 .tt_default.tt_up:before {
-	border-bottom-color: rgba(105, 109, 125, 0.4);
+    border-bottom-color: rgba(105, 109, 125, 0.4);
 }
 
 .tt_default.tt_up:after {
-	border-bottom-color: rgb(37, 48, 60);
+    border-bottom-color: rgb(37, 48, 60);
 }
 
 .tt_default.tt_right:before {
-	border-left-color: rgba(105, 109, 125, 0.4);
+    border-left-color: rgba(105, 109, 125, 0.4);
 }
 
 .tt_default.tt_right:after {
-	border-left-color: rgb(37, 48, 60);
+    border-left-color: rgb(37, 48, 60);
 }
 
 .tt_default.tt_down:before {
-	border-top-color: rgba(105, 109, 125, 0.4);
+    border-top-color: rgba(105, 109, 125, 0.4);
 }
 
 .tt_default.tt_down:after {
-	border-top-color: rgb(37, 48, 60);
+    border-top-color: rgb(37, 48, 60);
 }
 
 .tt_default.tt_left:before {
-	border-right-color: rgba(105, 109, 125, 0.4);
+    border-right-color: rgba(105, 109, 125, 0.4);
 }
 
 .tt_default.tt_left:after {
-	border-right-color: rgb(37, 48, 60);
+    border-right-color: rgb(37, 48, 60);
 }
 
 /* Окно управления беседой */
 .List {
-	background-color: rgb(44, 61, 78);
+    background-color: rgb(44, 61, 78);
 }
 .Select:not(.Select--opened) .Select__control {
-	border-color: transparent !important;
+    border-color: transparent !important;
 }
 
 .Select--opened .Select__control {
-	background-color: rgb(44, 61, 78);
+    background-color: rgb(44, 61, 78);
 }
 
 .Select__menu {
-	background-color: rgb(37, 48, 60);
+    background-color: rgb(37, 48, 60);
 }
 
 .ListItem--border:before {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 .Select__option--selected, .Select__option:hover {
-	background-color: rgb(44, 61, 78);
+    background-color: rgb(44, 61, 78);
 }
 
 .SubmitArea {
-	background-color: rgb(37, 48, 60);
+    background-color: rgb(37, 48, 60);
 }
 
 .SubmitArea .Button--tertiary:not(.Button--disabled):focus, 
 .SubmitArea .Button--tertiary:not(.Button--disabled):hover {
-	background-color: rgb(37, 48, 60);
+    background-color: rgb(37, 48, 60);
 }
 
 .SubmitArea .Button--primary {
-	background-color: #ffc000;
+    background-color: #ffc000;
 }
 
 .SubmitArea .Button--primary span {
-	color: rgb(37, 48, 60) !important;
+    color: rgb(37, 48, 60) !important;
 }
 
 .SubmitArea .Button--primary:not(.Button--disabled):focus, 
 .SubmitArea .Button--primary:not(.Button--disabled):hover {
-	background-color: #ffc000;
+    background-color: #ffc000;
 }
 
 /* Дропдаун админа беседы на участнике */ 
 .Dropdown__in {
-	background-color: rgb(37, 48, 60);
+    background-color: rgb(37, 48, 60);
 }
 
 .Dropdown__item:hover {
-	background-color: rgb(44, 61, 78);
+    background-color: rgb(44, 61, 78);
 }
 
 .Dropdown--b .Dropdown__in:before {
-	border-bottom-color: rgba(105, 109, 125, 0.4);
+    border-bottom-color: rgba(105, 109, 125, 0.4);
 }
 
 .Dropdown--b .Dropdown__in:after {
-	border-bottom-color: rgb(37, 48, 60);
+    border-bottom-color: rgb(37, 48, 60);
 }
 
 
 /* Окно "Приглашение сообщества в беседу" */
 #GroupChatInvites .GroupChatInvites {
-	background-color: rgb(44, 61, 78);
+    background-color: rgb(44, 61, 78);
 }
 
 #GroupChatInvites .MultiSelect__search {
-	background-color: rgb(37, 48, 60);
+    background-color: rgb(37, 48, 60);
 }
 
 #GroupChatInvites .MultiSelect__token {
-	background-color: rgb(44, 61, 78);
+    background-color: rgb(44, 61, 78);
 }
 
 #GroupChatInvites .MultiSelect__scroll .ListItem--border:before {
-	display: none;
+    display: none;
 }
 
 #GroupChatInvites .SubmitArea {
-	background-color: rgb(37, 48, 60);
+    background-color: rgb(37, 48, 60);
 }
 
 #GroupChatInvites .SubmitArea button {
-	background-color: #ffc000;
+    background-color: #ffc000;
 }
 
 #GroupChatInvites .SubmitArea button span {
-	color: rgb(37, 48, 60) !important;
+    color: rgb(37, 48, 60) !important;
 }
 
 /* Многострочное отображение запроса на Callback Api в управлении группой */
 .group_api_result_pre {
-	word-break: break-all;
-	white-space: pre-line;
+    word-break: break-all;
+    white-space: pre-line;
 }
 
 /*  Ошибка в управлении группой  */
 #group_edit_msg.msg.error {
-	background-color: rgb(37, 48, 60);
+    background-color: rgb(37, 48, 60);
 }
 
 /* Ошибка подтверждения сервера в управлении группой */
 .group_api_error {
-	background-color: rgb(37, 48, 60);
+    background-color: rgb(37, 48, 60);
 }
 
 /* Блок токенов в управлении группой */
 .group_tokens_row {
-	background-color: rgb(44, 61, 78);
+    background-color: rgb(44, 61, 78);
 }
 
 /* Левое меню с внутренним скроллом, если не уместится по высоте */
 #side_bar {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #side_bar_inner {
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 #side_bar nav {
-	max-height: inherit;
-	overflow: auto;
-	flex-shrink: 1;
+    max-height: inherit;
+    overflow: auto;
+    flex-shrink: 1;
 }
 
 /* Ddict Translate (https://chrome.google.com/webstore/detail/ddict-translate-translato/bpggmmljdiliancllaapiggllnkbjocb?hl=ru) */
 .ddict_div {
-	background-color: rgb(44, 61, 78);
-	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
-	border: 1px solid;
-	padding: 10px 15px;
+    background-color: rgb(44, 61, 78);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
+    border: 1px solid;
+    padding: 10px 15px;
 }
 
 .ddict_div .ddict_sentence {
-	margin-top: 10px !important;
-	position: relative;
-	font-weight: normal;
-	font-size: 14px;
+    margin-top: 10px !important;
+    position: relative;
+    font-weight: normal;
+    font-size: 14px;
 }
 
 .ddict_div .ddict_sentence:before {
-	content: '';
-	display: block;
-	position: absolute;
-	width: 100%;
-	top: -6px;
-	left: 50%;
-	transform: translateX(-50%);
-	height: 1px;
-	background-color: rgba(105, 109, 125, 0.4);
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    background-color: rgba(105, 109, 125, 0.4);
 }
 
 /* Тень у картинок/документов с картинками/ссылок с картинками в диалоге */
 .im-page-history-w .image_cover,
 .im-page-history-w .media_link--photo,
 .im-page-history-w .page_post_thumb_unsized {
-	  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Инпут в диалоге при записи голоса */
 [dir] .im-audio-message-input {
-	background-color: rgb(37, 48, 60);
+    background-color: rgb(37, 48, 60);
 }
 [dir] .im-audio-message-input .im-audio-message-track {
-	background-color: rgb(44, 61, 78);
+    background-color: rgb(44, 61, 78);
 }
 [dir] .im-audio-message-input .audio-msg-track.audio-msg-track_recording .audio-msg-track--btn {
-	  background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%2262%200%2024%2024%22%3E%3Cdesc%3E%20Created%20with%20Sketch.%3C%2Fdesc%3E%3Cg%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M74%2024C80.6%2024%2086%2018.6%2086%2012%2086%205.4%2080.6%200%2074%200%2067.4%200%2062%205.4%2062%2012%2062%2018.6%2067.4%2024%2074%2024Z%22%20fill%3D%22%23ffc000%22%2F%3E%3Crect%20x%3D%2270%22%20y%3D%228%22%20width%3D%228%22%20height%3D%228%22%20rx%3D%221%22%20fill%3D%22%23000%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E) #ffc000 no-repeat 50%;
+      background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%2262%200%2024%2024%22%3E%3Cdesc%3E%20Created%20with%20Sketch.%3C%2Fdesc%3E%3Cg%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M74%2024C80.6%2024%2086%2018.6%2086%2012%2086%205.4%2080.6%200%2074%200%2067.4%200%2062%205.4%2062%2012%2062%2018.6%2067.4%2024%2074%2024Z%22%20fill%3D%22%23ffc000%22%2F%3E%3Crect%20x%3D%2270%22%20y%3D%228%22%20width%3D%228%22%20height%3D%228%22%20rx%3D%221%22%20fill%3D%22%23000%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E) #ffc000 no-repeat 50%;
 }
 
 [dir] .im-audio-message-input .audio-msg-track .audio-msg-track--btn {
-	  background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.0%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%2011%22%20width%3D%2210px%22%20height%3D%2211px%22%3E%0A%20%20%20%20%3Cpolygon%20stroke%3D%22%23000%22%20fill%3D%22%23000%22%20style%3D%22stroke-linecap%3A%20round%3B%20stroke-linejoin%3A%20round%3B%22%20points%3D%222.5%200.5%202.5%209.5%209.5%205%22%20transform%3D%22%22%3E%3C%2Fpolygon%3E%0A%3C%2Fsvg%3E) #ffc000 no-repeat 50%;
+      background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.0%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%2011%22%20width%3D%2210px%22%20height%3D%2211px%22%3E%0A%20%20%20%20%3Cpolygon%20stroke%3D%22%23000%22%20fill%3D%22%23000%22%20style%3D%22stroke-linecap%3A%20round%3B%20stroke-linejoin%3A%20round%3B%22%20points%3D%222.5%200.5%202.5%209.5%209.5%205%22%20transform%3D%22%22%3E%3C%2Fpolygon%3E%0A%3C%2Fsvg%3E) #ffc000 no-repeat 50%;
 }
 
 [dir] .im-audio-message-input .audio-msg-track.audio-msg-track_playing .audio-msg-track--btn {
-	  background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.0%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%2011%22%20width%3D%2210px%22%20height%3D%2211px%22%3E%0A%20%20%20%20%3Crect%20x%3D%221.5%22%20y%3D%221%22%20rx%3D%220.5%22%20ry%3D%220.5%22%20width%3D%222%22%20height%3D%229%22%20fill%3D%22%23000%22%20stroke%3D%22%23000%22%20%2F%3E%0A%20%20%20%20%3Crect%20x%3D%226.5%22%20y%3D%221%22%20rx%3D%220.5%22%20ry%3D%220.5%22%20width%3D%222%22%20height%3D%229%22%20fill%3D%22%23000%22%20stroke%3D%22%23000%22%20%2F%3E%0A%3C%2Fsvg%3E) #ffc000 no-repeat 50%;
+      background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.0%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010%2011%22%20width%3D%2210px%22%20height%3D%2211px%22%3E%0A%20%20%20%20%3Crect%20x%3D%221.5%22%20y%3D%221%22%20rx%3D%220.5%22%20ry%3D%220.5%22%20width%3D%222%22%20height%3D%229%22%20fill%3D%22%23000%22%20stroke%3D%22%23000%22%20%2F%3E%0A%20%20%20%20%3Crect%20x%3D%226.5%22%20y%3D%221%22%20rx%3D%220.5%22%20ry%3D%220.5%22%20width%3D%222%22%20height%3D%229%22%20fill%3D%22%23000%22%20stroke%3D%22%23000%22%20%2F%3E%0A%3C%2Fsvg%3E) #ffc000 no-repeat 50%;
 }
 
 /* Кнопка о наличии нового уведомления в окне 'колокольчика' */
 [dir] .notifications_new_events, [dir] .notifications_new_events:hover {
-	background-color: rgb(37, 48, 60);
-	color: #ffc000 !important;
+    background-color: rgb(37, 48, 60);
+    color: #ffc000 !important;
 }
 
 
 /* Отступы постов/вложений от блока лайков */
 .wall_module:not(.search_results) .post--with-likes:not(.post_copy):not(.post_btl):not(.post_wf):not(.post_fr_likes) .wall_text .media_link:last-child {
-	margin-bottom: -12px;
+    margin-bottom: -12px;
 }
 
 .wall_text .page_post_sized_thumbs:last-child {
-	margin-bottom: -8px;
+    margin-bottom: -8px;
 }
 
 /* Цвет ссылок */
 [dir] ._im_mess .im-mess--text a:not(._im_replied_author_link):not(.im_srv_lnk ):not(.wall_post_more):not(.author):not(.im-mess-stack--lnk):not([onclick*="showForwardBox"]):not(.media_link__title):not(.mem_link):not(.page_doc_title):not([href*="browse_images"]), 
 [dir] .wall_reply_text a[rel="nofollow noopener"],
 [dir] .wall_post_cont a[rel="nofollow noopener"] { 
-	color: #E8EAED !important;
-	font-weight: 500;
-	text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    color: #E8EAED !important;
+    font-weight: 500;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Фон ссылки-вложения */
 [dir] .media_link__label, 
 [dir] .thumbed_link__label {
-	background-color: rgb(37, 48, 60);
-	margin: -1px;
+    background-color: rgb(37, 48, 60);
+    margin: -1px;
 }
 
 [dir] .article_snippet.article_snippet_mini .article_snippet_mini_info_block {
-	background-color: rgb(37, 48, 60);
+    background-color: rgb(37, 48, 60);
 }
 
 /* Модалка Красивый адрес для Вашей страницы  */
 .settdbx_edit {
-	background-color: rgb(44, 61, 78);
+    background-color: rgb(44, 61, 78);
 }
 
 #settdbx_addr_table {
-	border-color: rgb(37, 48, 60) !important;
-	background-color: rgb(44, 61, 78);
-	border-radius: 5px;
+    border-color: rgb(37, 48, 60) !important;
+    background-color: rgb(44, 61, 78);
+    border-radius: 5px;
 }
 
 .settdbx_edit_addr_label {
-	background-color: rgb(37, 48, 60);
+    background-color: rgb(37, 48, 60);
 }
 
 
@@ -1541,10 +1547,10 @@ body.dev .wk_text blockquote,
 .gedit_block_footer,
 .group_api_requests_table.ui_table tr.ui_table_row,
 .group_api_requests_table.ui_table tr.ui_table_row.header    {
-	background-color: transparent;    
+    background-color: transparent;    
 }
 /* Убрать задний фон */
-	
+    
 #dev_left_nav, .dev_section_methods_wrap {
   box-shadow: none;
   border: 1px solid rgba(232, 234, 237, .1);
@@ -3006,7 +3012,7 @@ body #top_notify_btn .top_notify_count {
     height: 10px;
 }
 [dir=ltr] .emoji_cats_title_helper:after {
-	bottom: -3px;
+    bottom: -3px;
 }
 [dir=ltr] .im-chat-input .sticker_hints_tt {
     border-radius: 4px;
@@ -3017,12 +3023,12 @@ body #top_notify_btn .top_notify_count {
 [dir=ltr] .emoji_smile_cont:hover {
     transform: scale(1.5);
     transition: all .1s !important;
-	border-radius: 4px;
-	z-index: 99;
+    border-radius: 4px;
+    z-index: 99;
 }
 
 [dir=ltr] .emoji_smile_cont:hover .emoji {
-	transform: scale(1.15);
+    transform: scale(1.15);
 }
 [dir=ltr] .emoji_smile_cont:hover > .emoji_bg {
     background-color: transparent !important;
