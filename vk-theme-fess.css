@@ -23,6 +23,7 @@ body .nim-dialog,
     --dark-bg: rgb(37, 48, 60);
     --middle-bg: rgb(44, 61, 78);
     --text-color: rgb(195, 207, 224);
+    --dark-text-color: rgb(114, 130, 147);
     --accent-color: #ffc000;
     --orange-color: rgb(208, 127, 41);
     --border-color: rgba(105, 109, 125, 0.4);
@@ -104,6 +105,17 @@ body.dev .wk_text blockquote,
 * TODO: Оформить плейлисты на стене и в сообщениях
 */
 /**********************************************************/
+
+/* Стилизация блока в сообщении "Запись из сообщества", когда в нем репост со стены группы */
+[dir] .post_top_info_caption {
+	color: var(--dark-text-color) !important;
+	background-color: transparent;
+	margin-left: 4px;
+}
+[dir] .im-mess.im-mess_selected:not(.im-mess_is_editing) .post_top_info_caption, 
+[dir] .im-mess.im-mess_light .post_top_info_caption {
+	background-color: transparent;
+}
 
 /* Стилизация распознавания голосовых */
 [dir] .vk_audio_msg_btns {
