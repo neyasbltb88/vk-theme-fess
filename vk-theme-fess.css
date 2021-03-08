@@ -106,6 +106,14 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Время сообщения в диалоге сделано темнее */
+[dir] .im-mess-stack .im-mess-stack--content .im-mess-stack--tools a {
+	color: var(--dark-text-color) !important;
+}
+[dir] .im-mess-stack .im-mess-stack--content .im-mess-stack--tools a:hover {
+	color: var(--text-color) !important;
+}
+
 /* Стилизация блока в сообщении "Запись из сообщества", когда в нем репост со стены группы */
 [dir] .post_top_info_caption {
 	color: var(--dark-text-color) !important;
