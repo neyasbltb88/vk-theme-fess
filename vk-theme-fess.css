@@ -29,7 +29,8 @@ body .nim-dialog,
     --light-color: rgb(232, 234, 237);
     --like-color: #ff3347;
     --icon-color: rgb(93, 121, 151);
-    --block-shadow: box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
+    --block-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.42);
+    --block-shadow-light: 0 0 10px 0 rgba(0, 0, 0, 0.32);
     --menu-icon-color: #5181b8;
 }
 
@@ -103,6 +104,35 @@ body.dev .wk_text blockquote,
 * TODO: Оформить плейлисты на стене и в сообщениях
 */
 /**********************************************************/
+
+/* Стилизация распознавания голосовых */
+[dir] .vk_audio_msg_btns {
+	user-select: none;
+}
+[dir] .vk_au_msg_recognize {
+	background-color: var(--middle-bg);
+	user-select: none;
+}
+[dir] .vk_au_msg_recognize_txt {
+	background-color: var(--middle-bg);
+	border: 1px solid;
+	padding: 6px 10px;
+	box-shadow: var(--block-shadow-light);
+	user-select: text;
+    cursor: default;
+}
+[dir] .vk_au_msg_recognize_txt:before {
+	border-bottom: 6px solid var(--border-color);
+	top: -13px;
+}
+[dir] .vk_au_msg_recognize_txt:after {
+	content: '';
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    border: 6px solid transparent;
+    border-bottom: 6px solid var(--middle-bg);
+}
 
 /* Фикс цвета бейджика уведомлений на колокольчике в шапке */
 [dir] .TopNavBtn__notifyCount {
