@@ -106,12 +106,20 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Убран верхний бордер у блока лайков */
+[dir] .like_cont {
+	box-shadow: none;
+}
+
 /* Время сообщения в диалоге сделано темнее */
 [dir] .im-mess-stack .im-mess-stack--content .im-mess-stack--tools a {
 	color: var(--dark-text-color) !important;
 }
 [dir] .im-mess-stack .im-mess-stack--content .im-mess-stack--tools a:hover {
 	color: var(--text-color) !important;
+}
+[dir] .im-mess-stack .im-mess-stack--content .im-mess-stack--tools {
+	color: var(--dark-text-color) !important;
 }
 
 /* Стилизация блока в сообщении "Запись из сообщества", когда в нем репост со стены группы */
