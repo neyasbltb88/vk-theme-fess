@@ -106,6 +106,11 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+/* Фикс изменившейся иконки создания новой беседы в главной части страницы диалогов */
+[dir] .im-page .im-page--center-empty {
+	font-size: 14px;
+}
+
 /* Убран верхний бордер у блока лайков */
 [dir] .like_cont {
 	box-shadow: none;
@@ -2506,9 +2511,6 @@ body:not(.dev) #page_header_cont {
 }
 input {
     background-color: rgb(55, 74, 93) !important;
-}
-[dir] .im-page .im-page--center-empty {
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAA7CAMAAAAU0snFAAAAKlBMVEUAAAD////W3+vW4OrV3+nW3+rW4Ord5u7W4OnV4OrW4OrW4urV3+nW4OotxiBTAAAADnRSTlMABonm/4hKHrvz/FeAnJN13t8AAADGSURBVHja7dbLDoUgDARQHoPi4/7/794FMdOIYGgXbphVNT0hJGOiE/EhYiQxeckDRpMkj1jcSBZE+Qi4sQCTf8Wvqml5AAycVdNxwE1+42ve8tqa3nkGkFvTO98AbI3Jcrrx7rM2k0/+Jbf8XUie0M5+XAfKBMl9ij1f8Rg8eT9n8dX6O6fXcXodp9dxehWnV3F6rmuqdpI/Vq28PHZU+RVP/lQ16iqh+P4nVHRnqcupVZxaxalVnFrFqVXcop1NO5t2w/oPnvUMamcUGVIAAAAASUVORK5CYII=') no-repeat top;
 }
 .nim-dialog_unread {
     background: rgb(55, 73, 93) !important;
