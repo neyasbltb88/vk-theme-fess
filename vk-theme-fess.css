@@ -106,6 +106,8 @@ body.dev .wk_text blockquote,
 */
 /**********************************************************/
 
+
+
 /* Фикс изменившейся иконки создания новой беседы в главной части страницы диалогов */
 [dir] .im-page .im-page--center-empty {
 	font-size: 14px;
@@ -130,7 +132,7 @@ body.dev .wk_text blockquote,
 /* Стилизация блока в сообщении "Запись из сообщества", когда в нем репост со стены группы */
 [dir] .post_top_info_caption {
 	color: var(--dark-text-color) !important;
-	background-color: transparent;
+	background-color: transparent !important;
 	margin-left: 4px;
 }
 [dir] .im-mess.im-mess_selected:not(.im-mess_is_editing) .post_top_info_caption, 
@@ -190,12 +192,10 @@ body.dev .wk_text blockquote,
 }
 
 /* Возврат старого лого VK */
-[dir] body.new_header_design .p_head_l0 .top_home_link .top_home_logo, 
-[dir] body.new_header_design .p_head_l97 .top_home_link .top_home_logo, 
-[dir] body.new_header_design .p_head_l114 .top_home_link .top_home_logo, 
-[dir] body.new_header_design .p_head_l1 .top_home_link .top_home_logo,
-[dir] .TopHomeLink--logoWithText {
-    background-image: url('https://vk.com/images/svg_icons/ic_head_logo.svg');
+[dir] #top_nav .TopHomeLink {
+	background-image: url(https://vk.com/images/svg_icons/ic_head_logo.svg);
+    background-repeat: no-repeat;
+    background-position-y: center;
 }
 
 /* Иконка уведомления в шапке с синим цветом иконок из главного меню */
