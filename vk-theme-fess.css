@@ -104,6 +104,11 @@
     */
     /**********************************************************/
     
+    /* Фон перетаскиваемого трека в плейлисте */
+    [dir] .audio_w_covers .audio_row.ui_gridsorter_moveable .audio_row_content {
+        background-color: var(--dark-bg);
+    }
+    
     /* Кнопки настроек в информации о беседе */
     [dir] .ChatSettings__pane .Select__control {
         background-color: var(--middle-bg);
@@ -3180,9 +3185,6 @@
         right: 0;
     }
     [dir] .mv_chat .mv_chat_messages .ui_scroll_content {
-        background-color: rgb(44, 61, 78);
-    }
-    [dir] .ui_scroll_bar_outer {
         background-color: rgb(44, 61, 78);
     }
     
