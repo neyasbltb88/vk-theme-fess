@@ -104,6 +104,58 @@
     */
     /**********************************************************/
     
+    /* Компановка футера списка диалогов */
+    [dir] .im-page .im-page--dialogs-footer {
+        display: flex;
+        align-items: center;
+    }
+    [dir] .im-page .im-page--dialogs-filter-wrap {
+        order: 0;
+        height: 100%;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+    }
+    [dir] .im-page .im-page--dialogs-filter-wrap .im-page--dialogs-filter {
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+    }
+    [dir] .im-page .im-page--dialogs-filter-wrap .im-page--dialogs-filter:not(.im-page--dialogs-filter_disabled):hover {
+        background-color: var(--dark-bg) !important;
+    }
+    [dir] .im-page .im-page--dialogs-filter-wrap .im-page--dialogs-filter.im-page--dialogs-filter_disabled:hover {
+        background-color: var(--middle-bg) !important;
+    }
+    [dir] .im-page .im-page--dialogs-settings {
+        order: 1;
+        background: none;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12.98%201.75c.37.06.72.2%201.03.45.5.4.75.92.94%201.67.05.2.13.42.23.63.24.1.48.22.7.34.23-.05.44-.13.61-.2%201.22-.57%202.23-.54%203.06.35l.2.24.55.67.3.41c.59.99.36%201.9-.4%202.9-.12.17-.25.39-.35.61.07.25.12.5.17.74.19.15.39.29.57.38.69.35%201.13.7%201.42%201.3.17.35.23.72.2%201.1-.01.19-.03.3-.09.54l-.19.83c-.06.25-.09.36-.16.54-.14.34-.35.65-.67.9-.5.4-1.06.52-1.84.54-.2%200-.43.03-.66.08-.15.2-.31.41-.48.6%200%20.24.02.47.06.66.16.76.17%201.33-.1%201.92-.18.36-.43.63-.73.85-.16.11-.26.16-.49.27l-.77.38c-.22.1-.32.15-.51.21-.36.1-.73.13-1.12.05-.64-.15-1.08-.5-1.58-1.1a3.52%203.52%200%2000-.5-.48%208.25%208.25%200%2001-.76%200c-.2.16-.37.33-.5.48-.5.6-.94.95-1.58%201.1-.39.08-.76.06-1.12-.05-.19-.06-.29-.1-.51-.21l-.77-.38a6.05%206.05%200%2001-.16-.08c-1.13-.58-1.46-1.58-1.16-2.96.04-.19.06-.42.06-.66-.17-.19-.33-.4-.48-.6a3.49%203.49%200%2000-.66-.08c-.78-.02-1.33-.14-1.84-.54a2.16%202.16%200%2001-.67-.9c-.07-.18-.1-.3-.16-.54l-.2-.83a2.9%202.9%200%2001-.09-.58c-.02-.4.06-.79.26-1.16.29-.54.72-.87%201.37-1.2.18-.1.38-.23.57-.38.05-.25.1-.5.17-.74-.1-.22-.23-.44-.36-.6-.75-1-.98-1.92-.38-2.9.09-.16.15-.24.3-.42l.53-.67c.1-.1.14-.16.2-.24.84-.9%201.85-.92%203.07-.36.17.08.38.16.6.21.23-.12.47-.24.7-.34.11-.21.2-.44.24-.63.19-.75.43-1.26.94-1.67.31-.25.66-.4%201.03-.45.15-.03.25-.03.42-.04h.99c.25%200%20.36%200%20.55.04zm-.48%201.68h-.93c-.43%200-.64%200-.86.86a5.44%205.44%200%2001-.71%201.6%206.4%206.4%200%2000-1.54.75%205.44%205.44%200%2001-1.68-.45c-.8-.38-.93-.21-1.2.12l-.54.67c-.27.33-.4.5.12%201.2.3.4.62.99.8%201.6a6.4%206.4%200%2000-.36%201.62c-.43.46-.97.84-1.41%201.07-.79.4-.74.6-.64%201.02l.2.84c.09.42.14.63%201.02.64.49.01%201.13.12%201.72.34.3.49.65.94%201.06%201.33.09.62.04%201.27-.06%201.74-.18.87.01.96.4%201.15l.77.38c.38.18.58.28%201.14-.4.32-.38.82-.82%201.37-1.13a6.49%206.49%200%20001.66%200c.55.31%201.05.75%201.37%201.13.56.68.76.58%201.14.4l.77-.38c.39-.19.58-.28.4-1.15a5.44%205.44%200%2001-.06-1.74c.4-.4.77-.84%201.06-1.33a5.44%205.44%200%20011.72-.34c.88-.01.93-.22%201.03-.64l.2-.84c.09-.41.14-.62-.65-1.02-.44-.23-.98-.61-1.4-1.07a6.4%206.4%200%2000-.38-1.62c.19-.61.5-1.2.8-1.6.54-.7.4-.87.13-1.2l-.54-.67c-.27-.33-.4-.5-1.2-.12-.44.2-1.06.39-1.68.45A6.4%206.4%200%200014%205.89a5.44%205.44%200%2001-.71-1.6c-.2-.81-.4-.86-.79-.86zM12%208.14a3.86%203.86%200%20110%207.72%203.86%203.86%200%20010-7.72zm0%201.72a2.14%202.14%200%20100%204.28%202.14%202.14%200%20000-4.28z%22%20fill%3D%22%2399A2AD%22%2F%3E%3C%2Fsvg%3E");
+    }
+    [dir] .im-page .msg_mark_read_icon {
+        order: 2;
+    }
+    [dir] .im-page .msg_mark_read_icon:hover {
+        background-color: var(--dark-bg) !important;
+    }
+    [dir] .im-page .vk_msg_info_icon {
+        order: 3;
+    }
+    [dir] .im-page .vk_msg_info_icon,
+    [dir] .im-page .msg_mark_read_icon,
+    [dir] .im-page .im-page--dialogs-settings {
+        width: 38px;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
     /* Кнопка дополнительных действий [...] (в шапке поста, но может еще где-то) */
     [dir] .FlatButton--secondary {
         background-color: var(--dark-bg);
@@ -1642,7 +1694,7 @@
         background-color: transparent;    
     }
     /* Убрать задний фон */
-        
+    
     [dir] #dev_left_nav, [dir] .dev_section_methods_wrap {
       box-shadow: none;
       border: 1px solid rgba(232, 234, 237, .1);
@@ -1931,7 +1983,7 @@
         background-color: #2c3d4e;      
       }
     }
-
+    
     /* [dir] #l_msg .left_count_wrap {
         animation: ms 1.5s infinite ease-in-out;
     } */
@@ -1954,7 +2006,7 @@
     
     /* Треугольники всплывашек */
     /* [dir] #top_notify_wrap:before {
-      
+    
     } */
     
     /* Постеры */
@@ -2395,16 +2447,8 @@
         width: 455px;
     }
     
-    [dir] .im-page .im-page--dialogs-filter.im-page--dialogs-filter_disabled, [dir] .im-page--dialogs-filter.\%cls\% {
-        padding: 23px 15px;
-    }
-    
     [dir] .im-page .im-page--dialogs-footer {
         height: 62px;
-    }
-    
-    [dir] .im-page .im-page--dialogs-settings, [dir] .vk_msg_info_icon {
-        margin: 20px 14px 
     }
     
     [dir] .im_editable im-chat-input--text _im_text {
@@ -2415,7 +2459,7 @@
     [dir] #im--page > div.im-page--history.page_block._im_page_history > div.im-page-history-w > div.im-page--chat-input._im_chat_input_w > div.im-chat-input.clear_fix._im_chat_input_parent > div.im-chat-input--textarea.fl_l._im_text_input._emoji_field_wrap._voice_field_wrap > div.im-chat-input--txt-wrap._im_text_wrap > div.im-chat-input--attach {
         right:100%;
         visibility: hidden;
-        
+    
     }    
     
     [dir] #im--page > div.im-page--history.page_block._im_page_history > div.im-page-history-w > div.im-page--chat-input._im_chat_input_w > div.im-chat-input.clear_fix._im_chat_input_parent > div.im-chat-input--textarea.fl_l._im_text_input._emoji_field_wrap._voice_field_wrap > div.im-chat-input--txt-wrap._im_text_wrap > div._im_media_selector.im-chat-input--selector {
@@ -2448,7 +2492,7 @@
     opacity:1;
     filter:alpha(opacity=100);
     }
-     
+    
     .im-mess-stack--photo:hover {
     opacity:0.5;
     filter:alpha(opacity=50);
@@ -2836,12 +2880,12 @@
         top: 20px;
         z-index: 600;
         opacity: .8;
-        
+    
     }
     [dir] .audio_pl_snippet.audio_pl_snippet_small .audio_pl_snippet__action_btn:hover {
         z-index: 600;
         opacity: 1;
-        
+    
     }
     [dir] .audio_pl_snippet.audio_pl_snippet_small .audio_pl_snippet__info_author {
         margin-top: -3px;
@@ -2935,7 +2979,7 @@
         position: absolute;
         height: 1px;
         width: 1px;
-        
+    
     }
     
     /*Плавающая табличка даты сообщений в диалогах*/
@@ -3224,7 +3268,7 @@
     }
     
     [dir] .reply.reply_dived.clear.reply_replieable._post .wall_reply_text {
-      
+    
         -webkit-transition: color .3s 3s !important;
         -moz-transition: color .3s 3s !important;
         -ms-transition: color .3s 3s !important;
@@ -3233,7 +3277,7 @@
     }
     
     [dir] .reply.reply_dived.clear.reply_replieable._post.new_reply .wall_reply_text {
-        
+    
         color: rgba(37, 48, 60, 1) !important;
         -webkit-transition: color .3s 3s !important;
         -moz-transition: color .3s 3s !important;
