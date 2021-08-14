@@ -106,6 +106,14 @@
     */
     /**********************************************************/
     
+    /* Кнопка дополнительных действий [...] (в шапке поста, но может еще где-то) */
+    [dir] .FlatButton--secondary {
+        background-color: var(--dark-bg);
+    }
+    [dir] .FlatButton--secondary:not(.disable):hover {
+        background-color: #283542;
+    }
+    
     /* Оформление новых лайков(реакций) */
     [dir] .PostBottomActionLikeBtns.like_cont,
     [dir] .PostActionStatusBar--afterPostContent {
