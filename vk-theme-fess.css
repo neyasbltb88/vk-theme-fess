@@ -104,6 +104,11 @@
     */
     /**********************************************************/
     
+    /* Прозрачный фон трека скроллбара */
+    [dir] .ui_scroll_bar_outer {
+        background-color: transparent;
+    }
+    
     /* Фон перетаскиваемого трека в плейлисте */
     [dir] .audio_w_covers .audio_row.ui_gridsorter_moveable .audio_row_content {
         background-color: var(--dark-bg);
