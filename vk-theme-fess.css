@@ -106,6 +106,21 @@
     */
     /**********************************************************/
     
+    /* Оформление новых лайков(реакций) */
+    [dir] .PostBottomActionLikeBtns.like_cont,
+    [dir] .PostActionStatusBar--afterPostContent {
+        /* Чинит вываливание вправо всего блока лайков */
+        width: 100%;
+    }
+    [dir] .ReactionsMenu {
+        background: var(--dark-bg) !important;
+        box-shadow: var(--block-shadow);
+    }
+    [dir] .PostBottomAction {
+        background-color: var(--middle-bg);
+        border: 1px solid;
+    }
+    
     /* Кнопка "Приглашения" в списке диалогов */
     [dir] .im-page .im-page--dialogs-message-requests-button:hover {
         background: var(--dark-bg);
