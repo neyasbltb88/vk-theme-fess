@@ -104,6 +104,11 @@
     */
     /**********************************************************/
     
+    /* Кнопки настроек в информации о беседе */
+    [dir] .ChatSettings__pane .Select__control {
+        background-color: var(--middle-bg);
+    }
+    
     /* Компановка футера списка диалогов */
     [dir] .im-page .im-page--dialogs-footer {
         display: flex;
